@@ -1383,7 +1383,8 @@
    32.4
   ],
   "bodies": [
-   "shell",
+   "base",
+   "cover",
    "button_main",
    "button_r",
    "button_l"
@@ -1512,7 +1513,7 @@
   ]
  },
  {
-  "id": "SB-S-US",
+  "id": "SB-US",
   "title": "Ultrasonic distance",
   "family": "Smart modules",
   "qty": 1,
@@ -1742,7 +1743,7 @@
   }
  },
  {
-  "id": "SB-S-LINE",
+  "id": "SB-LINE",
   "title": "Line sensor x5",
   "family": "Smart modules",
   "qty": 1,

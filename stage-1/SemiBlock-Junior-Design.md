@@ -415,13 +415,13 @@ Phase **P1** = launch (Core Set and Science Pack), **P2** = add-on packs in year
 
 | 3D | ID | Module | 中文 | What it does | Candidate chip | Phase | Replaces (45-in-1 kit) |
 |---|---|---|---|---|---|---|---|
-| <img src="renders/parts/SB-S-US.png" width="120" alt="SB-S-US"> | [`SB-S-US`](viewer/index.html#part=SB-S-US) | Ultrasonic distance | 超聲波測距 | 2-400 cm distance, 'eyes' RGB LEDs | RCWL-9610A + MCU | P1 launch | HC-SR04 超声波模块 |
+| <img src="renders/parts/SB-US.png" width="120" alt="SB-US"> | [`SB-US`](viewer/index.html#part=SB-US) | Ultrasonic distance | 超聲波測距 | 2-400 cm distance, 'eyes' RGB LEDs | RCWL-9610A + MCU | P1 launch | HC-SR04 超声波模块 |
 | <img src="renders/parts/SB-TOF.png" width="120" alt="SB-TOF"> | [`SB-TOF`](viewer/index.html#part=SB-TOF) | ToF laser distance | 激光測距 (ToF) | 4-400 cm, narrow beam, fast | VL53L1X (Class 1 laser, eye-safe) | P2 add-on | new |
 | <img src="renders/parts/SB-IRP.png" width="120" alt="SB-IRP"> | [`SB-IRP`](viewer/index.html#part=SB-IRP) | IR obstacle | 紅外避障 | 2-30 cm near/far, digital + analog | IR LED + phototransistor | P1 launch | 避障传感器 / 光遮断 |
 | <img src="renders/parts/SB-PIR.png" width="120" alt="SB-PIR"> | [`SB-PIR`](viewer/index.html#part=SB-PIR) | PIR motion | 人體紅外感應 | detects people moving, 3-5 m | AM312 mini PIR | P1 launch | new |
 | <img src="renders/parts/SB-RADAR.png" width="120" alt="SB-RADAR"> | [`SB-RADAR`](viewer/index.html#part=SB-RADAR) | mmWave presence | 毫米波人體存在 | detects people even when still | HLK-LD2410 24 GHz | P3 later | new |
 | <img src="renders/parts/SB-ZONE.png" width="120" alt="SB-ZONE"> | [`SB-ZONE`](viewer/index.html#part=SB-ZONE) | Multi-zone ToF 8x8 | 多區激光測距 | 8x8 depth map up to 4 m | VL53L5CX | P3 later | new |
-| <img src="renders/parts/SB-S-LINE.png" width="120" alt="SB-S-LINE"> | [`SB-S-LINE`](viewer/index.html#part=SB-S-LINE) | Line sensor x5 | 循跡感應器 x5 | 5-channel line position for line-follow races | 5x ITR20001 + MCU auto-calibrate | P1 launch | 循迹传感器 |
+| <img src="renders/parts/SB-LINE.png" width="120" alt="SB-LINE"> | [`SB-LINE`](viewer/index.html#part=SB-LINE) | Line sensor x5 | 循跡感應器 x5 | 5-channel line position for line-follow races | 5x ITR20001 + MCU auto-calibrate | P1 launch | 循迹传感器 |
 | <img src="renders/parts/SB-COLOR.png" width="120" alt="SB-COLOR"> | [`SB-COLOR`](viewer/index.html#part=SB-COLOR) | Colour sensor | 顏色感應器 | RGB + clear light, colour sorting, light level | TCS34725 + white LED | P1 launch | new |
 | <img src="renders/parts/SB-GEST.png" width="120" alt="SB-GEST"> | [`SB-GEST`](viewer/index.html#part=SB-GEST) | Gesture sensor | 手勢感應器 | up/down/left/right swipes, proximity | APDS-9960 | P2 add-on | new |
 | <img src="renders/parts/SB-LUX.png" width="120" alt="SB-LUX"> | [`SB-LUX`](viewer/index.html#part=SB-LUX) | Light sensor | 光度感應器 | ambient light in lux | BH1750 (lux) | P1 launch | 光敏电阻 / 魔术光杯 |
