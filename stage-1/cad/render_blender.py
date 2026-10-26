@@ -86,6 +86,9 @@ def tune_materials():
             setv("Roughness", 0.75)
             setv("Coat Weight", 0.0)
         elif name.startswith("sb_"):
+            if name == "sb_lgrey":          # keep light grey distinct from white
+                c = bsdf.inputs["Base Color"].default_value
+                setv("Base Color", (c[0] * 0.72, c[1] * 0.72, c[2] * 0.72, 1.0))
             setv("Coat Weight", 0.18)
             setv("Coat Roughness", 0.12)
             if name in ("sb_white",):
@@ -240,7 +243,8 @@ def render_shot(shot):
     w, h = shot["size"]
     setup(w, h)
     if shot.get("kind") == "part":
-        bpy.context.scene.cycles.samples = min(SAMPLES, 48)
+        bpy.context.scene.cycles.samples = min(SAMPLES, 32)
+        bpy.context.scene.view_settings.exposure -= 0.3
     objs, lo, hi = import_scene(os.path.join(BUILD, "render", shot["scene"] + ".glb"))
     tune_materials()
     cam, dist = frame_camera(shot["view"], lo, hi, w, h)

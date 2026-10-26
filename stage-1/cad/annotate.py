@@ -162,6 +162,8 @@ def steps_strip():
 # ----------------------------------------------------------- part cards
 def part_card(row, scale=1.0):
     src = Image.open(os.path.join(RAW, "part-%s.png" % row["id"])).convert("RGBA")
+    if src.width != 800:
+        src = src.resize((800, int(src.height * 800 / src.width)), Image.LANCZOS)
     w, h = src.size
     band = 118
     card = background(w, h + band, (250, 251, 254), (238, 242, 248))

@@ -43,7 +43,7 @@ PICK = os.environ.get("SB_SCENES", "").split()
 
 POSES = {"flat": ((1, 0, 0), (0, 1, 0)), "lay": ((0, 0, -1), (0, 1, 0)),
          "layr": ((0, 0, 1), (0, 1, 0)), "stand": ((1, 0, 0), (0, 0, 1))}
-VIEW = {"flat": [0.5, -1.0, 0.95], "lay": [0.35, -1.0, 0.7], "layr": [0.35, -1.0, 0.7], "stand": [0.5, -1.0, 0.45]}
+VIEW = {"flat": [0.5, -1.0, 0.95], "lay": [0.35, -1.0, 0.7], "layr": [-0.7, -1.0, 0.65], "stand": [0.5, -1.0, 0.45]}
 FAMILY_VIEW = {"Smart modules": [1.0, -0.85, 0.75], "Hub, motors & cables": [1.0, -0.85, 0.75],
                "Gears & motion": [0.3, -1.0, 1.25], "Connectors": [0.75, -1.0, 0.85]}
 
@@ -93,7 +93,7 @@ def build_parts():
             row["module"] = {k: m[k] for k in ("code", "zh", "cat", "phase", "chip", "does", "replaces", "size")}
         rows.append(row)
         view = FAMILY_VIEW.get(item["family"], VIEW[item["pose"]])
-        shots.append({"name": "part-" + part.pid, "scene": "parts/" + part.pid, "size": [800, 600],
+        shots.append({"name": "part-" + part.pid, "scene": "parts/" + part.pid, "size": [640, 480],
                       "view": {"dir": view, "lens": 85, "fit": 0.8}, "kind": "part",
                       "title": part.title, "pid": part.pid})
         print("part %-12s %-42s %.2fs" % (part.pid, part.title, time.time() - t), flush=True)
