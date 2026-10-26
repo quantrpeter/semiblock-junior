@@ -12,6 +12,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STAGE = os.path.dirname(HERE)
 DOC = os.path.join(STAGE, "SemiBlock-Junior-Design.md")
 CAT = json.load(open(os.path.join(STAGE, "viewer", "catalog.json")))
+_DWG = os.path.join(STAGE, "drawings", "index.json")
+SHEETS = {r["id"]: len(r["sheets"]) for r in json.load(open(_DWG))} if os.path.exists(_DWG) else {}
+for _r in CAT:
+    _r["dwg_sheets"] = SHEETS.get(_r["id"], 0)
 
 FAMILY_ORDER = ["Beams", "Connectors", "Pins & bushes", "TwistLock (lock system)", "Axles", "Gears & motion", "Wheels",
                 "Accessories & tools", "Hub, motors & cables"]
@@ -29,6 +33,15 @@ def esc(s):
     return str(s).replace("|", "\\|")
 
 
+def files(pid):
+    """Download links: 2D drawing (PDF), FreeCAD, STEP."""
+    links = []
+    if SHEETS.get(pid):
+        links.append("[PDF](drawings/%s.pdf)" % pid)
+    links += ["[FCStd](cad/fcstd/%s.FCStd)" % pid, "[STEP](cad/step/%s.step)" % pid]
+    return " · ".join(links)
+
+
 def size(r):
     return " x ".join("%g" % v for v in r["size_mm"])
 
@@ -40,11 +53,12 @@ def catalog_md():
         if not rows:
             continue
         out.append("### %s (%d types)\n" % (fam, len(rows)))
-        out.append("| 3D | ID | Part | Size (mm) | Core kit | Notes |")
-        out.append("|---|---|---|---|---:|---|")
+        out.append("| 3D | ID | Part | Size (mm) | Core kit | Notes | Files |")
+        out.append("|---|---|---|---|---:|---|---|")
         for r in rows:
-            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s |" % (
-                img(r["id"]), r["id"], r["id"], esc(r["title"]), size(r), r["qty"] or "-", esc(r["note"])))
+            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s | %s |" % (
+                img(r["id"]), r["id"], r["id"], esc(r["title"]), size(r), r["qty"] or "-", esc(r["note"]),
+                files(r["id"])))
         out.append("")
     return "\n".join(out)
 
@@ -57,13 +71,13 @@ def modules_md():
         if not rows:
             continue
         out.append("### %s (%d)\n" % (title, len(rows)))
-        out.append("| 3D | ID | Module | 中文 | What it does | Candidate chip | Phase | Replaces (45-in-1 kit) |")
-        out.append("|---|---|---|---|---|---|---|---|")
+        out.append("| 3D | ID | Module | 中文 | What it does | Candidate chip | Phase | Replaces (45-in-1 kit) | Files |")
+        out.append("|---|---|---|---|---|---|---|---|---|")
         for r in rows:
             m = r["module"]
-            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s | %s | %s |" % (
+            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s | %s | %s | %s |" % (
                 img(r["id"], 120), r["id"], r["id"], esc(r["title"]), m["zh"], esc(m["does"]), esc(m["chip"]),
-                PHASE[m["phase"]], esc(m["replaces"]) or "new"))
+                PHASE[m["phase"]], esc(m["replaces"]) or "new", files(r["id"])))
         out.append("")
     return "\n".join(out)
 

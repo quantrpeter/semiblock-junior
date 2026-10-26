@@ -266,7 +266,11 @@ function renderInfo(row, kind) {
   if (m) rows.push(['Chinese', m.zh], ['Phase', m.phase], ['Chip', m.chip], ['Replaces', m.replaces || '-']);
   el.innerHTML = `<h2>${esc(row.title)}</h2>${row.note ? `<p>${esc(row.note)}</p>` : ''}
     <dl>${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
-    <p class="files">CAD: <code>cad/step/${esc(row.id)}.step</code> &middot; <code>cad/stl/${esc(row.id)}.stl</code></p>`;
+    <div class="files"><b>Download</b>
+      ${row.dwg_sheets ? `<a href="../drawings/${esc(row.id)}.pdf" target="_blank">2D drawing PDF (${row.dwg_sheets} sheet${row.dwg_sheets > 1 ? 's' : ''})</a>` : ''}
+      <a href="../cad/fcstd/${esc(row.id)}.FCStd" download>FreeCAD (.FCStd)</a>
+      <a href="../cad/step/${esc(row.id)}.step" download>STEP</a>
+      <a href="../cad/stl/${esc(row.id)}.stl" download>STL</a></div>`;
 }
 
 // ------------------------------------------------------------------ sidebar
