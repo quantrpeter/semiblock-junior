@@ -186,11 +186,11 @@ def tl_exploded_scene():
 
 def tl_steps_scene(step):
     I = _beam_pair(3, (-8.0, 0.0, 0.0), along=(1, 0, 0), name="beam")
-    state = "locked" if step == 3 else "open"
-    lift = 16.0 if step == 1 else 0.0
+    state = "locked" if step == 3 else "open"     # step 0 = open, no arrows (knob close-up)
+    lift = 12.0 if step == 1 else 0.0
     I.append(place(P.tl_pin(2, state=state), "tlpin", origin=(0.0, 0.0, lift)))
     if step == 1:
-        I.append(Instance("arrow", [Body("arrow", arrow_straight((-7.5, 0, 34.0), (-7.5, 0, 6.0), 0.8, 2.2),
+        I.append(Instance("arrow", [Body("arrow", arrow_straight((-7.5, 0, 25.0), (-7.5, 0, 6.0), 0.8, 2.2),
                                          "arrow", False)]))
     if step == 2:
         I.append(Instance("arrow", [Body("arrow", arrow_turn((0, 0, 4.6), 1, 6.4, 150, -220, 0.55, 1.6),
@@ -351,9 +351,13 @@ SHOTS = [
          {"label": "Cam arcs block the fingers - lip cannot retract", "p": [0, 36.0, -12.5]},
          {"label": "Lip held behind the counterbore step", "p": [0, 38.6, -15.3]},
      ]},
-    {"name": "twistlock-step-1", "scene": "tl_step1", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
-    {"name": "twistlock-step-2", "scene": "tl_step2", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
-    {"name": "twistlock-step-3", "scene": "tl_step3", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
+    {"name": "twistlock-step-1", "scene": "tl_step1", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 2], "dist": 108}},
+    {"name": "twistlock-step-2", "scene": "tl_step2", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 2], "dist": 108}},
+    {"name": "twistlock-step-3", "scene": "tl_step3", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 2], "dist": 108}},
+    {"name": "twistlock-knob-open", "scene": "tl_step0", "size": [600, 600], "ground": False,
+     "view": {"dir": [0.3, -0.45, 1.0], "lens": 85, "target": [0, 0, 2.0], "dist": 28}},
+    {"name": "twistlock-knob-locked", "scene": "tl_step3", "size": [600, 600], "ground": False,
+     "view": {"dir": [0.3, -0.45, 1.0], "lens": 85, "target": [0, 0, 2.0], "dist": 28}},
     {"name": "collar", "scene": "collar", "size": [2000, 1100], "view": {"dir": [1.0, -0.45, 0.4], "lens": 100, "fit": 0.62},
      "title": "TwistLock Collar - axle lock",
      "anchors": [
@@ -435,7 +439,7 @@ def build_scenes():
     sc["tl_section"] = tl_section_scene()
     sc["tl_demo"] = tl_demo_scene()
     sc["tl_exploded"] = tl_exploded_scene()
-    for k in (1, 2, 3):
+    for k in (0, 1, 2, 3):
         sc["tl_step%d" % k] = tl_steps_scene(k)
     sc["collar"] = collar_scene()
     sc["collar_exploded"] = collar_exploded_scene()

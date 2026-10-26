@@ -615,7 +615,7 @@ def sensor_ultrasonic():
     tools.append(cav)
     tools.append(engrave("US", 3.0, 0.25, (8.0, 14.0, lz - 0.1), (0, 1, 0), (-1, 0, 0)))
     parts = _two_tone(shell, tools, cell, "sb_blue", zb=3.0)
-    return PartDef("SB-S-US", "Ultrasonic distance", parts + [
+    return PartDef("SB-US", "Ultrasonic distance", parts + [
         Body("panel", panel, "sb_blue", False),
         Body("eyes", Part.makeCompound(eyes), "steel", False), Body("mesh", Part.makeCompound(mesh), "mesh_dark", False),
         Body("brows", Part.makeCompound(brows), "led_cyan", False),
@@ -640,7 +640,7 @@ def sensor_line():
     tools.append(cav)
     tools.append(engrave("LINE", 2.6, 0.25, (4.0, 24.0, lz - 0.1), (0, 1, 0), (-1, 0, 0)))
     parts = _two_tone(shell, tools, cell, "sb_blue", zb=3.0)
-    return PartDef("SB-S-LINE", "Line sensor x5", parts + [
+    return PartDef("SB-LINE", "Line sensor x5", parts + [
         Body("windows", Part.makeCompound(win), "glass_dark", False),
         Body("leds_on", Part.makeCompound(leds_on), "led_red", False),
         Body("leds_off", Part.makeCompound(leds_off), "glass_dark", False),

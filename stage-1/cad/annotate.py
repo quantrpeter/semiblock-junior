@@ -183,6 +183,21 @@ def steps_strip():
         text(d, (cx, cy + 2), num, 38, bold=True, fill=(255, 255, 255), anchor="mm")
         text(d, (x + tw / 2, H - 100), head, 36, bold=True, anchor="mm")
         text(d, (x + tw / 2, H - 55), sub, 26, fill=MUTED, anchor="mm")
+        knob = {1: "twistlock-knob-open", 2: "twistlock-knob-locked"}.get(i)
+        kp = os.path.join(RAW, (knob or "") + ".png")
+        if knob and os.path.exists(kp):
+            k = Image.open(kp).convert("RGBA")
+            ks = 270
+            k = k.crop((60, 60, k.width - 60, k.height - 60)).resize((ks, ks), Image.LANCZOS)
+            disc = Image.new("RGBA", (ks, ks), (255, 255, 255, 255))
+            disc.alpha_composite(k)
+            mask = Image.new("L", (ks, ks), 0)
+            ImageDraw.Draw(mask).ellipse([0, 0, ks - 1, ks - 1], fill=255)
+            px, py = x + tw - ks - 16, 100 + th - ks - 16
+            canvas.paste(disc, (px, py), mask)
+            ring = (232, 50, 46) if i == 1 else (29, 196, 90)
+            d.ellipse([px - 3, py - 3, px + ks + 2, py + ks + 2], outline=ring, width=6)
+            text(d, (px + ks / 2, py - 22), "window: RED" if i == 1 else "window: GREEN", 24, bold=True, fill=ring, anchor="mm")
         if i < 2:
             ax = x + tw + 10
             d.polygon([(ax - 12, 100 + th / 2 - 22), (ax + 12, 100 + th / 2), (ax - 12, 100 + th / 2 + 22)], fill=(148, 163, 184))
@@ -255,7 +270,8 @@ def contact_sheet(title, rows, cols=5, scale=0.5):
 def main():
     n = 0
     for fn in sorted(os.listdir(RAW)):
-        if not fn.endswith(".json") or fn.startswith("part-") or fn.startswith("twistlock-step"):
+        if not fn.endswith(".json") or fn.startswith("part-") or fn.startswith("twistlock-step") \
+                or fn.startswith("twistlock-knob"):
             continue
         meta = json.load(open(os.path.join(RAW, fn)))
         callout_image(meta).convert("RGB").save(os.path.join(OUT, meta["name"] + ".png"), optimize=True)
