@@ -503,59 +503,7 @@ Phase **P1** = launch (Core Set and Science Pack), **P2** = add-on packs in year
 
 <!-- END:modules -->
 
-### 7.3 What happened to the 45-in-1 Arduino kit
-
-| # | Arduino kit board | SemiBlock Junior | Why |
-|---|---|---|---|
-| 1 | 旋转编码器 Rotary encoder | SB-ENC | same, with a big knob |
-| 2 | 霍尔磁力 Hall (digital) | SB-MAG | one magnetic module does 5 boards' jobs |
-| 3 | 红外发射 IR transmitter | SB-IRX | send + receive in one |
-| 4 | 光遮断 Photo-interrupter | motor encoders, SB-IRP | rotation counting is built into every motor |
-| 5 | 震动开关 Vibration switch | SB-KNOCK, hub IMU | |
-| 6 | 红外接收 IR receiver | SB-IRX | |
-| 7 | 18B20 温度 | SB-PROBE, SB-ENV | waterproof probe for science |
-| 8 | 手指测心跳 Heartbeat | SB-HEART | adds SpO₂ |
-| 9 | 倾斜开关 Tilt switch | hub IMU, SB-IMU | real angles instead of on/off |
-| 10 | 3色LED | SB-RGB | |
-| 11 | 模拟温度 Thermistor | SB-ENV | calibrated ±0.2 °C |
-| 12 | 激光发射头 Laser emitter | **not included** | typical modules are Class 3R, a risk to eyes. Use SB-TOF (Class 1) |
-| 13 | 霍尔 Hall (analog) | SB-MAG | |
-| 14 | 魔术光杯 Magic light cup | SB-RGB + SB-IMU | |
-| 15 | 水银开关 Mercury switch | **not included** | contains mercury; the hub IMU replaces it |
-| 16 | 无源蜂鸣器 Passive buzzer | hub speaker, SB-SPK | |
-| 17 | 敲击 Knock | SB-KNOCK | |
-| 18 | 七彩闪烁LED | SB-RGB | |
-| 19 | 有源蜂鸣器 Active buzzer | hub speaker | |
-| 20 | 双色LED | SB-RGB | |
-| 21 | 迷你磁簧 Mini reed | SB-MAG | |
-| 22 | 光敏电阻 Photoresistor | SB-LUX | real lux, not 0 to 1023 |
-| 23 | 温湿度 DHT11 | SB-ENV | |
-| 24 | 三色RGB | SB-RGB | |
-| 25 | 按键开关 Button | SB-BTN | |
-| 26 | 小双色LED | SB-RGB | |
-| 27 | 高感度声音 Sound | SB-SOUND, hub mic | |
-| 28 | 数字温度 Digital temp | SB-ENV | |
-| 29 | 线性霍尔 Linear Hall | SB-MAG | |
-| 30 | 小麦克风 Microphone | SB-SOUND | |
-| 31 | 火焰 Flame | SB-FLAME | |
-| 32 | 磁簧开关 Reed switch | SB-MAG | |
-| 33 | 人体触摸 Touch | SB-TOUCH | |
-| 34 | 循迹 Line tracking | SB-LINE | 5 channels, auto-calibrating |
-| 35 | 避障 Obstacle | SB-IRP | |
-| 36 | 继电器 Relay (mains-rated) | SB-SWITCH (≤ 12 V) | **no mains voltage in a kids' kit** |
-| 37 | XY摇杆 Joystick | SB-JOY | |
-| 38 | 水位 Water level | SB-WATER | gold-plated traces |
-| 39 | DS1302 时钟 RTC | hub RTC + Wi-Fi time | |
-| 40 | 陀螺仪 MPU-6050 | hub IMU, SB-IMU | |
-| 41 | 土壤湿度 Soil (resistive) | SB-SOIL (capacitive) | the resistive fork corrodes in days |
-| 42 | 降压模块 Buck converter | not needed | power handled by the hub |
-| 43 | SD卡读写 SD card | hub flash + semiblock.ai logging | |
-| 44 | 超声波 Ultrasonic | SB-US | |
-| 45 | 电源模块 Breadboard power | not needed | |
-
-**Result:** 45 loose boards become 23 SemiBlock modules (several boards merge into one) plus hub features. Three boards are dropped for safety (mercury, laser, mains relay), and four are absorbed by the hub (buck, breadboard power, SD card, RTC). On top of that, SemiBlock adds **38 sensing and output functions the kit never had**: ToF, PIR, radar, colour, gesture, UV, IR thermometer, thermal camera, bumper, force, weight, knob, slider, keypad, axle angle, compass, CO₂, TVOC, PM2.5, gas, pH, TDS, GPS, AI camera, offline voice, RFID, LED ring, LED matrix, traffic light, OLED, 4-digit display, speaker, fan, pump, vibration, electromagnet, solar and energy meter.
-
-### 7.4 Deliberately not in the kit
+### 7.3 Deliberately not in the kit
 
 Mains relays or anything above 12 V; Class 2 or higher lasers; mercury switches; resistive soil forks; unprotected lithium cells; bare breadboards and jumpers for P3 and P4 (they remain possible for older students through a "maker adapter" in a later phase). The gas sensor (heated MQ-2) is P3 and teacher-only.
 
