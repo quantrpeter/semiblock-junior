@@ -12,7 +12,7 @@ import os
 import re
 import textwrap
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STAGE = os.path.dirname(HERE)
@@ -36,7 +36,13 @@ def font(path, size):
     return ImageFont.truetype(path, size)
 
 
-def background(w, h, top=(247, 249, 253), bottom=(232, 238, 246)):
+# Renders sit on a mid-light grey-blue "stage" so white parts keep a visible
+# outline; contact sheets use a lighter page behind the cards.
+STAGE_BG = ((236, 240, 246), (212, 219, 229))
+PAGE_BG = ((248, 250, 252), (238, 242, 247))
+
+
+def background(w, h, top=STAGE_BG[0], bottom=STAGE_BG[1]):
     bg = Image.new("RGB", (w, h), top)
     px = ImageDraw.Draw(bg)
     for y in range(h):
@@ -53,6 +59,21 @@ def text(draw, xy, s, size, bold=False, fill=INK, anchor="la"):
     f = font(F_CJK if has_cjk(s) else (F_BOLD if bold else F_REG), size)
     draw.text(xy, s, font=f, fill=fill, anchor=anchor)
     return f
+
+
+def fade_edges(img, frac=0.1):
+    """Fade alpha to zero near the borders so soft ground shadows end smoothly
+    instead of stopping at a hard rectangle on the page background."""
+    w, h = img.size
+    m = max(1, int(frac * min(w, h)))
+    mask = Image.new("L", (w, h), 255)
+    d = ImageDraw.Draw(mask)
+    for i in range(m):
+        t = i / m
+        d.rectangle([i, i, w - 1 - i, h - 1 - i], outline=int(255 * t * t * (3 - 2 * t)))
+    out = img.copy()
+    out.putalpha(ImageChops.multiply(img.getchannel("A"), mask))
+    return out
 
 
 # ------------------------------------------------------------- callouts
@@ -87,6 +108,7 @@ def autocrop(src, anchors, keep_width):
 def callout_image(meta):
     src = Image.open(os.path.join(RAW, meta["name"] + ".png")).convert("RGBA")
     src, anchors_c = autocrop(src, meta.get("anchors", []), keep_width=bool(meta.get("anchors")))
+    src = fade_edges(src)
     meta = dict(meta, anchors=anchors_c)
     w, h = src.size
     header = 96 if meta.get("title") else 0
@@ -167,7 +189,7 @@ def steps_strip():
         p = os.path.join(RAW, "twistlock-step-%d.png" % k)
         if not os.path.exists(p):
             return None
-        tiles.append(Image.open(p).convert("RGBA"))
+        tiles.append(fade_edges(Image.open(p).convert("RGBA")))
     tw, th = tiles[0].size
     W, H = tw * 3 + 80, th + 230
     canvas = background(W, H)
@@ -211,9 +233,10 @@ def part_card(row, scale=1.0):
         src = src.resize((800, int(src.height * 800 / src.width)), Image.LANCZOS)
     w, h = src.size
     band = 118
-    card = background(w, h + band, (250, 251, 254), (238, 242, 248))
+    card = background(w, h + band)
     card.alpha_composite(src, (0, 0))
     d = ImageDraw.Draw(card)
+    d.rectangle([0, h, w, h + band], fill=(252, 253, 255))
     mod = row.get("module")
     accent = CAT_COLORS.get(mod["cat"], BLUE) if mod else (MAGENTA if row["family"].startswith("TwistLock") else BLUE)
     d.rectangle([0, h, w, h + 6], fill=accent)
@@ -251,7 +274,7 @@ def contact_sheet(title, rows, cols=5, scale=0.5):
     n_rows = (len(cards) + cols - 1) // cols
     W = cols * cw + (cols + 1) * g
     H = 110 + n_rows * (ch + g) + g
-    sheet = background(W, H)
+    sheet = background(W, H, *PAGE_BG)
     d = ImageDraw.Draw(sheet)
     text(d, (g + 8, 34), title, 38, bold=True)
     text(d, (W - g - 8, 46), "SemiBlock Junior  |  %d parts" % len(cards), 22, fill=MUTED, anchor="ra")

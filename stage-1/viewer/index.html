@@ -6,7 +6,7 @@
 <title>SemiBlock Junior 3D</title>
 <style>
   :root {
-    --bg: #eef2f8; --panel: #ffffff; --ink: #0f172a; --muted: #5a6678; --line: #d8e0ec;
+    --bg: #dde3ec; --panel: #ffffff; --ink: #0f172a; --muted: #5a6678; --line: #d8e0ec;
     --blue: #1f6fe5; --magenta: #c8209e; --green: #16a34a; --red: #e8322e;
   }
   * { box-sizing: border-box; }
@@ -83,6 +83,7 @@
   <div class="hud">
     <div class="row" id="lockGroup"><label>Lock</label><button id="lockBtn" data-state="locked">Unlock all</button><span id="lockState"></span></div>
     <div class="row" id="explodeGroup"><label>Explode</label><input id="explode" type="range" min="0" max="1" step="0.01" value="0"></div>
+    <div class="row"><label>Edges</label><button id="edgesBtn" class="on">Lines</button></div>
     <div class="row"><label>Section</label>
       <button data-section="">Off</button><button data-section="x">X</button><button data-section="y">Y</button><button data-section="z">Z</button>
       <input id="sectionPos" type="range" min="0" max="100" value="50" disabled>

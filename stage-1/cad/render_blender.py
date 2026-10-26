@@ -4,7 +4,8 @@
 
 Reads cad/build/shots.json + cad/build/render/<scene>.glb and writes
 cad/build/raw/<shot>.png (transparent) + <shot>.json (2D callout anchors).
-Env: SB_SCALE=0.5 renders at half size for quick checks, SB_SAMPLES=64.
+Env: SB_SCALE=0.5 renders at half size for quick checks, SB_SAMPLES=64,
+SB_LINES=0 turns off the edge lines, SB_RAW=<dir> writes test renders elsewhere.
 """
 import json
 import math
@@ -17,7 +18,7 @@ from mathutils import Vector
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BUILD = os.path.join(HERE, "build")
-RAW = os.path.join(BUILD, "raw")
+RAW = os.environ.get("SB_RAW", os.path.join(BUILD, "raw"))
 os.makedirs(RAW, exist_ok=True)
 
 argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
@@ -54,20 +55,49 @@ def setup(w, h):
     sc.render.film_transparent = True
     sc.render.image_settings.file_format = "PNG"
     sc.render.image_settings.color_mode = "RGBA"
-    sc.view_settings.view_transform = os.environ.get("SB_VIEW", "Standard")
+    # Khronos PBR Neutral keeps base colours true and rolls highlights off
+    # instead of clipping them, so white parts keep visible face shading.
+    sc.view_settings.view_transform = os.environ.get("SB_VIEW", "Khronos PBR Neutral")
     for look in os.environ.get("SB_LOOKS", "Medium Contrast|None").split("|"):
         try:
             sc.view_settings.look = look
             break
         except Exception:
             pass
-    sc.view_settings.exposure = float(os.environ.get("SB_EXPOSURE", "-0.5"))
+    sc.view_settings.exposure = float(os.environ.get("SB_EXPOSURE", "0"))
     world = bpy.data.worlds.new("studio")
     world.use_nodes = True
     bg = world.node_tree.nodes["Background"]
     bg.inputs["Color"].default_value = (0.86, 0.9, 0.96, 1.0)
-    bg.inputs["Strength"].default_value = float(os.environ.get("SB_WORLD", "0.38"))
+    bg.inputs["Strength"].default_value = float(os.environ.get("SB_WORLD", "0.15"))
     sc.world = world
+    if os.environ.get("SB_LINES", "1") == "1":
+        add_outlines(sc, max(1.2, w / 900))
+
+
+def add_outlines(sc, width):
+    """Thin grey Freestyle lines on silhouettes and sharp edges, like building
+    instructions: hole rims and face edges stay readable on white parts."""
+    sc.render.use_freestyle = True
+    sc.render.line_thickness_mode = "ABSOLUTE"
+    sc.render.line_thickness = width * float(os.environ.get("SB_LINE_W", "1")) * SCALE
+    fs = bpy.context.view_layer.freestyle_settings
+    fs.crease_angle = math.radians(140)
+    ls = fs.linesets[0] if fs.linesets else fs.linesets.new("lines")
+    ls.select_by_visibility = True
+    ls.visibility = "VISIBLE"
+    ls.select_by_edge_types = True
+    ls.select_silhouette = True
+    ls.select_border = True
+    ls.select_crease = True
+    ls.select_by_collection = True
+    ls.collection_negation = "EXCLUSIVE"
+    ls.collection = bpy.data.collections.get("no_lines") or bpy.data.collections.new("no_lines")
+    style = ls.linestyle or bpy.data.linestyles.new("sb_line")
+    ls.linestyle = style
+    style.color = (0.09, 0.11, 0.14)
+    style.alpha = float(os.environ.get("SB_LINE_A", "0.6"))
+    style.thickness = 1.0
 
 
 def tune_materials():
@@ -86,13 +116,12 @@ def tune_materials():
             setv("Roughness", 0.75)
             setv("Coat Weight", 0.0)
         elif name.startswith("sb_"):
-            if name == "sb_lgrey":          # keep light grey distinct from white
+            if name == "sb_white":          # real white ABS reflects ~80%, not 95%
                 c = bsdf.inputs["Base Color"].default_value
-                setv("Base Color", (c[0] * 0.72, c[1] * 0.72, c[2] * 0.72, 1.0))
+                setv("Base Color", (c[0] * 0.82, c[1] * 0.82, c[2] * 0.82, 1.0))
+                setv("Subsurface Weight", 0.04)
             setv("Coat Weight", 0.18)
             setv("Coat Roughness", 0.12)
-            if name in ("sb_white",):
-                setv("Subsurface Weight", 0.04)
         elif name == "glass_dark":
             setv("Roughness", 0.22)
             setv("Coat Weight", 0.25)
@@ -177,10 +206,11 @@ def add_lights(cam, target, dist, radius):
         look_at(lo, target)
     r = max(radius, 0.01)
     k = (r / 0.08) ** 2 * float(os.environ.get("SB_LIGHT", "1"))
-    area("key", target - right * 2.2 * r + up * 3.2 * r - fwd * 1.2 * r, 2.6 * r, 3.0 * k)
-    area("fill", target + right * 3.0 * r + up * 1.2 * r - fwd * 1.6 * r, 3.2 * r, 1.0 * k, (0.92, 0.96, 1.0))
-    area("rim", target + fwd * 3.0 * r + up * 2.4 * r, 2.4 * r, 1.8 * k)
-    area("top", target + up * 4.5 * r, 4.0 * r, 0.7 * k)
+    # Strong key from upper left, weak fill, no overhead light: top, front and
+    # side faces get clearly different brightness and holes fall into shade.
+    area("key", target - right * 2.6 * r + up * 2.6 * r - fwd * 1.8 * r, 1.6 * r, 2.6 * k)
+    area("fill", target + right * 3.2 * r + up * 0.8 * r - fwd * 2.0 * r, 4.0 * r, 0.6 * k, (0.92, 0.96, 1.0))
+    area("rim", target + fwd * 3.0 * r + up * 2.0 * r + right * 1.0 * r, 2.0 * r, 1.1 * k)
 
 
 def refine_framing(cam, objs, fit, w, h, passes=3):
@@ -217,6 +247,9 @@ def add_ground(lo, hi):
     s = max(hi.x - lo.x, hi.y - lo.y, hi.z - lo.z) * 30
     g.scale = (s, s, 1)
     g.is_shadow_catcher = True
+    no_lines = bpy.data.collections.get("no_lines")
+    if no_lines is not None:
+        no_lines.objects.link(g)
 
 
 def project_anchors(shot, cam):

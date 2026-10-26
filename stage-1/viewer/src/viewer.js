@@ -57,32 +57,38 @@ const view = document.getElementById('view');
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+// Neutral tone mapping keeps white parts from clipping (same idea as the Blender renders)
+renderer.toneMapping = THREE.NeutralToneMapping;
+renderer.toneMappingExposure = 1.0;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.localClippingEnabled = true;
 view.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xeef2f8);
+scene.background = new THREE.Color(0xdde3ec);
 const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-scene.environmentIntensity = 0.85;
+scene.environmentIntensity = 0.45;
 const camera = new THREE.PerspectiveCamera(32, 1, 0.0005, 50);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+const sun = new THREE.DirectionalLight(0xffffff, 2.2);
 sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048);
 sun.shadow.bias = -0.0002;
-scene.add(sun, sun.target, new THREE.HemisphereLight(0xffffff, 0xdfe6f0, 0.5));
+const fill = new THREE.DirectionalLight(0xeaf2ff, 0.35);
+scene.add(sun, sun.target, fill, fill.target, new THREE.HemisphereLight(0xffffff, 0xc9d2de, 0.25));
+// thin dark lines on sharp edges so hole rims and faces read on white parts
+const edgeMat = new THREE.LineBasicMaterial({ color: 0x1b222c, transparent: true, opacity: 0.38 });
+let edgesOn = true;
 const ground = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShadowMaterial({ opacity: 0.16 }));
 ground.rotation.x = -Math.PI / 2;
 ground.receiveShadow = true;
 scene.add(ground);
 
 const clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0);
+edgeMat.clippingPlanes = [clipPlane];
 let current = null;            // { root, box, lockables, explodables, kind, meta }
 let sectionAxis = null;
 let explodeT = 0;
@@ -110,6 +116,8 @@ function frameObject(box, dir = new THREE.Vector3(1.0, 0.75, 1.1)) {
   ground.scale.setScalar(radius * 12);
   sun.position.copy(center).add(new THREE.Vector3(-0.6, 1.4, 0.8).multiplyScalar(radius * 3));
   sun.target.position.copy(center);
+  fill.position.copy(center).add(new THREE.Vector3(1.2, 0.4, -0.2).multiplyScalar(radius * 3));
+  fill.target.position.copy(center);
   const sc = sun.shadow.camera;
   sc.left = sc.bottom = -radius * 1.6; sc.right = sc.top = radius * 1.6;
   sc.near = radius * 0.5; sc.far = radius * 8;
@@ -119,15 +127,27 @@ function frameObject(box, dir = new THREE.Vector3(1.0, 0.75, 1.1)) {
 function prepare(root) {
   const lockables = [], explodables = [];
   const nodes = [];
+  const tuned = new Set();
   root.traverse((o) => nodes.push(o));          // snapshot: we add children below
   nodes.forEach((o) => {
     if (o.isMesh) {
       o.castShadow = o.receiveShadow = true;
       const m = o.material;
+      if (!tuned.has(m)) {
+        tuned.add(m);
+        if (m.name === 'sb_white') m.color.multiplyScalar(0.82);   // real white ABS reflects ~80%
+        m.polygonOffset = true;                                     // keep edge lines on top
+        m.polygonOffsetFactor = 1;
+        m.polygonOffsetUnits = 1;
+      }
       m.clippingPlanes = [clipPlane];
       m.clipShadows = true;
       m.side = THREE.FrontSide;
       m.needsUpdate = true;
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 35), edgeMat);
+      edges.userData.isEdge = true;
+      edges.visible = edgesOn;
+      o.add(edges);
       const cap = new THREE.Mesh(o.geometry, new THREE.MeshBasicMaterial({
         color: m.color ? m.color.clone().multiplyScalar(0.55) : 0x444444, side: THREE.BackSide,
         clippingPlanes: [clipPlane] }));
@@ -152,6 +172,12 @@ function prepare(root) {
                                                      off: ex.explode === 'hide' ? null : cadToGl(ex.explode) });
   });
   return { lockables, explodables };
+}
+
+function setEdges(on) {
+  edgesOn = on;
+  ui('edgesBtn').classList.toggle('on', on);
+  if (current) current.root.traverse((o) => { if (o.userData.isEdge) o.visible = on; });
 }
 
 function setCaps(on) {
@@ -297,6 +323,7 @@ document.querySelectorAll('[data-section]').forEach((b) => b.addEventListener('c
   sectionAxis = b.dataset.section || null; applySection();
 }));
 ui('sectionPos').addEventListener('input', applySection);
+ui('edgesBtn').addEventListener('click', () => setEdges(!edgesOn));
 ui('reset').addEventListener('click', () => current && frameObject(current.box));
 ui('spin').addEventListener('click', () => { controls.autoRotate = !controls.autoRotate; ui('spin').classList.toggle('on', controls.autoRotate); });
 ui('shot').addEventListener('click', () => {
