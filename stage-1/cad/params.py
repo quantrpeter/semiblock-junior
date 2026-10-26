@@ -48,7 +48,7 @@ TL_KNOB_D = 6.0         # fits inside the 8 mm grid with 2 mm to the next knob
 TL_KNOB_T = 1.2
 TL_WING_W = 1.6
 TL_WING_H = 1.4         # total protrusion above beam face = KNOB_T + WING_H
-TL_WINDOW_D = 1.1       # two status windows in the knob
+TL_WINDOW_ARC = 50      # two 50 deg arc status windows in the knob (readable from ~1 m)
 TL_WINDOW_R = 2.2       # radius of the status windows / status ring
 TL_LOCK_TURN_DEG = -90  # clockwise quarter turn (seen from the knob)
 

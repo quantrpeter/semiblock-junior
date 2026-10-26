@@ -94,8 +94,9 @@ def tune_materials():
             if name in ("sb_white",):
                 setv("Subsurface Weight", 0.04)
         elif name == "glass_dark":
-            setv("Coat Weight", 1.0)
-            setv("Coat Roughness", 0.02)
+            setv("Roughness", 0.22)
+            setv("Coat Weight", 0.25)
+            setv("Coat Roughness", 0.1)
         elif name in ("ind_red", "ind_green"):
             setv("Emission Color", bsdf.inputs["Base Color"].default_value)
             setv("Emission Strength", 0.6)
@@ -152,6 +153,8 @@ def frame_camera(view, lo, hi, w, h):
             v = c - target
             x, y, z = v.dot(right), v.dot(upv), v.dot(d)
             dist = max(dist, abs(x) / tx + z, abs(y) / ty + z)
+    if "dist" in view:                       # fixed camera: same framing across shots
+        dist = view["dist"] * MM
     cam.location = target + d * dist
     look_at(cam, target)
     return cam, dist
@@ -250,7 +253,9 @@ def render_shot(shot):
     cam, dist = frame_camera(shot["view"], lo, hi, w, h)
     target = (lo + hi) / 2 if "target" not in shot["view"] else cad(shot["view"]["target"])
     add_lights(cam, target, dist, (hi - lo).length / 2)
-    refine_framing(cam, objs, shot["view"].get("fit", 0.8), w, h)
+    if "dist" not in shot["view"]:
+        refine_framing(cam, objs, shot["view"].get("fit", 0.8), w, h)
+    bpy.context.scene.view_settings.exposure += shot.get("exposure", 0.0)
     if shot.get("ground", True):
         add_ground(lo, hi)
     anchors = project_anchors(shot, cam)

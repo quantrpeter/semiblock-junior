@@ -153,8 +153,8 @@ def brain_hub():
     tools += grid_holes("+y", [(x, z) for x in xs for z in (12.0, 20.0)], cell)
     tools += grid_holes("-y", [(x, z) for x in xs for z in (12.0, 20.0)], cell)
     tools += grid_holes("-z", [(x, y) for x in xs for y in grid(ny)], cell)
-    body = shell.cut(tools)
-    return PartDef("SB-HUB", "Junior Brain (ESP32-S3 hub)", [Body("shell", body, "sb_white")] + extra,
+    parts = _two_tone(shell, tools, cell, "sb_blue", zb=5.0)
+    return PartDef("SB-HUB", "Junior Brain (ESP32-S3 hub)", parts + extra,
                    {"family": "Motors & hub"})
 
 

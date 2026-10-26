@@ -351,9 +351,9 @@ SHOTS = [
          {"label": "Cam arcs block the fingers - lip cannot retract", "p": [0, 36.0, -12.5]},
          {"label": "Lip held behind the counterbore step", "p": [0, 38.6, -15.3]},
      ]},
-    {"name": "twistlock-step-1", "scene": "tl_step1", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "fit": 0.8}},
-    {"name": "twistlock-step-2", "scene": "tl_step2", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "fit": 0.8}},
-    {"name": "twistlock-step-3", "scene": "tl_step3", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "fit": 0.8}},
+    {"name": "twistlock-step-1", "scene": "tl_step1", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
+    {"name": "twistlock-step-2", "scene": "tl_step2", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
+    {"name": "twistlock-step-3", "scene": "tl_step3", "size": [900, 900], "view": {"dir": [0.9, -1.0, 0.85], "lens": 85, "target": [0, 0, 3], "dist": 150}},
     {"name": "collar", "scene": "collar", "size": [2000, 1100], "view": {"dir": [1.0, -0.45, 0.4], "lens": 100, "fit": 0.62},
      "title": "TwistLock Collar - axle lock",
      "anchors": [
@@ -380,7 +380,7 @@ SHOTS = [
      ]},
     {"name": "parts-kit", "scene": "parts_kit", "size": [2200, 1250], "view": {"dir": [0.15, -1.0, 1.25], "lens": 70, "fit": 0.92},
      "title": "Stage-1 mechanical parts"},
-    {"name": "hub-front", "scene": "hub", "size": [1800, 1150], "view": {"dir": [1.0, -0.75, 0.75], "lens": 85, "fit": 0.58},
+    {"name": "hub-front", "scene": "hub", "exposure": -0.4, "size": [1800, 1150], "view": {"dir": [1.0, -0.75, 0.75], "lens": 85, "fit": 0.58},
      "title": "Junior Brain - front",
      "anchors": [
          {"label": "1.54 in colour screen", "p": [18.0, 0.0, 31.6]},
@@ -390,7 +390,7 @@ SHOTS = [
          {"label": "Ports A B C - any motor or sensor", "p": [43.9, -16.0, 18.0]},
          {"label": "Pin holes on sides and bottom", "p": [12.0, -24.0, 12.0]},
      ]},
-    {"name": "hub-back", "scene": "hub", "size": [1800, 1150], "view": {"dir": [-1.0, 0.8, 0.6], "lens": 85, "fit": 0.58},
+    {"name": "hub-back", "scene": "hub", "exposure": -0.4, "size": [1800, 1150], "view": {"dir": [-1.0, 0.8, 0.6], "lens": 85, "fit": 0.58},
      "title": "Junior Brain - back",
      "anchors": [
          {"label": "Ports D E F", "p": [-43.9, 16.0, 18.0]},
@@ -409,7 +409,7 @@ SHOTS = [
          {"label": "Temp / humidity / pressure", "p": [48.0, 56.0, 7.9]},
          {"label": "SemiLink-6 plug", "p": [96.0, 44.0, 6.8]},
      ]},
-    {"name": "semilink", "scene": "semilink", "size": [1800, 1100], "view": {"dir": [1.0, -0.8, 0.55], "lens": 100, "fit": 0.55},
+    {"name": "semilink", "scene": "semilink", "size": [1800, 1100], "view": {"dir": [1.0, -0.8, 0.55], "lens": 100, "target": [10, 0, 17], "dist": 150},
      "title": "SemiLink-6 connector",
      "anchors": [
          {"label": "Keyed 'house' shape: cannot go in upside down", "p": [10.0, -4.2, 20.7]},

@@ -56,8 +56,38 @@ def text(draw, xy, s, size, bold=False, fill=INK, anchor="la"):
 
 
 # ------------------------------------------------------------- callouts
+def autocrop(src, anchors, keep_width):
+    """Trim empty background (alpha) but keep room for label stacks."""
+    bbox = src.getchannel("A").point(lambda v: 255 if v > 12 else 0).getbbox()
+    if not bbox:
+        return src, anchors
+    w, h = src.size
+    m = int(0.06 * max(w, h))
+    x0, y0, x1, y1 = bbox
+    if keep_width:
+        x0, x1 = 0, w
+    else:
+        x0, x1 = max(0, x0 - m), min(w, x1 + m)
+    y0, y1 = max(0, y0 - m), min(h, y1 + m)
+    if anchors:                                   # enough height for the tallest label stack
+        need = 0
+        for side in ("left", "right"):
+            n = sum(1 for a in anchors if (a.get("side", "auto") == side) or
+                    (a.get("side", "auto") == "auto" and (a["x"] < w / 2) == (side == "left")))
+            need = max(need, n * 104 + 60)
+        if any(a.get("side") in ("top", "bottom") for a in anchors):
+            need += 200
+        extra = max(0, need - (y1 - y0))
+        y0, y1 = max(0, y0 - extra // 2), min(h, y1 + extra - extra // 2)
+    out = src.crop((x0, y0, x1, y1))
+    moved = [dict(a, x=a["x"] - x0, y=a["y"] - y0) for a in anchors]
+    return out, moved
+
+
 def callout_image(meta):
     src = Image.open(os.path.join(RAW, meta["name"] + ".png")).convert("RGBA")
+    src, anchors_c = autocrop(src, meta.get("anchors", []), keep_width=bool(meta.get("anchors")))
+    meta = dict(meta, anchors=anchors_c)
     w, h = src.size
     header = 96 if meta.get("title") else 0
     canvas = background(w, h + header)

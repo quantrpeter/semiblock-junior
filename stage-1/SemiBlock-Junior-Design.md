@@ -123,7 +123,7 @@ Scores: 1 = poor, 5 = excellent.
 The pin has two moulded parts:
 
 * **Sleeve** (POM): a slip-fit shank with a slot that splits the far end into two fingers, and a **catch lip** (Ø 5.4) with a 45° ramp. A flange (Ø 5.9) sits flush inside the near counterbore. Four small ribs stop the sleeve from spinning while you turn the knob.
-* **Core** (POM, magenta): a knob with a wing grip and two status windows, a shaft, and a **D-shaped cam** (2.62 mm across the arcs, 1.9 mm across the flats) that sits inside the fingers.
+* **Core** (POM, magenta): a knob with a wing grip and two 50° arc status windows (big enough to read from about 1 m), a shaft, and a **D-shaped cam** (2.62 mm across the arcs, 1.9 mm across the flats) that sits inside the fingers.
 * A pad-printed **status ring** on the flange (red/red/green/green) shows through the windows.
 
 ![TwistLock exploded](renders/twistlock-exploded.png)
@@ -167,6 +167,7 @@ Details that make it work for kids:
 | Catch lip | Ø 5.4 mm, 45° back ramp | 0.3 mm catch per side behind a 6.2 mm counterbore |
 | Cam | 2.62 mm across arcs / 1.9 mm across flats | blocks fingers when locked / frees 0.35 mm when open |
 | Knob | Ø 6.0 mm, 2.6 mm proud, 1.6 mm wing | fingertip grip; 2 mm gap to the next knob |
+| Status windows | 2 x 50° arc slots, 1.1 mm wide, over a red/green pad-printed ring | readable from about 1 m |
 | Material | POM (acetal) for both parts | fatigue-resistant snap fingers, low friction cam |
 | Turn | 90°, clockwise to lock, detent at both ends | tactile, cannot over-turn |
 

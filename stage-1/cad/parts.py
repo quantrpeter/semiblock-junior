@@ -362,7 +362,8 @@ def tl_core(modules=2):
         box(-2, -TL_CAM_FLATS / 2, zf, 2, TL_CAM_FLATS / 2, 0))        # flats face +-Y = OPEN
     snap = zcyl(1.4, -0.62, -0.42)
     core = knob.fuse(wing).fuse(shaft).fuse(cam).fuse(snap).removeSplitter()
-    core = core.cut([zcyl(TL_WINDOW_D / 2, -0.5, 3, sx * TL_WINDOW_R, 0) for sx in (1, -1)])
+    # two 50 deg arc windows (readable from ~1 m) over the red/green status ring
+    core = core.cut([sector(TL_WINDOW_R - 0.55, TL_WINDOW_R + 0.55, a, TL_WINDOW_ARC, -0.5, 3) for a in (0, 180)])
     return core
 
 
