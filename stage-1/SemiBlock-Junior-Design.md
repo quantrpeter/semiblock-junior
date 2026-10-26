@@ -677,6 +677,8 @@ Rebuild everything after changing a dimension:
 /Applications/Blender.app/Contents/MacOS/Blender -b -P stage-1/cad/render_blender.py
 # 3. callouts, cards, sheets, diagrams, tables
 python3 stage-1/cad/annotate.py && python3 stage-1/cad/diagrams.py && python3 stage-1/cad/make_docs.py
+# 4. only if viewer/src/viewer.js changed (three@0.169.0 + esbuild installed with npm)
+npx esbuild stage-1/viewer/src/viewer.js --bundle --format=iife --minify --outfile=stage-1/viewer/viewer.bundle.js
 ```
 
 ## Sources
