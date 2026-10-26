@@ -1,0 +1,3783 @@
+[
+ {
+  "id": "SB-B02X",
+  "title": "Beam 1x2 (pin + axle hole)",
+  "family": "Beams",
+  "qty": 8,
+  "note": "1 pin hole + 1 axle hole: cranks, levers",
+  "size_mm": [
+   15.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-B03",
+  "title": "Beam 1x3",
+  "family": "Beams",
+  "qty": 12,
+  "note": "length engraved on both edges",
+  "size_mm": [
+   23.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-B05",
+  "title": "Beam 1x5",
+  "family": "Beams",
+  "qty": 12,
+  "note": "hole ticks; long tick every 5th hole",
+  "size_mm": [
+   39.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-B07",
+  "title": "Beam 1x7",
+  "family": "Beams",
+  "qty": 10,
+  "note": "most-used length",
+  "size_mm": [
+   55.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-B09",
+  "title": "Beam 1x9",
+  "family": "Beams",
+  "qty": 8,
+  "note": "",
+  "size_mm": [
+   71.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-B11",
+  "title": "Beam 1x11",
+  "family": "Beams",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   87.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-B13",
+  "title": "Beam 1x13",
+  "family": "Beams",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   103.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-B15",
+  "title": "Beam 1x15",
+  "family": "Beams",
+  "qty": 6,
+  "note": "chassis rails",
+  "size_mm": [
+   119.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-H03",
+  "title": "Thin beam 1x3 (half thickness)",
+  "family": "Beams",
+  "qty": 6,
+  "note": "half thickness, axle holes at the ends",
+  "size_mm": [
+   23.4,
+   7.4,
+   3.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-H05",
+  "title": "Thin beam 1x5 (half thickness)",
+  "family": "Beams",
+  "qty": 6,
+  "note": "half thickness: linkages, flat panels",
+  "size_mm": [
+   39.4,
+   7.4,
+   3.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-L24",
+  "title": "L-beam 2x4",
+  "family": "Beams",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   31.4,
+   15.4,
+   7.8
+  ],
+  "bodies": [
+   "lbeam"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-L35",
+  "title": "L-beam 3x5",
+  "family": "Beams",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   39.4,
+   23.4,
+   7.8
+  ],
+  "bodies": [
+   "lbeam"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-T33",
+  "title": "T-beam 3x3",
+  "family": "Beams",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   23.4,
+   23.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-K46",
+  "title": "Bent beam 1x9 (53 deg)",
+  "family": "Beams",
+  "qty": 4,
+  "note": "53 deg bend = 3-4-5 triangle, ends stay on the grid",
+  "size_mm": [
+   55.4,
+   39.4,
+   7.8
+  ],
+  "bodies": [
+   "beam"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-F57",
+  "title": "Frame 5x7",
+  "family": "Beams",
+  "qty": 2,
+  "note": "one-piece rigid chassis frame",
+  "size_mm": [
+   39.4,
+   55.4,
+   7.8
+  ],
+  "bodies": [
+   "frame"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-C111",
+  "title": "SemiCube 1x1x1 (6-way)",
+  "family": "Connectors",
+  "qty": 8,
+  "note": "NEW: 6-way node, builds 3D frames fast",
+  "size_mm": [
+   7.8,
+   7.8,
+   7.8
+  ],
+  "bodies": [
+   "cube"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-C121",
+  "title": "Block 1x2x1 (pin holes on 4 faces)",
+  "family": "Connectors",
+  "qty": 6,
+  "note": "NEW: pin holes on 4 faces + axle through",
+  "size_mm": [
+   15.8,
+   7.8,
+   7.8
+  ],
+  "bodies": [
+   "block"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-XC12",
+  "title": "Cross block 1x2",
+  "family": "Connectors",
+  "qty": 10,
+  "note": "pin hole + perpendicular axle hole",
+  "size_mm": [
+   15.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "block"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-XC13",
+  "title": "Cross block 1x3",
+  "family": "Connectors",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   23.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "block"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-XA2",
+  "title": "Axle joiner 2L",
+  "family": "Connectors",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   7.4,
+   7.4,
+   15.8
+  ],
+  "bodies": [
+   "joiner"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-XP2",
+  "title": "Pin joiner 2L",
+  "family": "Connectors",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   7.4,
+   7.4,
+   15.8
+  ],
+  "bodies": [
+   "joiner"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-XN1",
+  "title": "Angle connector #1",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   15.6,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-XN2",
+  "title": "Angle connector #2 (180 deg)",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   23.8,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-XN3",
+  "title": "Angle connector #3 (157.5 deg)",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   24.7,
+   9.5,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-XN4",
+  "title": "Angle connector #4 (135 deg)",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   24.7,
+   11.5,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-XN5",
+  "title": "Angle connector #5 (112.5 deg)",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   23.7,
+   13.2,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-XN6",
+  "title": "Angle connector #6 (90 deg)",
+  "family": "Connectors",
+  "qty": 4,
+  "note": "colour = angle, kids match by colour",
+  "size_mm": [
+   21.8,
+   14.6,
+   7.8
+  ],
+  "bodies": [
+   "conn"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-QP2",
+  "title": "Quick Pin 2L (friction)",
+  "family": "Pins & bushes",
+  "qty": 60,
+  "note": "Technic-style friction pin",
+  "size_mm": [
+   5.6,
+   5.6,
+   15.8
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-QP2S",
+  "title": "Quick Pin 2L (smooth, pivots)",
+  "family": "Pins & bushes",
+  "qty": 20,
+  "note": "smooth: free pivot",
+  "size_mm": [
+   5.6,
+   5.6,
+   15.8
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-QP3",
+  "title": "Quick Pin 3L (friction)",
+  "family": "Pins & bushes",
+  "qty": 20,
+  "note": "",
+  "size_mm": [
+   5.6,
+   5.6,
+   23.8
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-QP1",
+  "title": "Half pin 1L with stop head",
+  "family": "Pins & bushes",
+  "qty": 10,
+  "note": "",
+  "size_mm": [
+   5.9,
+   5.9,
+   9.7
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-AP2",
+  "title": "Axle pin (friction)",
+  "family": "Pins & bushes",
+  "qty": 12,
+  "note": "",
+  "size_mm": [
+   5.6,
+   5.6,
+   15.8
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-AP2S",
+  "title": "Axle pin (smooth)",
+  "family": "Pins & bushes",
+  "qty": 8,
+  "note": "",
+  "size_mm": [
+   5.6,
+   5.6,
+   15.8
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-BP",
+  "title": "Ball pin (tow ball)",
+  "family": "Pins & bushes",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   5.8,
+   5.8,
+   16.2
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-PX",
+  "title": "Pin with cross hole",
+  "family": "Pins & bushes",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   7.8,
+   7.4,
+   15.6
+  ],
+  "bodies": [
+   "pin"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-BU1",
+  "title": "Bush 1L",
+  "family": "Pins & bushes",
+  "qty": 10,
+  "note": "",
+  "size_mm": [
+   7.4,
+   7.4,
+   7.8
+  ],
+  "bodies": [
+   "bush"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-BU0",
+  "title": "Half bush",
+  "family": "Pins & bushes",
+  "qty": 20,
+  "note": "",
+  "size_mm": [
+   7.2,
+   7.2,
+   3.9
+  ],
+  "bodies": [
+   "bush"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-TL2",
+  "title": "TwistLock Pin 2L (friction)",
+  "family": "TwistLock (lock system)",
+  "qty": 40,
+  "note": "push in, 1/4 turn = locked, green window",
+  "size_mm": [
+   6.0,
+   6.0,
+   18.4
+  ],
+  "bodies": [
+   "sleeve",
+   "core"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_black",
+   "sb_magenta"
+  ]
+ },
+ {
+  "id": "SB-TL2S",
+  "title": "TwistLock Pin 2L (smooth, pivots)",
+  "family": "TwistLock (lock system)",
+  "qty": 16,
+  "note": "locked axially but still pivots",
+  "size_mm": [
+   6.0,
+   6.0,
+   18.4
+  ],
+  "bodies": [
+   "sleeve",
+   "core"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_lgrey",
+   "sb_magenta"
+  ]
+ },
+ {
+  "id": "SB-TL3",
+  "title": "TwistLock Pin 3L (friction)",
+  "family": "TwistLock (lock system)",
+  "qty": 16,
+  "note": "joins 3 layers",
+  "size_mm": [
+   6.0,
+   6.0,
+   26.4
+  ],
+  "bodies": [
+   "sleeve",
+   "core"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_black",
+   "sb_magenta"
+  ]
+ },
+ {
+  "id": "SB-TL3S",
+  "title": "TwistLock Pin 3L (smooth, pivots)",
+  "family": "TwistLock (lock system)",
+  "qty": 8,
+  "note": "",
+  "size_mm": [
+   6.0,
+   6.0,
+   26.4
+  ],
+  "bodies": [
+   "sleeve",
+   "core"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_lgrey",
+   "sb_magenta"
+  ]
+ },
+ {
+  "id": "SB-TC",
+  "title": "TwistLock Collar 1/2L",
+  "family": "TwistLock (lock system)",
+  "qty": 16,
+  "note": "replaces the half bush: wheels never fall off",
+  "size_mm": [
+   7.4,
+   7.4,
+   4.5
+  ],
+  "bodies": [
+   "collet",
+   "ring"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_lgrey",
+   "sb_magenta",
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-TC1",
+  "title": "TwistLock Collar 1L",
+  "family": "TwistLock (lock system)",
+  "qty": 8,
+  "note": "1L version, more grip",
+  "size_mm": [
+   7.4,
+   7.4,
+   8.4
+  ],
+  "bodies": [
+   "collet",
+   "ring"
+  ],
+  "materials": [
+   "ind_green",
+   "ind_red",
+   "sb_lgrey",
+   "sb_magenta",
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-A02",
+  "title": "Axle 2",
+  "family": "Axles",
+  "qty": 10,
+  "note": "notch every 8 mm: count notches = length",
+  "size_mm": [
+   4.8,
+   4.8,
+   15.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A03",
+  "title": "Axle 3",
+  "family": "Axles",
+  "qty": 10,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   23.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-A04",
+  "title": "Axle 4",
+  "family": "Axles",
+  "qty": 8,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   31.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A05",
+  "title": "Axle 5",
+  "family": "Axles",
+  "qty": 8,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   39.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-A06",
+  "title": "Axle 6",
+  "family": "Axles",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   47.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A07",
+  "title": "Axle 7",
+  "family": "Axles",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   55.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-A08",
+  "title": "Axle 8",
+  "family": "Axles",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   63.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A10",
+  "title": "Axle 10",
+  "family": "Axles",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   4.8,
+   4.8,
+   79.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A12",
+  "title": "Axle 12",
+  "family": "Axles",
+  "qty": 2,
+  "note": "odd = grey, even = black",
+  "size_mm": [
+   4.8,
+   4.8,
+   95.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-A03S",
+  "title": "Axle 3 with stop",
+  "family": "Axles",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   5.9,
+   5.9,
+   23.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-A04S",
+  "title": "Axle 4 with stop",
+  "family": "Axles",
+  "qty": 6,
+  "note": "",
+  "size_mm": [
+   5.9,
+   5.9,
+   31.8
+  ],
+  "bodies": [
+   "axle"
+  ],
+  "materials": [
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-G08",
+  "title": "Gear 8T",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   9.6,
+   9.6,
+   3.7
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-G12B",
+  "title": "Double-bevel gear 12T",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "double bevel: parallel or 90 deg",
+  "size_mm": [
+   13.6,
+   13.6,
+   4.0
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-G16",
+  "title": "Gear 16T",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   17.6,
+   17.6,
+   3.7
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-G20B",
+  "title": "Double-bevel gear 20T",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   21.6,
+   21.6,
+   4.0
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-G24",
+  "title": "Gear 24T",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   25.6,
+   25.6,
+   3.7
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-G24C",
+  "title": "Clutch gear 24T (slips at safe torque)",
+  "family": "Gears & motion",
+  "qty": 2,
+  "note": "NEW: slips before motors or teeth break",
+  "size_mm": [
+   25.6,
+   25.6,
+   7.8
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_magenta",
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-G36B",
+  "title": "Double-bevel gear 36T",
+  "family": "Gears & motion",
+  "qty": 2,
+  "note": "",
+  "size_mm": [
+   37.6,
+   37.6,
+   3.9
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-G40",
+  "title": "Gear 40T",
+  "family": "Gears & motion",
+  "qty": 2,
+  "note": "",
+  "size_mm": [
+   41.6,
+   41.6,
+   3.7
+  ],
+  "bodies": [
+   "gear"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-GW",
+  "title": "Worm gear",
+  "family": "Gears & motion",
+  "qty": 2,
+  "note": "",
+  "size_mm": [
+   10.4,
+   10.4,
+   15.8
+  ],
+  "bodies": [
+   "worm"
+  ],
+  "materials": [
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-GR4",
+  "title": "Gear rack 1x4",
+  "family": "Gears & motion",
+  "qty": 4,
+  "note": "pin holes on the side, m = 1 teeth",
+  "size_mm": [
+   31.8,
+   7.4,
+   9.7
+  ],
+  "bodies": [
+   "rack"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-GR8",
+  "title": "Gear rack 1x8",
+  "family": "Gears & motion",
+  "qty": 2,
+  "note": "",
+  "size_mm": [
+   63.8,
+   7.4,
+   9.7
+  ],
+  "bodies": [
+   "rack"
+  ],
+  "materials": [
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-W56",
+  "title": "Wheel 56 x 26 + tyre",
+  "family": "Wheels",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   56.0,
+   56.0,
+   26.0
+  ],
+  "bodies": [
+   "hub",
+   "tire"
+  ],
+  "materials": [
+   "rubber",
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-W30",
+  "title": "Wheel 30 x 14 + tyre",
+  "family": "Wheels",
+  "qty": 4,
+  "note": "",
+  "size_mm": [
+   30.0,
+   30.0,
+   14.0
+  ],
+  "bodies": [
+   "hub",
+   "tire"
+  ],
+  "materials": [
+   "rubber",
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-WO48",
+  "title": "Omni wheel 48",
+  "family": "Wheels",
+  "qty": 2,
+  "note": "NEW vs Technic: rolls sideways",
+  "size_mm": [
+   48.0,
+   48.0,
+   15.6
+  ],
+  "bodies": [
+   "hub",
+   "rollers"
+  ],
+  "materials": [
+   "rubber",
+   "sb_dgrey"
+  ]
+ },
+ {
+  "id": "SB-WM60L",
+  "title": "Mecanum wheel 60 (left)",
+  "family": "Wheels",
+  "qty": 2,
+  "note": "NEW: drive in any direction (pair L + R)",
+  "size_mm": [
+   59.5,
+   59.7,
+   24.9
+  ],
+  "bodies": [
+   "hub",
+   "rollers"
+  ],
+  "materials": [
+   "rubber",
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-WM60R",
+  "title": "Mecanum wheel 60 (right)",
+  "family": "Wheels",
+  "qty": 2,
+  "note": "",
+  "size_mm": [
+   59.5,
+   59.7,
+   24.2
+  ],
+  "bodies": [
+   "hub",
+   "rollers"
+  ],
+  "materials": [
+   "rubber",
+   "sb_blue"
+  ]
+ },
+ {
+  "id": "SB-CASTER",
+  "title": "Ball caster block",
+  "family": "Wheels",
+  "qty": 1,
+  "note": "",
+  "size_mm": [
+   15.8,
+   47.8,
+   39.9
+  ],
+  "bodies": [
+   "block",
+   "ball"
+  ],
+  "materials": [
+   "sb_dgrey",
+   "steel"
+  ]
+ },
+ {
+  "id": "SB-KEY",
+  "title": "SemiKey multi-tool",
+  "family": "Accessories & tools",
+  "qty": 1,
+  "note": "key + axle gauge + pin lifter + ruler",
+  "size_mm": [
+   93.8,
+   18.0,
+   3.2
+  ],
+  "bodies": [
+   "key"
+  ],
+  "materials": [
+   "sb_magenta"
+  ]
+ },
+ {
+  "id": "SB-CC",
+  "title": "Cable clip (pin-in)",
+  "family": "Accessories & tools",
+  "qty": 12,
+  "note": "NEW: snaps into any hole, tidies cables",
+  "size_mm": [
+   5.6,
+   5.6,
+   13.6
+  ],
+  "bodies": [
+   "clip"
+  ],
+  "materials": [
+   "sb_lgrey"
+  ]
+ },
+ {
+  "id": "SB-N26",
+  "title": "Name plate 2x6 (write-on)",
+  "family": "Accessories & tools",
+  "qty": 2,
+  "note": "write a name, pin it on",
+  "size_mm": [
+   47.8,
+   15.8,
+   3.8
+  ],
+  "bodies": [
+   "plate"
+  ],
+  "materials": [
+   "sb_blue",
+   "sb_white"
+  ]
+ },
+ {
+  "id": "SB-HUB",
+  "title": "Junior Brain (ESP32-S3 hub)",
+  "family": "Hub, motors & cables",
+  "qty": 1,
+  "note": "ESP32-S3, 1.54 in screen, 6 ports, IMU, mic, speaker",
+  "size_mm": [
+   87.8,
+   47.8,
+   32.4
+  ],
+  "bodies": [
+   "shell",
+   "button_main",
+   "button_r",
+   "button_l"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_blue",
+   "sb_lgrey",
+   "sb_white",
+   "screen_glow"
+  ]
+ },
+ {
+  "id": "SB-MOT-M",
+  "title": "SemiMotor M (encoder motor)",
+  "family": "Hub, motors & cables",
+  "qty": 2,
+  "note": "encoder: speed + position, both ends have a port",
+  "size_mm": [
+   39.8,
+   23.8,
+   23.8
+  ],
+  "bodies": [
+   "shell",
+   "output"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-MOT-L",
+  "title": "SemiMotor L (encoder motor, high torque)",
+  "family": "Hub, motors & cables",
+  "qty": 1,
+  "note": "high torque, 4 pin holes on the output",
+  "size_mm": [
+   55.8,
+   23.8,
+   23.8
+  ],
+  "bodies": [
+   "shell",
+   "output"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-SV180",
+  "title": "SemiServo 180 deg (position)",
+  "family": "Hub, motors & cables",
+  "qty": 1,
+  "note": "position servo, axle output",
+  "size_mm": [
+   31.8,
+   15.8,
+   24.7
+  ],
+  "bodies": [
+   "base",
+   "cover",
+   "output"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-SV360",
+  "title": "SemiServo 360 (continuous)",
+  "family": "Hub, motors & cables",
+  "qty": 0,
+  "note": "continuous rotation",
+  "size_mm": [
+   31.8,
+   15.8,
+   24.7
+  ],
+  "bodies": [
+   "base",
+   "cover",
+   "output"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ]
+ },
+ {
+  "id": "SB-LINK",
+  "title": "SemiLink-6 plug + cable",
+  "family": "Hub, motors & cables",
+  "qty": 8,
+  "note": "keyed + latching, cable is replaceable",
+  "size_mm": [
+   11.2,
+   8.4,
+   17.5
+  ],
+  "bodies": [
+   "plug"
+  ],
+  "materials": [
+   "cable",
+   "contact",
+   "sb_black"
+  ]
+ },
+ {
+  "id": "SB-S-US",
+  "title": "Ultrasonic distance",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "2-400 cm distance, 'eyes' RGB LEDs",
+  "size_mm": [
+   15.8,
+   47.8,
+   23.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_cyan",
+   "mesh_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "US",
+   "zh": "超聲波測距",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "RCWL-9610A + MCU",
+   "does": "2-400 cm distance, 'eyes' RGB LEDs",
+   "replaces": "HC-SR04 超声波模块",
+   "size": [
+    2,
+    6,
+    3
+   ]
+  }
+ },
+ {
+  "id": "SB-TOF",
+  "title": "ToF laser distance",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "4-400 cm, narrow beam, fast",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "TOF",
+   "zh": "激光測距 (ToF)",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "VL53L1X (Class 1 laser, eye-safe)",
+   "does": "4-400 cm, narrow beam, fast",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-IRP",
+  "title": "IR obstacle",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "2-30 cm near/far, digital + analog",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "ir_led",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "IRP",
+   "zh": "紅外避障",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "IR LED + phototransistor",
+   "does": "2-30 cm near/far, digital + analog",
+   "replaces": "避障传感器 / 光遮断",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-PIR",
+  "title": "PIR motion",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "detects people moving, 3-5 m",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "dome_white",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "PIR",
+   "zh": "人體紅外感應",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "AM312 mini PIR",
+   "does": "detects people moving, 3-5 m",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-RADAR",
+  "title": "mmWave presence",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "detects people even when still",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "RADAR",
+   "zh": "毫米波人體存在",
+   "cat": "sense",
+   "phase": "P3",
+   "chip": "HLK-LD2410 24 GHz",
+   "does": "detects people even when still",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-ZONE",
+  "title": "Multi-zone ToF 8x8",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "8x8 depth map up to 4 m",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "ZONE",
+   "zh": "多區激光測距",
+   "cat": "sense",
+   "phase": "P3",
+   "chip": "VL53L5CX",
+   "does": "8x8 depth map up to 4 m",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-S-LINE",
+  "title": "Line sensor x5",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "5-channel line position for line-follow races",
+  "size_mm": [
+   15.8,
+   47.8,
+   23.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_red",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "LINE",
+   "zh": "循跡感應器 x5",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "5x ITR20001 + MCU auto-calibrate",
+   "does": "5-channel line position for line-follow races",
+   "replaces": "循迹传感器",
+   "size": [
+    2,
+    6,
+    3
+   ]
+  }
+ },
+ {
+  "id": "SB-COLOR",
+  "title": "Colour sensor",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "RGB + clear light, colour sorting, light level",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "COLOR",
+   "zh": "顏色感應器",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "TCS34725 + white LED",
+   "does": "RGB + clear light, colour sorting, light level",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-GEST",
+  "title": "Gesture sensor",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "up/down/left/right swipes, proximity",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "GEST",
+   "zh": "手勢感應器",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "APDS-9960",
+   "does": "up/down/left/right swipes, proximity",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-LUX",
+  "title": "Light sensor",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "ambient light in lux",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "dome_white",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "LUX",
+   "zh": "光度感應器",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "BH1750 (lux)",
+   "does": "ambient light in lux",
+   "replaces": "光敏电阻 / 魔术光杯",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-UV",
+  "title": "UV index",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "UV index + ambient light",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "dome_violet",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "UV",
+   "zh": "紫外線感應器",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "LTR-390",
+   "does": "UV index + ambient light",
+   "replaces": "",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-FLAME",
+  "title": "Flame sensor",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "finds a candle flame (fire-fighting robot)",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "ir_led",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "FLAME",
+   "zh": "火焰感應器",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "3x IR phototransistor 760-1100 nm",
+   "does": "finds a candle flame (fire-fighting robot)",
+   "replaces": "火焰传感器",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-IRT",
+  "title": "IR thermometer",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "no-contact temperature -70..380 C",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "IRT",
+   "zh": "非接觸測溫",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "MLX90614",
+   "does": "no-contact temperature -70..380 C",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-THERM",
+  "title": "Thermal camera 8x8",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "8x8 heat image, finds warm bodies",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "THERM",
+   "zh": "熱成像鏡頭",
+   "cat": "sense",
+   "phase": "P3",
+   "chip": "AMG8833",
+   "does": "8x8 heat image, finds warm bodies",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-BTN",
+  "title": "Big button",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "press / release / long-press / count",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "BTN",
+   "zh": "大按鈕",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "tactile switch + MCU",
+   "does": "press / release / long-press / count",
+   "replaces": "按键开关",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-BUMP",
+  "title": "Bumper switch",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "robot hits a wall",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_lgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "BUMP",
+   "zh": "碰撞開關",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "micro-switch",
+   "does": "robot hits a wall",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-TOUCH",
+  "title": "Touch pad",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "touch / no touch, works through paper",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "TOUCH",
+   "zh": "觸摸感應",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "capacitive touch",
+   "does": "touch / no touch, works through paper",
+   "replaces": "人体触摸",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-FORCE",
+  "title": "Force sensor",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "push force 0-10 N",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "FORCE",
+   "zh": "力度感應器",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "strain gauge + MCU",
+   "does": "push force 0-10 N",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-LOAD",
+  "title": "Weight (load cell 1 kg)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "weighs objects to 1 g",
+  "size_mm": [
+   15.8,
+   63.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "LOAD",
+   "zh": "稱重感應器",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "1 kg load cell + HX711",
+   "does": "weighs objects to 1 g",
+   "replaces": "",
+   "size": [
+    2,
+    8,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-POT",
+  "title": "Rotary knob",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "0-100 % turn position",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "POT",
+   "zh": "旋鈕",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "10k potentiometer",
+   "does": "0-100 % turn position",
+   "replaces": "",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-ENC",
+  "title": "Rotary encoder",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "endless clicks + push button",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "ENC",
+   "zh": "旋轉編碼器",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "EC11 encoder + push",
+   "does": "endless clicks + push button",
+   "replaces": "旋转编码器",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SLIDE",
+  "title": "Slide control",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "0-100 % slider position",
+  "size_mm": [
+   15.8,
+   47.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "SLIDE",
+   "zh": "滑桿",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "60 mm slide pot",
+   "does": "0-100 % slider position",
+   "replaces": "",
+   "size": [
+    2,
+    6,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-JOY",
+  "title": "Joystick",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "x / y / push, drive a robot by hand",
+  "size_mm": [
+   23.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "rubber",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "JOY",
+   "zh": "搖桿",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "2-axis + push",
+   "does": "x / y / push, drive a robot by hand",
+   "replaces": "XY摇杆",
+   "size": [
+    3,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-KEYPAD",
+  "title": "Keypad 4x3",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "enter numbers / passwords",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_lgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "KEYPAD",
+   "zh": "鍵盤",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "12-key capacitive",
+   "does": "enter numbers / passwords",
+   "replaces": "",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-IMU",
+  "title": "Motion sensor (6-axis)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "tilt, shake, spin of a moving part",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "IMU",
+   "zh": "動作感應 (六軸)",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "ICM-42670 accel + gyro",
+   "does": "tilt, shake, spin of a moving part",
+   "replaces": "倾斜开关 / 水银开关 / 震动开关",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-KNOCK",
+  "title": "Knock / vibration",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "knocks, taps, vibration strength",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "brass",
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "KNOCK",
+   "zh": "敲擊 / 震動",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "piezo disc",
+   "does": "knocks, taps, vibration strength",
+   "replaces": "敲击 / 震动开关",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-ANGLE",
+  "title": "Angle sensor (axle-through)",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "absolute angle of any axle that passes through",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "ANGLE",
+   "zh": "角度感應器",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "AS5600 magnetic encoder",
+   "does": "absolute angle of any axle that passes through",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-MAG",
+  "title": "Magnetic sensor",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "magnet near/far, N or S, strength",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "MAG",
+   "zh": "磁力感應器",
+   "cat": "sense",
+   "phase": "P1",
+   "chip": "linear Hall + threshold",
+   "does": "magnet near/far, N or S, strength",
+   "replaces": "霍尔 x2 / 线性霍尔 / 磁簧 x2",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-COMPASS",
+  "title": "Compass",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "heading 0-360 deg",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "ind_red",
+   "port_black",
+   "sb_blue",
+   "sb_dgrey",
+   "sb_white"
+  ],
+  "module": {
+   "code": "COMPASS",
+   "zh": "電子指南針",
+   "cat": "sense",
+   "phase": "P2",
+   "chip": "MMC5603 magnetometer",
+   "does": "heading 0-360 deg",
+   "replaces": "",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-ENV",
+  "title": "Temp / humidity / pressure",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "+-0.2 C, %RH, hPa, altitude",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "ENV",
+   "zh": "溫度 / 濕度 / 氣壓",
+   "cat": "env",
+   "phase": "P1",
+   "chip": "SHT40 + BMP280",
+   "does": "+-0.2 C, %RH, hPa, altitude",
+   "replaces": "DHT11 温湿度 / 模拟温度 / 数字温度",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-PROBE",
+  "title": "Waterproof temp probe",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "-55..125 C in water, soil, food",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "cable",
+   "contact",
+   "port_black",
+   "sb_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "PROBE",
+   "zh": "防水溫度探頭",
+   "cat": "env",
+   "phase": "P1",
+   "chip": "DS18B20 stainless probe",
+   "does": "-55..125 C in water, soil, food",
+   "replaces": "18B20温度传感器",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SOIL",
+  "title": "Soil moisture",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "plant needs water? 0-100 %",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "pcb",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "SOIL",
+   "zh": "土壤濕度",
+   "cat": "env",
+   "phase": "P1",
+   "chip": "capacitive (no corrosion)",
+   "does": "plant needs water? 0-100 %",
+   "replaces": "土壤湿度 (resistive)",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-WATER",
+  "title": "Water level / rain",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "water depth 0-35 mm, rain drops",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "pcb",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "WATER",
+   "zh": "水位 / 雨滴",
+   "cat": "env",
+   "phase": "P2",
+   "chip": "gold-plated traces",
+   "does": "water depth 0-35 mm, rain drops",
+   "replaces": "水位传感器",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SOUND",
+  "title": "Sound level",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "loudness in dB, clap detect",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "SOUND",
+   "zh": "聲音感應器",
+   "cat": "env",
+   "phase": "P1",
+   "chip": "MEMS mic + RMS",
+   "does": "loudness in dB, clap detect",
+   "replaces": "高感度声音 / 小麦克风",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-CO2",
+  "title": "CO2 (NDIR)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "true CO2 ppm - classroom air",
+  "size_mm": [
+   15.8,
+   31.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "CO2",
+   "zh": "二氧化碳",
+   "cat": "env",
+   "phase": "P2",
+   "chip": "Sensirion SCD40",
+   "does": "true CO2 ppm - classroom air",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-AIR",
+  "title": "Air quality (TVOC)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "TVOC + eCO2 index",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "AIR",
+   "zh": "空氣質素",
+   "cat": "env",
+   "phase": "P2",
+   "chip": "ENS160",
+   "does": "TVOC + eCO2 index",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-PM",
+  "title": "Dust PM2.5",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "PM1 / PM2.5 / PM10 ug/m3",
+  "size_mm": [
+   31.8,
+   47.8,
+   23.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "mesh_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "PM",
+   "zh": "懸浮粒子 PM2.5",
+   "cat": "env",
+   "phase": "P3",
+   "chip": "Plantower PMSA003",
+   "does": "PM1 / PM2.5 / PM10 ug/m3",
+   "replaces": "",
+   "size": [
+    4,
+    6,
+    3
+   ]
+  }
+ },
+ {
+  "id": "SB-GAS",
+  "title": "Gas / smoke",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "smoke / LPG level",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "mesh_dark",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "GAS",
+   "zh": "氣體 / 煙霧",
+   "cat": "env",
+   "phase": "P3",
+   "chip": "MQ-2 (heated, teacher use)",
+   "does": "smoke / LPG level",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-PH",
+  "title": "pH probe",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "pH 0-14 for chemistry lessons",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "cable",
+   "contact",
+   "dome_white",
+   "port_black",
+   "sb_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "PH",
+   "zh": "酸鹼度",
+   "cat": "env",
+   "phase": "P3",
+   "chip": "pH electrode + amp",
+   "does": "pH 0-14 for chemistry lessons",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-TDS",
+  "title": "Water quality (TDS)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "dissolved solids ppm",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "cable",
+   "contact",
+   "port_black",
+   "sb_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "TDS",
+   "zh": "水質 TDS",
+   "cat": "env",
+   "phase": "P3",
+   "chip": "TDS probe + amp",
+   "does": "dissolved solids ppm",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-HEART",
+  "title": "Heart rate & SpO2",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "pulse + oxygen for PE / biology",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_red",
+   "port_black",
+   "sb_blue",
+   "sb_white"
+  ],
+  "module": {
+   "code": "HEART",
+   "zh": "心率 / 血氧",
+   "cat": "env",
+   "phase": "P2",
+   "chip": "MAX30102",
+   "does": "pulse + oxygen for PE / biology",
+   "replaces": "手指测心跳",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-GPS",
+  "title": "GPS",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "position + time outdoors",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "ceramic",
+   "contact",
+   "port_black",
+   "sb_blue",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "GPS",
+   "zh": "衛星定位",
+   "cat": "env",
+   "phase": "P3",
+   "chip": "ATGM336H GPS + BeiDou",
+   "does": "position + time outdoors",
+   "replaces": "",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-CAM",
+  "title": "AI vision camera",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "face, colour, line, tag, QR, object recognition",
+  "size_mm": [
+   23.8,
+   31.8,
+   31.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_white",
+   "port_black",
+   "sb_violet",
+   "sb_white",
+   "steel"
+  ],
+  "module": {
+   "code": "CAM",
+   "zh": "AI 視覺鏡頭",
+   "cat": "ai",
+   "phase": "P2",
+   "chip": "ESP32-S3 + 2 MP camera",
+   "does": "face, colour, line, tag, QR, object recognition",
+   "replaces": "",
+   "size": [
+    3,
+    4,
+    4
+   ]
+  }
+ },
+ {
+  "id": "SB-VOICE",
+  "title": "Offline voice",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "Cantonese / Mandarin / English commands",
+  "size_mm": [
+   23.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_cyan",
+   "led_green",
+   "led_red",
+   "led_yellow",
+   "port_black",
+   "sb_violet",
+   "sb_white"
+  ],
+  "module": {
+   "code": "VOICE",
+   "zh": "離線語音識別",
+   "cat": "ai",
+   "phase": "P2",
+   "chip": "ESP32-S3 / CI1302 voice chip",
+   "does": "Cantonese / Mandarin / English commands",
+   "replaces": "",
+   "size": [
+    3,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-RFID",
+  "title": "RFID / NFC reader",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "read cards, stickers, wristbands",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_teal",
+   "sb_white"
+  ],
+  "module": {
+   "code": "RFID",
+   "zh": "拍卡感應",
+   "cat": "connect",
+   "phase": "P2",
+   "chip": "PN532 13.56 MHz",
+   "does": "read cards, stickers, wristbands",
+   "replaces": "",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-IRX",
+  "title": "IR remote send + receive",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "TV / air-con remote codes",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "ir_led",
+   "port_black",
+   "sb_black",
+   "sb_teal",
+   "sb_white"
+  ],
+  "module": {
+   "code": "IRX",
+   "zh": "紅外收發",
+   "cat": "connect",
+   "phase": "P1",
+   "chip": "38 kHz IR LED + receiver",
+   "does": "TV / air-con remote codes",
+   "replaces": "红外发射 / 红外接收",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-RGB",
+  "title": "RGB LED x4",
+  "family": "Smart modules",
+  "qty": 1,
+  "note": "any colour, any brightness",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_cyan",
+   "led_green",
+   "led_red",
+   "led_yellow",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "RGB",
+   "zh": "彩色燈 x4",
+   "cat": "output",
+   "phase": "P1",
+   "chip": "4x WS2812B",
+   "does": "any colour, any brightness",
+   "replaces": "3色LED / 双色LED x2 / 七彩 / RGB",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-RING",
+  "title": "LED ring x12",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "spinners, timers, compass display",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_cyan",
+   "led_green",
+   "led_red",
+   "led_yellow",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "RING",
+   "zh": "燈環 x12",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "12x WS2812B",
+   "does": "spinners, timers, compass display",
+   "replaces": "",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-MATRIX",
+  "title": "LED matrix 8x8",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "faces, icons, scrolling text",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_cyan",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "MATRIX",
+   "zh": "點陣顯示",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "64x WS2812-2020",
+   "does": "faces, icons, scrolling text",
+   "replaces": "",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-TRAFFIC",
+  "title": "Traffic light",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "red / yellow / green lessons",
+  "size_mm": [
+   15.8,
+   15.8,
+   23.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "led_green",
+   "led_red",
+   "led_yellow",
+   "port_black",
+   "sb_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "TRAFFIC",
+   "zh": "交通燈",
+   "cat": "output",
+   "phase": "P1",
+   "chip": "3 LEDs",
+   "does": "red / yellow / green lessons",
+   "replaces": "",
+   "size": [
+    2,
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "id": "SB-OLED",
+  "title": "OLED screen 0.96 in",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "text, numbers, simple graphs",
+  "size_mm": [
+   23.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_white",
+   "sb_yellow",
+   "screen_glow"
+  ],
+  "module": {
+   "code": "OLED",
+   "zh": "顯示屏",
+   "cat": "output",
+   "phase": "P1",
+   "chip": "SSD1306 128x64",
+   "does": "text, numbers, simple graphs",
+   "replaces": "",
+   "size": [
+    3,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SEG",
+  "title": "4-digit display",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "big numbers: scores, timers",
+  "size_mm": [
+   23.8,
+   47.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "led_red",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "SEG",
+   "zh": "數碼管",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "TM1637",
+   "does": "big numbers: scores, timers",
+   "replaces": "",
+   "size": [
+    3,
+    6,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SPK",
+  "title": "Speaker / MP3",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "play sounds and recorded voice",
+  "size_mm": [
+   31.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_white",
+   "sb_yellow"
+  ],
+  "module": {
+   "code": "SPK",
+   "zh": "喇叭 / 音樂",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "I2S amp + 8 MB sound flash",
+   "does": "play sounds and recorded voice",
+   "replaces": "有源 / 无源蜂鸣器",
+   "size": [
+    4,
+    4,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-FAN",
+  "title": "Fan",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "wind, cooling, hovercraft",
+  "size_mm": [
+   15.8,
+   31.8,
+   31.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "mesh_dark",
+   "port_black",
+   "sb_dgrey",
+   "sb_white",
+   "sb_yellow",
+   "soft"
+  ],
+  "module": {
+   "code": "FAN",
+   "zh": "風扇",
+   "cat": "output",
+   "phase": "P1",
+   "chip": "DC motor + soft blades + guard",
+   "does": "wind, cooling, hovercraft",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    4
+   ]
+  }
+ },
+ {
+  "id": "SB-PUMP",
+  "title": "Water pump",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "plant watering, fountains",
+  "size_mm": [
+   23.8,
+   31.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_dgrey",
+   "sb_white",
+   "sb_yellow",
+   "steel",
+   "tube"
+  ],
+  "module": {
+   "code": "PUMP",
+   "zh": "水泵",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "5 V pump + tubes",
+   "does": "plant watering, fountains",
+   "replaces": "",
+   "size": [
+    3,
+    4,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-VIB",
+  "title": "Vibration motor",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "buzz feedback",
+  "size_mm": [
+   15.8,
+   15.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_white",
+   "sb_yellow",
+   "steel"
+  ],
+  "module": {
+   "code": "VIB",
+   "zh": "震動馬達",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "coin vibration motor",
+   "does": "buzz feedback",
+   "replaces": "",
+   "size": [
+    2,
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-EMAG",
+  "title": "Electromagnet",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "pick up and drop steel parts",
+  "size_mm": [
+   15.8,
+   23.8,
+   15.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_dgrey",
+   "sb_white",
+   "sb_yellow",
+   "steel"
+  ],
+  "module": {
+   "code": "EMAG",
+   "zh": "電磁鐵",
+   "cat": "output",
+   "phase": "P3",
+   "chip": "5 V electromagnet",
+   "does": "pick up and drop steel parts",
+   "replaces": "",
+   "size": [
+    2,
+    3,
+    2
+   ]
+  }
+ },
+ {
+  "id": "SB-SWITCH",
+  "title": "Power switch (12 V max)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "switch lamps, pumps, LED strips safely",
+  "size_mm": [
+   15.8,
+   23.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_white",
+   "sb_yellow",
+   "steel",
+   "terminal"
+  ],
+  "module": {
+   "code": "SWITCH",
+   "zh": "電源開關",
+   "cat": "output",
+   "phase": "P2",
+   "chip": "MOSFET, 12 V / 2 A max",
+   "does": "switch lamps, pumps, LED strips safely",
+   "replaces": "继电器 (mains relay removed)",
+   "size": [
+    2,
+    3,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-SOLAR",
+  "title": "Solar panel 1 W",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "energy lessons, solar car",
+  "size_mm": [
+   47.8,
+   63.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "port_black",
+   "sb_dgrey",
+   "sb_white",
+   "solar",
+   "steel"
+  ],
+  "module": {
+   "code": "SOLAR",
+   "zh": "太陽能板",
+   "cat": "power",
+   "phase": "P2",
+   "chip": "6 V 1 W panel + charge meter",
+   "does": "energy lessons, solar car",
+   "replaces": "",
+   "size": [
+    6,
+    8,
+    1
+   ]
+  }
+ },
+ {
+  "id": "SB-METER",
+  "title": "Energy meter (V/I/W)",
+  "family": "Smart modules",
+  "qty": 0,
+  "note": "measures voltage, current, power",
+  "size_mm": [
+   15.8,
+   31.8,
+   7.8
+  ],
+  "bodies": [
+   "base",
+   "cover"
+  ],
+  "materials": [
+   "contact",
+   "glass_dark",
+   "port_black",
+   "sb_dgrey",
+   "sb_white",
+   "screen_glow"
+  ],
+  "module": {
+   "code": "METER",
+   "zh": "電能錶",
+   "cat": "power",
+   "phase": "P2",
+   "chip": "INA219",
+   "does": "measures voltage, current, power",
+   "replaces": "",
+   "size": [
+    2,
+    4,
+    1
+   ]
+  }
+ }
+]

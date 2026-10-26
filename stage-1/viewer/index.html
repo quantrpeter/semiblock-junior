@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SemiBlock Junior 3D</title>
+<style>
+  :root {
+    --bg: #eef2f8; --panel: #ffffff; --ink: #0f172a; --muted: #5a6678; --line: #d8e0ec;
+    --blue: #1f6fe5; --magenta: #c8209e; --green: #16a34a; --red: #e8322e;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; font: 14px/1.45 -apple-system, "Segoe UI", Arial, "PingFang HK", sans-serif; color: var(--ink); background: var(--bg); }
+  body { display: grid; grid-template-columns: 300px 1fr 300px; grid-template-rows: 56px 1fr; height: 100vh; }
+  header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 0 16px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 17px; margin: 0; white-space: nowrap; }
+  header h1 b { color: var(--blue); }
+  header .tag { color: var(--muted); font-size: 12px; }
+  #menu { display: none; }
+  .tools { margin-left: auto; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button { font: inherit; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--ink); }
+  button:hover { border-color: var(--blue); }
+  button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+  aside { overflow: auto; background: var(--panel); border-right: 1px solid var(--line); }
+  #search { width: calc(100% - 24px); margin: 12px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  details { border-top: 1px solid var(--line); }
+  summary { padding: 10px 14px; font-weight: 600; cursor: pointer; }
+  summary span { color: var(--muted); font-weight: 400; float: right; }
+  .item { display: flex; gap: 10px; align-items: center; padding: 6px 12px; color: inherit; text-decoration: none; }
+  .item:hover { background: #f3f6fb; }
+  .item.active { background: #e6efff; }
+  .item img, .item .ico { width: 56px; height: 44px; object-fit: cover; border-radius: 6px; background: #eef2f8; flex: none; }
+  .item .ico { display: grid; place-items: center; font-weight: 700; color: var(--blue); }
+  .item .t { display: flex; flex-direction: column; min-width: 0; }
+  .item small { color: var(--muted); }
+  main { position: relative; min-width: 0; }
+  #view { position: absolute; inset: 0; }
+  #view canvas { display: block; }
+  .hud { position: absolute; left: 14px; bottom: 14px; display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; max-width: calc(100% - 28px); }
+  .hud .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .hud label { color: var(--muted); min-width: 60px; }
+  #lockState { color: var(--muted); font-size: 12px; }
+  #dims { position: absolute; right: 14px; bottom: 14px; color: var(--muted); font-size: 12px; background: rgba(255,255,255,.85); padding: 4px 8px; border-radius: 6px; }
+  #loading, #error { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; }
+  #error { color: var(--red); }
+  #panel { overflow: auto; background: var(--panel); border-left: 1px solid var(--line); padding: 16px; }
+  #info h2 { font-size: 18px; margin: 0 0 8px; }
+  #info dl { display: grid; grid-template-columns: 96px 1fr; gap: 4px 10px; margin: 12px 0; }
+  #info dt { color: var(--muted); }
+  #info dd { margin: 0; }
+  #info .files { color: var(--muted); font-size: 12px; }
+  code { font-size: 12px; background: #f1f4f9; padding: 1px 4px; border-radius: 4px; }
+  .legend { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; margin-right: 4px; }
+  @media (max-width: 1100px) {
+    body { grid-template-columns: 1fr; grid-template-rows: 56px 1fr auto; }
+    aside { display: none; position: fixed; top: 56px; bottom: 0; left: 0; width: min(320px, 85vw); z-index: 5; box-shadow: 0 8px 30px rgba(15,23,42,.2); }
+    body.show-side aside { display: block; }
+    #menu { display: inline-block; }
+    #panel { border-left: 0; border-top: 1px solid var(--line); max-height: 34vh; }
+    header .tag { display: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <button id="menu" aria-label="Parts list">Parts</button>
+  <h1><b>SemiBlock</b> Junior &middot; 3D parts</h1>
+  <span class="tag">Stage-1 concept &middot; drag to rotate, scroll to zoom, right-drag to pan</span>
+  <div class="tools">
+    <button id="reset">Reset view</button>
+    <button id="spin">Auto-rotate</button>
+    <button id="shot">Save PNG</button>
+  </div>
+</header>
+<aside>
+  <input id="search" type="search" placeholder="Search parts (e.g. pin, gear, 溫度)">
+  <div id="list"></div>
+</aside>
+<main>
+  <div id="view"></div>
+  <div class="hud">
+    <div class="row" id="lockGroup"><label>Lock</label><button id="lockBtn" data-state="locked">Unlock all</button><span id="lockState"></span></div>
+    <div class="row" id="explodeGroup"><label>Explode</label><input id="explode" type="range" min="0" max="1" step="0.01" value="0"></div>
+    <div class="row"><label>Section</label>
+      <button data-section="">Off</button><button data-section="x">X</button><button data-section="y">Y</button><button data-section="z">Z</button>
+      <input id="sectionPos" type="range" min="0" max="100" value="50" disabled>
+    </div>
+  </div>
+  <div id="dims"></div>
+  <div id="loading" hidden>Loading model...</div>
+  <div id="error" hidden></div>
+</main>
+<section id="panel">
+  <div id="info"></div>
+  <div class="legend"><b>Colour code</b><br>
+    <span class="dot" style="background:#c8209e"></span>magenta = lock parts<br>
+    <span class="dot" style="background:#1dc45a"></span>green window = locked<br>
+    <span class="dot" style="background:#e8322e"></span>red window = open<br>
+    <span class="dot" style="background:#1f6fe5"></span>blue base = sensing module<br>
+    <span class="dot" style="background:#ffc21a"></span>yellow base = output module<br>
+    <span class="dot" style="background:#12a89a"></span>teal = connect &nbsp;<span class="dot" style="background:#7447ee"></span>violet = AI
+  </div>
+</section>
+<script src="catalog.js"></script>
+<script src="viewer.bundle.js"></script>
+</body>
+</html>
