@@ -667,3 +667,15 @@ npx esbuild stage-1/viewer/src/viewer.js --bundle --format=iife --minify --outfi
 * Technic hole, axle and pin dimensions cross-checked with the open-source [Technic.scad](https://github.com/cfinke/Technic.scad) library (8 mm pitch, 4.85 mm hole, 7.8 mm thickness, 1.8 mm axle spline) and a [Eurobricks thread on pin and axle sizes](https://www.eurobricks.com/forum/forums/topic/75308-lego-pin-and-axle-standard).
 * SPIKE Prime set contents (6-port hub, 6-axis gyro, colour / distance / force sensors, 3 motors): [Rapid Online product listing](https://rapidonline.com/lego-education-45678-spike-prime-set-70-6713).
 * Hong Kong curriculum: [EDB circular on Primary Science (P1 and P4 from 2025/26, HK$350k grant)](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/science-edu/pri-sci/EDBC23018E.pdf), [LegCo reply on STEAM, coding and AI education (2025)](https://www.info.gov.hk/gia/general/202504/30/P2025043000311.htm).
+
+# Stage 1: SemiBlock Junior concept
+
+| Open | What you get |
+|---|---|
+| [`viewer/index.html`](viewer/index.html) | Interactive 3D. Rotate every part and assembly, lock/unlock the TwistLocks, explode the rover, cut sections. Double-click to open in Chrome, Edge or Safari; it works offline. |
+| [`renders/`](renders/) | Hero renders and labelled diagrams. `renders/parts/` has a picture of every part; `renders/sheets/` has contact sheets per family. |
+| [`drawings/`](drawings/) | 2D manufacturing drawings for the factory: one PDF per part (EN / 简体中文, A3, first-angle), the combined drawing pack and an RFQ parts list (CSV). |
+| [`cad/fcstd/`](cad/fcstd/) | FreeCAD files, one per part: coloured 3D bodies, part data and the drawing sheets as TechDraw pages. |
+| [`cad/step/`](cad/step/) | STEP files for suppliers and CAD tools (Fusion 360, SolidWorks, Onshape), in mm. |
+| [`cad/stl/`](cad/stl/) | STL files for 3D-printing prototypes (TwistLock pins: resin printer, tough resin). |
+| [`cad/`](cad/) | Parametric source. Change a number in `params.py` and rebuild (see the end of the design doc). |

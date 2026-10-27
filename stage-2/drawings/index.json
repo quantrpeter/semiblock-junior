@@ -1,0 +1,4009 @@
+[
+ {
+  "id": "SB-B02X",
+  "title": "H-beam 1x2 (pin + axle hole)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B02X.pdf",
+  "fcstd": "cad/fcstd/SB-B02X.FCStd",
+  "step": "cad/step/SB-B02X.step",
+  "sheets": [
+   "SB-B02X"
+  ],
+  "rows": [
+   [
+    "SB-B02X",
+    "SB-B02X",
+    "H-beam 1x2 (pin + axle hole)",
+    "工字孔梁 1×2（圆孔+十字孔）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.46",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-B03",
+  "title": "H-beam 1x3",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B03.pdf",
+  "fcstd": "cad/fcstd/SB-B03.FCStd",
+  "step": "cad/step/SB-B03.step",
+  "sheets": [
+   "SB-B03"
+  ],
+  "rows": [
+   [
+    "SB-B03",
+    "SB-B03",
+    "H-beam 1x3",
+    "工字孔梁 1×3",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.72",
+    12
+   ]
+  ]
+ },
+ {
+  "id": "SB-B05",
+  "title": "H-beam 1x5",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B05.pdf",
+  "fcstd": "cad/fcstd/SB-B05.FCStd",
+  "step": "cad/step/SB-B05.step",
+  "sheets": [
+   "SB-B05"
+  ],
+  "rows": [
+   [
+    "SB-B05",
+    "SB-B05",
+    "H-beam 1x5",
+    "工字孔梁 1×5",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.16",
+    12
+   ]
+  ]
+ },
+ {
+  "id": "SB-B07",
+  "title": "H-beam 1x7",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B07.pdf",
+  "fcstd": "cad/fcstd/SB-B07.FCStd",
+  "step": "cad/step/SB-B07.step",
+  "sheets": [
+   "SB-B07"
+  ],
+  "rows": [
+   [
+    "SB-B07",
+    "SB-B07",
+    "H-beam 1x7",
+    "工字孔梁 1×7",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.61",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-B09",
+  "title": "H-beam 1x9",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B09.pdf",
+  "fcstd": "cad/fcstd/SB-B09.FCStd",
+  "step": "cad/step/SB-B09.step",
+  "sheets": [
+   "SB-B09"
+  ],
+  "rows": [
+   [
+    "SB-B09",
+    "SB-B09",
+    "H-beam 1x9",
+    "工字孔梁 1×9",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.05",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-B11",
+  "title": "H-beam 1x11",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B11.pdf",
+  "fcstd": "cad/fcstd/SB-B11.FCStd",
+  "step": "cad/step/SB-B11.step",
+  "sheets": [
+   "SB-B11"
+  ],
+  "rows": [
+   [
+    "SB-B11",
+    "SB-B11",
+    "H-beam 1x11",
+    "工字孔梁 1×11",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.50",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-B13",
+  "title": "H-beam 1x13",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B13.pdf",
+  "fcstd": "cad/fcstd/SB-B13.FCStd",
+  "step": "cad/step/SB-B13.step",
+  "sheets": [
+   "SB-B13"
+  ],
+  "rows": [
+   [
+    "SB-B13",
+    "SB-B13",
+    "H-beam 1x13",
+    "工字孔梁 1×13",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.95",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-B15",
+  "title": "H-beam 1x15",
+  "family": "H-beams",
+  "pdf": "drawings/SB-B15.pdf",
+  "fcstd": "cad/fcstd/SB-B15.FCStd",
+  "step": "cad/step/SB-B15.step",
+  "sheets": [
+   "SB-B15"
+  ],
+  "rows": [
+   [
+    "SB-B15",
+    "SB-B15",
+    "H-beam 1x15",
+    "工字孔梁 1×15",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "3.39",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-S03",
+  "title": "Thin beam 1x3 (half thickness)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-S03.pdf",
+  "fcstd": "cad/fcstd/SB-S03.FCStd",
+  "step": "cad/step/SB-S03.step",
+  "sheets": [
+   "SB-S03"
+  ],
+  "rows": [
+   [
+    "SB-S03",
+    "SB-S03",
+    "Thin beam 1x3 (half thickness)",
+    "薄孔梁 1×3（半厚）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.45",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-S05",
+  "title": "Thin beam 1x5 (half thickness)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-S05.pdf",
+  "fcstd": "cad/fcstd/SB-S05.FCStd",
+  "step": "cad/step/SB-S05.step",
+  "sheets": [
+   "SB-S05"
+  ],
+  "rows": [
+   [
+    "SB-S05",
+    "SB-S05",
+    "Thin beam 1x5 (half thickness)",
+    "薄孔梁 1×5（半厚）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.77",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-L24",
+  "title": "L H-beam 2x4",
+  "family": "H-beams",
+  "pdf": "drawings/SB-L24.pdf",
+  "fcstd": "cad/fcstd/SB-L24.FCStd",
+  "step": "cad/step/SB-L24.step",
+  "sheets": [
+   "SB-L24"
+  ],
+  "rows": [
+   [
+    "SB-L24",
+    "SB-L24",
+    "L H-beam 2x4",
+    "L形工字孔梁 2×4",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.07",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-L35",
+  "title": "L H-beam 3x5",
+  "family": "H-beams",
+  "pdf": "drawings/SB-L35.pdf",
+  "fcstd": "cad/fcstd/SB-L35.FCStd",
+  "step": "cad/step/SB-L35.step",
+  "sheets": [
+   "SB-L35"
+  ],
+  "rows": [
+   [
+    "SB-L35",
+    "SB-L35",
+    "L H-beam 3x5",
+    "L形工字孔梁 3×5",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.52",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-T33",
+  "title": "T H-beam 3x3",
+  "family": "H-beams",
+  "pdf": "drawings/SB-T33.pdf",
+  "fcstd": "cad/fcstd/SB-T33.FCStd",
+  "step": "cad/step/SB-T33.step",
+  "sheets": [
+   "SB-T33"
+  ],
+  "rows": [
+   [
+    "SB-T33",
+    "SB-T33",
+    "T H-beam 3x3",
+    "T形工字孔梁 3×3",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.07",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-K46",
+  "title": "Bent H-beam 1x9 (53 deg)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-K46.pdf",
+  "fcstd": "cad/fcstd/SB-K46.FCStd",
+  "step": "cad/step/SB-K46.step",
+  "sheets": [
+   "SB-K46"
+  ],
+  "rows": [
+   [
+    "SB-K46",
+    "SB-K46",
+    "Bent H-beam 1x9 (53 deg)",
+    "弯工字孔梁 1×9（53°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.98",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-K44",
+  "title": "Bent H-beam 1x7 (45 deg)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-K44.pdf",
+  "fcstd": "cad/fcstd/SB-K44.FCStd",
+  "step": "cad/step/SB-K44.step",
+  "sheets": [
+   "SB-K44"
+  ],
+  "rows": [
+   [
+    "SB-K44",
+    "SB-K44",
+    "Bent H-beam 1x7 (45 deg)",
+    "弯工字孔梁 1×7（45°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.53",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-F57",
+  "title": "Frame 5x7 (H-section)",
+  "family": "H-beams",
+  "pdf": "drawings/SB-F57.pdf",
+  "fcstd": "cad/fcstd/SB-F57.FCStd",
+  "step": "cad/step/SB-F57.step",
+  "sheets": [
+   "SB-F57"
+  ],
+  "rows": [
+   [
+    "SB-F57",
+    "SB-F57",
+    "Frame 5x7 (H-section)",
+    "工字截面框架 5×7",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.46",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-C111",
+  "title": "SemiCube 1x1x1 (6-way)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-C111.pdf",
+  "fcstd": "cad/fcstd/SB-C111.FCStd",
+  "step": "cad/step/SB-C111.step",
+  "sheets": [
+   "SB-C111"
+  ],
+  "rows": [
+   [
+    "SB-C111",
+    "SB-C111",
+    "SemiCube 1x1x1 (6-way)",
+    "六向连接块 1×1×1",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.19",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-C121",
+  "title": "Block 1x2x1 (pin holes on 4 faces)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-C121.pdf",
+  "fcstd": "cad/fcstd/SB-C121.FCStd",
+  "step": "cad/step/SB-C121.step",
+  "sheets": [
+   "SB-C121"
+  ],
+  "rows": [
+   [
+    "SB-C121",
+    "SB-C121",
+    "Block 1x2x1 (pin holes on 4 faces)",
+    "连接块 1×2×1（四面销孔）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.39",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-XC12",
+  "title": "Cross block 1x2",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XC12.pdf",
+  "fcstd": "cad/fcstd/SB-XC12.FCStd",
+  "step": "cad/step/SB-XC12.step",
+  "sheets": [
+   "SB-XC12"
+  ],
+  "rows": [
+   [
+    "SB-XC12",
+    "SB-XC12",
+    "Cross block 1x2",
+    "十字连接块 1×2",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.56",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-XC13",
+  "title": "Cross block 1x3",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XC13.pdf",
+  "fcstd": "cad/fcstd/SB-XC13.FCStd",
+  "step": "cad/step/SB-XC13.step",
+  "sheets": [
+   "SB-XC13"
+  ],
+  "rows": [
+   [
+    "SB-XC13",
+    "SB-XC13",
+    "Cross block 1x3",
+    "十字连接块 1×3",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.87",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-XA2",
+  "title": "Axle joiner 2L",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XA2.pdf",
+  "fcstd": "cad/fcstd/SB-XA2.FCStd",
+  "step": "cad/step/SB-XA2.step",
+  "sheets": [
+   "SB-XA2"
+  ],
+  "rows": [
+   [
+    "SB-XA2",
+    "SB-XA2",
+    "Axle joiner 2L",
+    "轴连接器 2L",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.46",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-XP2",
+  "title": "Pin joiner 2L",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XP2.pdf",
+  "fcstd": "cad/fcstd/SB-XP2.FCStd",
+  "step": "cad/step/SB-XP2.step",
+  "sheets": [
+   "SB-XP2"
+  ],
+  "rows": [
+   [
+    "SB-XP2",
+    "SB-XP2",
+    "Pin joiner 2L",
+    "销连接器 2L",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.38",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN1",
+  "title": "Angle connector #1",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN1.pdf",
+  "fcstd": "cad/fcstd/SB-XN1.FCStd",
+  "step": "cad/step/SB-XN1.step",
+  "sheets": [
+   "SB-XN1"
+  ],
+  "rows": [
+   [
+    "SB-XN1",
+    "SB-XN1",
+    "Angle connector #1",
+    "角度连接器 #1",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.53",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN2",
+  "title": "Angle connector #2 (180 deg)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN2.pdf",
+  "fcstd": "cad/fcstd/SB-XN2.FCStd",
+  "step": "cad/step/SB-XN2.step",
+  "sheets": [
+   "SB-XN2"
+  ],
+  "rows": [
+   [
+    "SB-XN2",
+    "SB-XN2",
+    "Angle connector #2 (180 deg)",
+    "角度连接器 #2（180°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.66",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN3",
+  "title": "Angle connector #3 (157.5 deg)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN3.pdf",
+  "fcstd": "cad/fcstd/SB-XN3.FCStd",
+  "step": "cad/step/SB-XN3.step",
+  "sheets": [
+   "SB-XN3"
+  ],
+  "rows": [
+   [
+    "SB-XN3",
+    "SB-XN3",
+    "Angle connector #3 (157.5 deg)",
+    "角度连接器 #3（157.5°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.76",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN4",
+  "title": "Angle connector #4 (135 deg)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN4.pdf",
+  "fcstd": "cad/fcstd/SB-XN4.FCStd",
+  "step": "cad/step/SB-XN4.step",
+  "sheets": [
+   "SB-XN4"
+  ],
+  "rows": [
+   [
+    "SB-XN4",
+    "SB-XN4",
+    "Angle connector #4 (135 deg)",
+    "角度连接器 #4（135°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.87",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN5",
+  "title": "Angle connector #5 (112.5 deg)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN5.pdf",
+  "fcstd": "cad/fcstd/SB-XN5.FCStd",
+  "step": "cad/step/SB-XN5.step",
+  "sheets": [
+   "SB-XN5"
+  ],
+  "rows": [
+   [
+    "SB-XN5",
+    "SB-XN5",
+    "Angle connector #5 (112.5 deg)",
+    "角度连接器 #5（112.5°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.88",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-XN6",
+  "title": "Angle connector #6 (90 deg)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-XN6.pdf",
+  "fcstd": "cad/fcstd/SB-XN6.FCStd",
+  "step": "cad/step/SB-XN6.step",
+  "sheets": [
+   "SB-XN6"
+  ],
+  "rows": [
+   [
+    "SB-XN6",
+    "SB-XN6",
+    "Angle connector #6 (90 deg)",
+    "角度连接器 #6（90°）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.88",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-AH",
+  "title": "AngleLock hinge (15 deg steps)",
+  "family": "Connectors",
+  "pdf": "drawings/SB-AH.pdf",
+  "fcstd": "cad/fcstd/SB-AH.FCStd",
+  "step": "cad/step/SB-AH.step",
+  "sheets": [
+   "SB-AH"
+  ],
+  "rows": [
+   [
+    "SB-AH",
+    "SB-AH",
+    "AngleLock hinge (15 deg steps)",
+    "角度铰链（15° 分度）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Violet 紫 #7447EE",
+    "SB-C09",
+    "SPI B-2 光滑面",
+    "2.62",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-QP2",
+  "title": "Quick Pin 2L (friction)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-QP2.pdf",
+  "fcstd": "cad/fcstd/SB-QP2.FCStd",
+  "step": "cad/step/SB-QP2.step",
+  "sheets": [
+   "SB-QP2"
+  ],
+  "rows": [
+   [
+    "SB-QP2",
+    "SB-QP2",
+    "Quick Pin 2L (friction)",
+    "摩擦销 2L",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.23",
+    60
+   ]
+  ]
+ },
+ {
+  "id": "SB-QP2S",
+  "title": "Quick Pin 2L (smooth, pivots)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-QP2S.pdf",
+  "fcstd": "cad/fcstd/SB-QP2S.FCStd",
+  "step": "cad/step/SB-QP2S.step",
+  "sheets": [
+   "SB-QP2S"
+  ],
+  "rows": [
+   [
+    "SB-QP2S",
+    "SB-QP2S",
+    "Quick Pin 2L (smooth, pivots)",
+    "光滑销 2L（可转动）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.23",
+    20
+   ]
+  ]
+ },
+ {
+  "id": "SB-QP3",
+  "title": "Quick Pin 3L (friction)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-QP3.pdf",
+  "fcstd": "cad/fcstd/SB-QP3.FCStd",
+  "step": "cad/step/SB-QP3.step",
+  "sheets": [
+   "SB-QP3"
+  ],
+  "rows": [
+   [
+    "SB-QP3",
+    "SB-QP3",
+    "Quick Pin 3L (friction)",
+    "摩擦销 3L",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "SPI B-2 光滑面",
+    "0.35",
+    20
+   ]
+  ]
+ },
+ {
+  "id": "SB-QP1",
+  "title": "Half pin 1L with stop head",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-QP1.pdf",
+  "fcstd": "cad/fcstd/SB-QP1.FCStd",
+  "step": "cad/step/SB-QP1.step",
+  "sheets": [
+   "SB-QP1"
+  ],
+  "rows": [
+   [
+    "SB-QP1",
+    "SB-QP1",
+    "Half pin 1L with stop head",
+    "半销 1L（带挡头）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.17",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-AP2",
+  "title": "Axle pin (friction)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-AP2.pdf",
+  "fcstd": "cad/fcstd/SB-AP2.FCStd",
+  "step": "cad/step/SB-AP2.step",
+  "sheets": [
+   "SB-AP2"
+  ],
+  "rows": [
+   [
+    "SB-AP2",
+    "SB-AP2",
+    "Axle pin (friction)",
+    "轴销（摩擦）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "SPI B-2 光滑面",
+    "0.28",
+    12
+   ]
+  ]
+ },
+ {
+  "id": "SB-AP2S",
+  "title": "Axle pin (smooth)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-AP2S.pdf",
+  "fcstd": "cad/fcstd/SB-AP2S.FCStd",
+  "step": "cad/step/SB-AP2S.step",
+  "sheets": [
+   "SB-AP2S"
+  ],
+  "rows": [
+   [
+    "SB-AP2S",
+    "SB-AP2S",
+    "Axle pin (smooth)",
+    "轴销（光滑）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.28",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-BP",
+  "title": "Ball pin (tow ball)",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-BP.pdf",
+  "fcstd": "cad/fcstd/SB-BP.FCStd",
+  "step": "cad/step/SB-BP.step",
+  "sheets": [
+   "SB-BP"
+  ],
+  "rows": [
+   [
+    "SB-BP",
+    "SB-BP",
+    "Ball pin (tow ball)",
+    "球头销（拖车球）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "SPI B-2 光滑面",
+    "0.31",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-PX",
+  "title": "Pin with cross hole",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-PX.pdf",
+  "fcstd": "cad/fcstd/SB-PX.FCStd",
+  "step": "cad/step/SB-PX.step",
+  "sheets": [
+   "SB-PX"
+  ],
+  "rows": [
+   [
+    "SB-PX",
+    "SB-PX",
+    "Pin with cross hole",
+    "带十字孔销",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.38",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-BU1",
+  "title": "Bush 1L",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-BU1.pdf",
+  "fcstd": "cad/fcstd/SB-BU1.FCStd",
+  "step": "cad/step/SB-BU1.step",
+  "sheets": [
+   "SB-BU1"
+  ],
+  "rows": [
+   [
+    "SB-BU1",
+    "SB-BU1",
+    "Bush 1L",
+    "轴套 1L",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.15",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-BU0",
+  "title": "Half bush",
+  "family": "Pins & bushes",
+  "pdf": "drawings/SB-BU0.pdf",
+  "fcstd": "cad/fcstd/SB-BU0.FCStd",
+  "step": "cad/step/SB-BU0.step",
+  "sheets": [
+   "SB-BU0"
+  ],
+  "rows": [
+   [
+    "SB-BU0",
+    "SB-BU0",
+    "Half bush",
+    "半轴套",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.14",
+    20
+   ]
+  ]
+ },
+ {
+  "id": "SB-TL2",
+  "title": "TwistLock Pin 2L (friction)",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TL2.pdf",
+  "fcstd": "cad/fcstd/SB-TL2.FCStd",
+  "step": "cad/step/SB-TL2.step",
+  "sheets": [
+   "SB-TL2-ASM",
+   "SB-TL2-01",
+   "SB-TL2-02"
+  ],
+  "rows": [
+   [
+    "SB-TL2",
+    "SB-TL2-01",
+    "TwistLock Pin 2L (friction) — Sleeve",
+    "旋锁销 2L（摩擦） — 套管",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.28",
+    40
+   ],
+   [
+    "SB-TL2",
+    "SB-TL2-02",
+    "TwistLock Pin 2L (friction) — Core",
+    "旋锁销 2L（摩擦） — 锁芯",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.16",
+    40
+   ]
+  ]
+ },
+ {
+  "id": "SB-TL2S",
+  "title": "TwistLock Pin 2L (smooth, pivots)",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TL2S.pdf",
+  "fcstd": "cad/fcstd/SB-TL2S.FCStd",
+  "step": "cad/step/SB-TL2S.step",
+  "sheets": [
+   "SB-TL2S-ASM",
+   "SB-TL2S-01",
+   "SB-TL2S-02"
+  ],
+  "rows": [
+   [
+    "SB-TL2S",
+    "SB-TL2S-01",
+    "TwistLock Pin 2L (smooth, pivots) — Sleeve",
+    "旋锁销 2L（光滑，可转动） — 套管",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.28",
+    16
+   ],
+   [
+    "SB-TL2S",
+    "SB-TL2S-02",
+    "TwistLock Pin 2L (smooth, pivots) — Core",
+    "旋锁销 2L（光滑，可转动） — 锁芯",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.16",
+    16
+   ]
+  ]
+ },
+ {
+  "id": "SB-TL3",
+  "title": "TwistLock Pin 3L (friction)",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TL3.pdf",
+  "fcstd": "cad/fcstd/SB-TL3.FCStd",
+  "step": "cad/step/SB-TL3.step",
+  "sheets": [
+   "SB-TL3-ASM",
+   "SB-TL3-01",
+   "SB-TL3-02"
+  ],
+  "rows": [
+   [
+    "SB-TL3",
+    "SB-TL3-01",
+    "TwistLock Pin 3L (friction) — Sleeve",
+    "旋锁销 3L（摩擦） — 套管",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.42",
+    16
+   ],
+   [
+    "SB-TL3",
+    "SB-TL3-02",
+    "TwistLock Pin 3L (friction) — Core",
+    "旋锁销 3L（摩擦） — 锁芯",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.22",
+    16
+   ]
+  ]
+ },
+ {
+  "id": "SB-TL3S",
+  "title": "TwistLock Pin 3L (smooth, pivots)",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TL3S.pdf",
+  "fcstd": "cad/fcstd/SB-TL3S.FCStd",
+  "step": "cad/step/SB-TL3S.step",
+  "sheets": [
+   "SB-TL3S-ASM",
+   "SB-TL3S-01",
+   "SB-TL3S-02"
+  ],
+  "rows": [
+   [
+    "SB-TL3S",
+    "SB-TL3S-01",
+    "TwistLock Pin 3L (smooth, pivots) — Sleeve",
+    "旋锁销 3L（光滑，可转动） — 套管",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.42",
+    8
+   ],
+   [
+    "SB-TL3S",
+    "SB-TL3S-02",
+    "TwistLock Pin 3L (smooth, pivots) — Core",
+    "旋锁销 3L（光滑，可转动） — 锁芯",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.22",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-TC",
+  "title": "TwistLock Collar 1/2L",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TC.pdf",
+  "fcstd": "cad/fcstd/SB-TC.FCStd",
+  "step": "cad/step/SB-TC.step",
+  "sheets": [
+   "SB-TC-ASM",
+   "SB-TC-01",
+   "SB-TC-02"
+  ],
+  "rows": [
+   [
+    "SB-TC",
+    "SB-TC-01",
+    "TwistLock Collar 1/2L — Collet",
+    "旋锁轴环 1/2L — 夹套",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.07",
+    16
+   ],
+   [
+    "SB-TC",
+    "SB-TC-02",
+    "TwistLock Collar 1/2L — Lock ring",
+    "旋锁轴环 1/2L — 锁环",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.09",
+    16
+   ]
+  ]
+ },
+ {
+  "id": "SB-TC1",
+  "title": "TwistLock Collar 1L",
+  "family": "TwistLock (lock system)",
+  "pdf": "drawings/SB-TC1.pdf",
+  "fcstd": "cad/fcstd/SB-TC1.FCStd",
+  "step": "cad/step/SB-TC1.step",
+  "sheets": [
+   "SB-TC1-ASM",
+   "SB-TC1-01",
+   "SB-TC1-02"
+  ],
+  "rows": [
+   [
+    "SB-TC1",
+    "SB-TC1-01",
+    "TwistLock Collar 1L — Collet",
+    "旋锁轴环 1L — 夹套",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.13",
+    8
+   ],
+   [
+    "SB-TC1",
+    "SB-TC1-02",
+    "TwistLock Collar 1L — Lock ring",
+    "旋锁轴环 1L — 锁环",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "SPI B-2 光滑面",
+    "0.18",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-A02",
+  "title": "Axle 2",
+  "family": "Axles",
+  "pdf": "drawings/SB-A02.pdf",
+  "fcstd": "cad/fcstd/SB-A02.FCStd",
+  "step": "cad/step/SB-A02.step",
+  "sheets": [
+   "SB-A02"
+  ],
+  "rows": [
+   [
+    "SB-A02",
+    "SB-A02",
+    "Axle 2",
+    "十字轴 2",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.30",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-A03",
+  "title": "Axle 3",
+  "family": "Axles",
+  "pdf": "drawings/SB-A03.pdf",
+  "fcstd": "cad/fcstd/SB-A03.FCStd",
+  "step": "cad/step/SB-A03.step",
+  "sheets": [
+   "SB-A03"
+  ],
+  "rows": [
+   [
+    "SB-A03",
+    "SB-A03",
+    "Axle 3",
+    "十字轴 3",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.45",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "SB-A04",
+  "title": "Axle 4",
+  "family": "Axles",
+  "pdf": "drawings/SB-A04.pdf",
+  "fcstd": "cad/fcstd/SB-A04.FCStd",
+  "step": "cad/step/SB-A04.step",
+  "sheets": [
+   "SB-A04"
+  ],
+  "rows": [
+   [
+    "SB-A04",
+    "SB-A04",
+    "Axle 4",
+    "十字轴 4",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.60",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-A05",
+  "title": "Axle 5",
+  "family": "Axles",
+  "pdf": "drawings/SB-A05.pdf",
+  "fcstd": "cad/fcstd/SB-A05.FCStd",
+  "step": "cad/step/SB-A05.step",
+  "sheets": [
+   "SB-A05"
+  ],
+  "rows": [
+   [
+    "SB-A05",
+    "SB-A05",
+    "Axle 5",
+    "十字轴 5",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.75",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-A06",
+  "title": "Axle 6",
+  "family": "Axles",
+  "pdf": "drawings/SB-A06.pdf",
+  "fcstd": "cad/fcstd/SB-A06.FCStd",
+  "step": "cad/step/SB-A06.step",
+  "sheets": [
+   "SB-A06"
+  ],
+  "rows": [
+   [
+    "SB-A06",
+    "SB-A06",
+    "Axle 6",
+    "十字轴 6",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.90",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-A07",
+  "title": "Axle 7",
+  "family": "Axles",
+  "pdf": "drawings/SB-A07.pdf",
+  "fcstd": "cad/fcstd/SB-A07.FCStd",
+  "step": "cad/step/SB-A07.step",
+  "sheets": [
+   "SB-A07"
+  ],
+  "rows": [
+   [
+    "SB-A07",
+    "SB-A07",
+    "Axle 7",
+    "十字轴 7",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "1.05",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-A08",
+  "title": "Axle 8",
+  "family": "Axles",
+  "pdf": "drawings/SB-A08.pdf",
+  "fcstd": "cad/fcstd/SB-A08.FCStd",
+  "step": "cad/step/SB-A08.step",
+  "sheets": [
+   "SB-A08"
+  ],
+  "rows": [
+   [
+    "SB-A08",
+    "SB-A08",
+    "Axle 8",
+    "十字轴 8",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "1.20",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-A10",
+  "title": "Axle 10",
+  "family": "Axles",
+  "pdf": "drawings/SB-A10.pdf",
+  "fcstd": "cad/fcstd/SB-A10.FCStd",
+  "step": "cad/step/SB-A10.step",
+  "sheets": [
+   "SB-A10"
+  ],
+  "rows": [
+   [
+    "SB-A10",
+    "SB-A10",
+    "Axle 10",
+    "十字轴 10",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "1.50",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-A12",
+  "title": "Axle 12",
+  "family": "Axles",
+  "pdf": "drawings/SB-A12.pdf",
+  "fcstd": "cad/fcstd/SB-A12.FCStd",
+  "step": "cad/step/SB-A12.step",
+  "sheets": [
+   "SB-A12"
+  ],
+  "rows": [
+   [
+    "SB-A12",
+    "SB-A12",
+    "Axle 12",
+    "十字轴 12",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "1.80",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-A03S",
+  "title": "Axle 3 with stop",
+  "family": "Axles",
+  "pdf": "drawings/SB-A03S.pdf",
+  "fcstd": "cad/fcstd/SB-A03S.FCStd",
+  "step": "cad/step/SB-A03S.step",
+  "sheets": [
+   "SB-A03S"
+  ],
+  "rows": [
+   [
+    "SB-A03S",
+    "SB-A03S",
+    "Axle 3 with stop",
+    "带挡十字轴 3",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.46",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-A04S",
+  "title": "Axle 4 with stop",
+  "family": "Axles",
+  "pdf": "drawings/SB-A04S.pdf",
+  "fcstd": "cad/fcstd/SB-A04S.FCStd",
+  "step": "cad/step/SB-A04S.step",
+  "sheets": [
+   "SB-A04S"
+  ],
+  "rows": [
+   [
+    "SB-A04S",
+    "SB-A04S",
+    "Axle 4 with stop",
+    "带挡十字轴 4",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Black 黑 #24282E",
+    "SB-C06",
+    "SPI B-2 光滑面",
+    "0.61",
+    6
+   ]
+  ]
+ },
+ {
+  "id": "SB-G08",
+  "title": "Gear 8T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G08.pdf",
+  "fcstd": "cad/fcstd/SB-G08.FCStd",
+  "step": "cad/step/SB-G08.step",
+  "sheets": [
+   "SB-G08"
+  ],
+  "rows": [
+   [
+    "SB-G08",
+    "SB-G08",
+    "Gear 8T",
+    "直齿轮 8齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "SPI B-2 光滑面",
+    "0.16",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-G12B",
+  "title": "Double-bevel gear 12T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G12B.pdf",
+  "fcstd": "cad/fcstd/SB-G12B.FCStd",
+  "step": "cad/step/SB-G12B.step",
+  "sheets": [
+   "SB-G12B"
+  ],
+  "rows": [
+   [
+    "SB-G12B",
+    "SB-G12B",
+    "Double-bevel gear 12T",
+    "双面锥齿轮 12齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.43",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-G16",
+  "title": "Gear 16T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G16.pdf",
+  "fcstd": "cad/fcstd/SB-G16.FCStd",
+  "step": "cad/step/SB-G16.step",
+  "sheets": [
+   "SB-G16"
+  ],
+  "rows": [
+   [
+    "SB-G16",
+    "SB-G16",
+    "Gear 16T",
+    "直齿轮 16齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.93",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-G20B",
+  "title": "Double-bevel gear 20T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G20B.pdf",
+  "fcstd": "cad/fcstd/SB-G20B.FCStd",
+  "step": "cad/step/SB-G20B.step",
+  "sheets": [
+   "SB-G20B"
+  ],
+  "rows": [
+   [
+    "SB-G20B",
+    "SB-G20B",
+    "Double-bevel gear 20T",
+    "双面锥齿轮 20齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "SPI B-2 光滑面",
+    "1.48",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-G24",
+  "title": "Gear 24T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G24.pdf",
+  "fcstd": "cad/fcstd/SB-G24.FCStd",
+  "step": "cad/step/SB-G24.step",
+  "sheets": [
+   "SB-G24"
+  ],
+  "rows": [
+   [
+    "SB-G24",
+    "SB-G24",
+    "Gear 24T",
+    "直齿轮 24齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "SPI B-2 光滑面",
+    "1.83",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-G24C",
+  "title": "Clutch gear 24T (slips at safe torque)",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G24C.pdf",
+  "fcstd": "cad/fcstd/SB-G24C.FCStd",
+  "step": "cad/step/SB-G24C.step",
+  "sheets": [
+   "SB-G24C"
+  ],
+  "rows": [
+   [
+    "SB-G24C",
+    "SB-G24C",
+    "Clutch gear 24T (slips at safe torque)",
+    "离合齿轮 24齿（过载打滑）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "White 白 #F2F4F7",
+    "SB-C03",
+    "SPI B-2 光滑面",
+    "2.99",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-G36B",
+  "title": "Double-bevel gear 36T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G36B.pdf",
+  "fcstd": "cad/fcstd/SB-G36B.FCStd",
+  "step": "cad/step/SB-G36B.step",
+  "sheets": [
+   "SB-G36B"
+  ],
+  "rows": [
+   [
+    "SB-G36B",
+    "SB-G36B",
+    "Double-bevel gear 36T",
+    "双面锥齿轮 36齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "SPI B-2 光滑面",
+    "3.82",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-G40",
+  "title": "Gear 40T",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-G40.pdf",
+  "fcstd": "cad/fcstd/SB-G40.FCStd",
+  "step": "cad/step/SB-G40.step",
+  "sheets": [
+   "SB-G40"
+  ],
+  "rows": [
+   [
+    "SB-G40",
+    "SB-G40",
+    "Gear 40T",
+    "直齿轮 40齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "5.10",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-GW",
+  "title": "Worm gear",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-GW.pdf",
+  "fcstd": "cad/fcstd/SB-GW.FCStd",
+  "step": "cad/step/SB-GW.step",
+  "sheets": [
+   "SB-GW"
+  ],
+  "rows": [
+   [
+    "SB-GW",
+    "SB-GW",
+    "Worm gear",
+    "蜗杆",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "SPI B-2 光滑面",
+    "0.87",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-GR4",
+  "title": "Gear rack 1x4",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-GR4.pdf",
+  "fcstd": "cad/fcstd/SB-GR4.FCStd",
+  "step": "cad/step/SB-GR4.step",
+  "sheets": [
+   "SB-GR4"
+  ],
+  "rows": [
+   [
+    "SB-GR4",
+    "SB-GR4",
+    "Gear rack 1x4",
+    "齿条 1×4",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "2.02",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-GR8",
+  "title": "Gear rack 1x8",
+  "family": "Gears & motion",
+  "pdf": "drawings/SB-GR8.pdf",
+  "fcstd": "cad/fcstd/SB-GR8.FCStd",
+  "step": "cad/step/SB-GR8.step",
+  "sheets": [
+   "SB-GR8"
+  ],
+  "rows": [
+   [
+    "SB-GR8",
+    "SB-GR8",
+    "Gear rack 1x8",
+    "齿条 1×8",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Yellow 黄 #FFC21A",
+    "SB-C02",
+    "SPI B-2 光滑面",
+    "4.06",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-BR5",
+  "title": "Bearing beam 1x5 (ball bearing)",
+  "family": "Bearings",
+  "pdf": "drawings/SB-BR5.pdf",
+  "fcstd": "cad/fcstd/SB-BR5.FCStd",
+  "step": "cad/step/SB-BR5.step",
+  "sheets": [
+   "SB-BR5-ASM",
+   "SB-BR5-01",
+   "SB-BR5-02",
+   "SB-BR5-03"
+  ],
+  "rows": [
+   [
+    "SB-BR5",
+    "SB-BR5-01",
+    "Bearing beam 1x5 (ball bearing) — Bearing housing",
+    "轴承梁 1×5（滚珠轴承） — 轴承座",
+    "injection moulded",
+    "PA66-GF30, e.g. Zytel 70G30 or equiv.",
+    "Teal 青绿 #12A89A",
+    "SB-C08",
+    "VDI 3400 Ref 21 细哑光纹理",
+    "1.76",
+    4
+   ],
+   [
+    "SB-BR5",
+    "SB-BR5-02",
+    "Bearing beam 1x5 (ball bearing) — Axle hub",
+    "轴承梁 1×5（滚珠轴承） — 十字轴芯",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.42",
+    4
+   ],
+   [
+    "SB-BR5",
+    "SB-BR5-03",
+    "Bearing beam 1x5 (ball bearing) — Retainer ring",
+    "轴承梁 1×5（滚珠轴承） — 压圈",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Teal 青绿 #12A89A",
+    "SB-C08",
+    "SPI B-2 光滑面",
+    "0.08",
+    4
+   ],
+   [
+    "SB-BR5",
+    "purchased",
+    "Bearing beam 1x5 (ball bearing) — Bearing MR128ZZ",
+    "轴承梁 1×5（滚珠轴承） — 轴承",
+    "purchased part",
+    "Chrome steel GCr15 (purchased)",
+    "Bright steel 本色 #C9CED6",
+    "—",
+    "polished 抛光",
+    "1.64",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-TT7",
+  "title": "Turntable 7x7 with ball bearing",
+  "family": "Bearings",
+  "pdf": "drawings/SB-TT7.pdf",
+  "fcstd": "cad/fcstd/SB-TT7.FCStd",
+  "step": "cad/step/SB-TT7.step",
+  "sheets": [
+   "SB-TT7-ASM",
+   "SB-TT7-01",
+   "SB-TT7-02",
+   "SB-TT7-03"
+  ],
+  "rows": [
+   [
+    "SB-TT7",
+    "SB-TT7-01",
+    "Turntable 7x7 with ball bearing — Base",
+    "转盘 7×7（滚珠轴承） — 底座",
+    "injection moulded",
+    "PA66-GF30, e.g. Zytel 70G30 or equiv.",
+    "Teal 青绿 #12A89A",
+    "SB-C08",
+    "VDI 3400 Ref 21 细哑光纹理",
+    "14.39",
+    1
+   ],
+   [
+    "SB-TT7",
+    "SB-TT7-02",
+    "Turntable 7x7 with ball bearing — Rotor 40T",
+    "转盘 7×7（滚珠轴承） — 转盘齿圈 40齿",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "13.45",
+    1
+   ],
+   [
+    "SB-TT7",
+    "SB-TT7-03",
+    "Turntable 7x7 with ball bearing — Retainer ring",
+    "转盘 7×7（滚珠轴承） — 压圈",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Teal 青绿 #12A89A",
+    "SB-C08",
+    "SPI B-2 光滑面",
+    "0.17",
+    1
+   ],
+   [
+    "SB-TT7",
+    "purchased",
+    "Turntable 7x7 with ball bearing — Bearing 6705ZZ",
+    "转盘 7×7（滚珠轴承） — 轴承",
+    "purchased part",
+    "Chrome steel GCr15 (purchased)",
+    "Bright steel 本色 #C9CED6",
+    "—",
+    "polished 抛光",
+    "9.41",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-W56",
+  "title": "Wheel 56 x 26 + tyre",
+  "family": "Wheels",
+  "pdf": "drawings/SB-W56.pdf",
+  "fcstd": "cad/fcstd/SB-W56.FCStd",
+  "step": "cad/step/SB-W56.step",
+  "sheets": [
+   "SB-W56-ASM",
+   "SB-W56-01",
+   "SB-W56-02"
+  ],
+  "rows": [
+   [
+    "SB-W56",
+    "SB-W56-01",
+    "Wheel 56 x 26 + tyre — Hub",
+    "车轮 56×26（含轮胎） — 轮毂",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "13.35",
+    4
+   ],
+   [
+    "SB-W56",
+    "SB-W56-02",
+    "Wheel 56 x 26 + tyre — Tyre",
+    "车轮 56×26（含轮胎） — 轮胎",
+    "injection moulded",
+    "TPE, Shore A 65 ±5",
+    "Black 黑 #1C1F23",
+    "SB-C10",
+    "VDI 3400 Ref 27 哑光纹理",
+    "27.64",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-W30",
+  "title": "Wheel 30 x 14 + tyre",
+  "family": "Wheels",
+  "pdf": "drawings/SB-W30.pdf",
+  "fcstd": "cad/fcstd/SB-W30.FCStd",
+  "step": "cad/step/SB-W30.step",
+  "sheets": [
+   "SB-W30-ASM",
+   "SB-W30-01",
+   "SB-W30-02"
+  ],
+  "rows": [
+   [
+    "SB-W30",
+    "SB-W30-01",
+    "Wheel 30 x 14 + tyre — Hub",
+    "车轮 30×14（含轮胎） — 轮毂",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "3.46",
+    4
+   ],
+   [
+    "SB-W30",
+    "SB-W30-02",
+    "Wheel 30 x 14 + tyre — Tyre",
+    "车轮 30×14（含轮胎） — 轮胎",
+    "injection moulded",
+    "TPE, Shore A 65 ±5",
+    "Black 黑 #1C1F23",
+    "SB-C10",
+    "VDI 3400 Ref 27 哑光纹理",
+    "5.03",
+    4
+   ]
+  ]
+ },
+ {
+  "id": "SB-WO48",
+  "title": "Omni wheel 48",
+  "family": "Wheels",
+  "pdf": "drawings/SB-WO48.pdf",
+  "fcstd": "cad/fcstd/SB-WO48.FCStd",
+  "step": "cad/step/SB-WO48.step",
+  "sheets": [
+   "SB-WO48-ASM",
+   "SB-WO48-01",
+   "SB-WO48-02"
+  ],
+  "rows": [
+   [
+    "SB-WO48",
+    "SB-WO48-01",
+    "Omni wheel 48 — Hub",
+    "全向轮 48 — 轮毂",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.28",
+    2
+   ],
+   [
+    "SB-WO48",
+    "SB-WO48-02",
+    "Omni wheel 48 — Roller",
+    "全向轮 48 — 滚轮",
+    "injection moulded",
+    "TPU, Shore A 85 ±5",
+    "Black 黑 #1C1F23",
+    "SB-C10",
+    "VDI 3400 Ref 24 哑光纹理",
+    "0.39",
+    32
+   ]
+  ]
+ },
+ {
+  "id": "SB-WM60L",
+  "title": "Mecanum wheel 60 (left)",
+  "family": "Wheels",
+  "pdf": "drawings/SB-WM60L.pdf",
+  "fcstd": "cad/fcstd/SB-WM60L.FCStd",
+  "step": "cad/step/SB-WM60L.step",
+  "sheets": [
+   "SB-WM60L-ASM",
+   "SB-WM60L-01",
+   "SB-WM60L-02"
+  ],
+  "rows": [
+   [
+    "SB-WM60L",
+    "SB-WM60L-01",
+    "Mecanum wheel 60 (left) — Hub",
+    "麦克纳姆轮 60（左） — 轮毂",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "11.06",
+    2
+   ],
+   [
+    "SB-WM60L",
+    "SB-WM60L-02",
+    "Mecanum wheel 60 (left) — Roller",
+    "麦克纳姆轮 60（左） — 滚轮",
+    "injection moulded",
+    "TPU, Shore A 85 ±5",
+    "Black 黑 #1C1F23",
+    "SB-C10",
+    "VDI 3400 Ref 24 哑光纹理",
+    "1.98",
+    18
+   ]
+  ]
+ },
+ {
+  "id": "SB-WM60R",
+  "title": "Mecanum wheel 60 (right)",
+  "family": "Wheels",
+  "pdf": "drawings/SB-WM60R.pdf",
+  "fcstd": "cad/fcstd/SB-WM60R.FCStd",
+  "step": "cad/step/SB-WM60R.step",
+  "sheets": [
+   "SB-WM60R-ASM",
+   "SB-WM60R-01",
+   "SB-WM60R-02"
+  ],
+  "rows": [
+   [
+    "SB-WM60R",
+    "SB-WM60R-01",
+    "Mecanum wheel 60 (right) — Hub",
+    "麦克纳姆轮 60（右） — 轮毂",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "13.45",
+    2
+   ],
+   [
+    "SB-WM60R",
+    "SB-WM60R-02",
+    "Mecanum wheel 60 (right) — Roller",
+    "麦克纳姆轮 60（右） — 滚轮",
+    "injection moulded",
+    "TPU, Shore A 85 ±5",
+    "Black 黑 #1C1F23",
+    "SB-C10",
+    "VDI 3400 Ref 24 哑光纹理",
+    "1.98",
+    18
+   ]
+  ]
+ },
+ {
+  "id": "SB-CASTER",
+  "title": "Ball caster block",
+  "family": "Wheels",
+  "pdf": "drawings/SB-CASTER.pdf",
+  "fcstd": "cad/fcstd/SB-CASTER.FCStd",
+  "step": "cad/step/SB-CASTER.step",
+  "sheets": [
+   "SB-CASTER-ASM",
+   "SB-CASTER-01"
+  ],
+  "rows": [
+   [
+    "SB-CASTER",
+    "SB-CASTER-01",
+    "Ball caster block — Housing",
+    "万向球座 — 球座",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey 深灰 #5B636D",
+    "SB-C05",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "16.55",
+    1
+   ],
+   [
+    "SB-CASTER",
+    "purchased",
+    "Ball caster block — Steel ball",
+    "万向球座 — 钢球",
+    "purchased part",
+    "Chrome steel GCr15 (purchased)",
+    "Bright steel 本色 #C9CED6",
+    "—",
+    "polished 抛光",
+    "9.03",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-KEY",
+  "title": "SemiKey multi-tool",
+  "family": "Accessories & tools",
+  "pdf": "drawings/SB-KEY.pdf",
+  "fcstd": "cad/fcstd/SB-KEY.FCStd",
+  "step": "cad/step/SB-KEY.step",
+  "sheets": [
+   "SB-KEY"
+  ],
+  "rows": [
+   [
+    "SB-KEY",
+    "SB-KEY",
+    "SemiKey multi-tool",
+    "SemiKey 多功能工具",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Magenta 品红 #C8209E",
+    "SB-C07",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.37",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-CC",
+  "title": "Cable clip (pin-in)",
+  "family": "Accessories & tools",
+  "pdf": "drawings/SB-CC.pdf",
+  "fcstd": "cad/fcstd/SB-CC.FCStd",
+  "step": "cad/step/SB-CC.step",
+  "sheets": [
+   "SB-CC"
+  ],
+  "rows": [
+   [
+    "SB-CC",
+    "SB-CC",
+    "Cable clip (pin-in)",
+    "线夹（插销式）",
+    "injection moulded",
+    "POM copolymer, e.g. Hostaform C 9021",
+    "Light grey 浅灰 #B4BCC6",
+    "SB-C04",
+    "SPI B-2 光滑面",
+    "0.22",
+    12
+   ]
+  ]
+ },
+ {
+  "id": "SB-N26",
+  "title": "Name plate 2x6 (write-on)",
+  "family": "Accessories & tools",
+  "pdf": "drawings/SB-N26.pdf",
+  "fcstd": "cad/fcstd/SB-N26.FCStd",
+  "step": "cad/step/SB-N26.step",
+  "sheets": [
+   "SB-N26"
+  ],
+  "rows": [
+   [
+    "SB-N26",
+    "SB-N26",
+    "Name plate 2x6 (write-on)",
+    "名牌 2×6（可书写）",
+    "injection moulded",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue 蓝 #1F6FE5",
+    "SB-C01",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.54",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-HUB",
+  "title": "Junior Brain (ESP32-S3 hub)",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-HUB.pdf",
+  "fcstd": "cad/fcstd/SB-HUB.FCStd",
+  "step": "cad/step/SB-HUB.step",
+  "sheets": [
+   "SB-HUB"
+  ],
+  "rows": [
+   [
+    "SB-HUB",
+    "SB-HUB",
+    "Junior Brain (ESP32-S3 hub)",
+    "主控盒 Junior Brain（ESP32-S3）",
+    "electronic module (outline drawing)",
+    "PC/ABS, UL94 V-0",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "131.9",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-MOT-M",
+  "title": "SemiMotor M (encoder motor)",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-MOT-M.pdf",
+  "fcstd": "cad/fcstd/SB-MOT-M.FCStd",
+  "step": "cad/step/SB-MOT-M.step",
+  "sheets": [
+   "SB-MOT-M"
+  ],
+  "rows": [
+   [
+    "SB-MOT-M",
+    "SB-MOT-M",
+    "SemiMotor M (encoder motor)",
+    "编码电机 M",
+    "electronic module (outline drawing)",
+    "PC/ABS, UL94 V-0",
+    "White",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "16.5",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "SB-MOT-L",
+  "title": "SemiMotor L (encoder motor, high torque)",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-MOT-L.pdf",
+  "fcstd": "cad/fcstd/SB-MOT-L.FCStd",
+  "step": "cad/step/SB-MOT-L.step",
+  "sheets": [
+   "SB-MOT-L"
+  ],
+  "rows": [
+   [
+    "SB-MOT-L",
+    "SB-MOT-L",
+    "SemiMotor L (encoder motor, high torque)",
+    "编码电机 L（大扭矩）",
+    "electronic module (outline drawing)",
+    "PC/ABS, UL94 V-0",
+    "White",
+    "SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "23.4",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-SV180",
+  "title": "SemiServo 180 deg (position)",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-SV180.pdf",
+  "fcstd": "cad/fcstd/SB-SV180.FCStd",
+  "step": "cad/step/SB-SV180.step",
+  "sheets": [
+   "SB-SV180"
+  ],
+  "rows": [
+   [
+    "SB-SV180",
+    "SB-SV180",
+    "SemiServo 180 deg (position)",
+    "舵机 180°",
+    "electronic module (outline drawing)",
+    "PC/ABS, UL94 V-0",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "10.4",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-SV360",
+  "title": "SemiServo 360 (continuous)",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-SV360.pdf",
+  "fcstd": "cad/fcstd/SB-SV360.FCStd",
+  "step": "cad/step/SB-SV360.step",
+  "sheets": [
+   "SB-SV360"
+  ],
+  "rows": [
+   [
+    "SB-SV360",
+    "SB-SV360",
+    "SemiServo 360 (continuous)",
+    "360° 连续旋转舵机",
+    "electronic module (outline drawing)",
+    "PC/ABS, UL94 V-0",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "10.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-LINK",
+  "title": "SemiLink-6 plug + cable",
+  "family": "Hub, motors & cables",
+  "pdf": "drawings/SB-LINK.pdf",
+  "fcstd": "cad/fcstd/SB-LINK.FCStd",
+  "step": "cad/step/SB-LINK.step",
+  "sheets": [
+   "SB-LINK"
+  ],
+  "rows": [
+   [
+    "SB-LINK",
+    "SB-LINK",
+    "SemiLink-6 plug + cable",
+    "SemiLink-6 插头及线缆",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Black",
+    "SB-C06",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "0.9",
+    8
+   ]
+  ]
+ },
+ {
+  "id": "SB-US",
+  "title": "Ultrasonic distance",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-US.pdf",
+  "fcstd": "cad/fcstd/SB-US.FCStd",
+  "step": "cad/step/SB-US.step",
+  "sheets": [
+   "SB-US"
+  ],
+  "rows": [
+   [
+    "SB-US",
+    "SB-US",
+    "Ultrasonic distance",
+    "超声波测距模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "11.0",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-TOF",
+  "title": "ToF laser distance",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-TOF.pdf",
+  "fcstd": "cad/fcstd/SB-TOF.FCStd",
+  "step": "cad/step/SB-TOF.step",
+  "sheets": [
+   "SB-TOF"
+  ],
+  "rows": [
+   [
+    "SB-TOF",
+    "SB-TOF",
+    "ToF laser distance",
+    "激光测距模块（ToF）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.5",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-IRP",
+  "title": "IR obstacle",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-IRP.pdf",
+  "fcstd": "cad/fcstd/SB-IRP.FCStd",
+  "step": "cad/step/SB-IRP.step",
+  "sheets": [
+   "SB-IRP"
+  ],
+  "rows": [
+   [
+    "SB-IRP",
+    "SB-IRP",
+    "IR obstacle",
+    "红外避障模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-PIR",
+  "title": "PIR motion",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-PIR.pdf",
+  "fcstd": "cad/fcstd/SB-PIR.FCStd",
+  "step": "cad/step/SB-PIR.step",
+  "sheets": [
+   "SB-PIR"
+  ],
+  "rows": [
+   [
+    "SB-PIR",
+    "SB-PIR",
+    "PIR motion",
+    "人体红外感应模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.5",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-RADAR",
+  "title": "mmWave presence",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-RADAR.pdf",
+  "fcstd": "cad/fcstd/SB-RADAR.FCStd",
+  "step": "cad/step/SB-RADAR.step",
+  "sheets": [
+   "SB-RADAR"
+  ],
+  "rows": [
+   [
+    "SB-RADAR",
+    "SB-RADAR",
+    "mmWave presence",
+    "毫米波人体存在模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.2",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-ZONE",
+  "title": "Multi-zone ToF 8x8",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-ZONE.pdf",
+  "fcstd": "cad/fcstd/SB-ZONE.FCStd",
+  "step": "cad/step/SB-ZONE.step",
+  "sheets": [
+   "SB-ZONE"
+  ],
+  "rows": [
+   [
+    "SB-ZONE",
+    "SB-ZONE",
+    "Multi-zone ToF 8x8",
+    "多区激光测距模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.5",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-LINE",
+  "title": "Line sensor x5",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-LINE.pdf",
+  "fcstd": "cad/fcstd/SB-LINE.FCStd",
+  "step": "cad/step/SB-LINE.step",
+  "sheets": [
+   "SB-LINE"
+  ],
+  "rows": [
+   [
+    "SB-LINE",
+    "SB-LINE",
+    "Line sensor x5",
+    "循迹传感器 ×5",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "16.4",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-COLOR",
+  "title": "Colour sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-COLOR.pdf",
+  "fcstd": "cad/fcstd/SB-COLOR.FCStd",
+  "step": "cad/step/SB-COLOR.step",
+  "sheets": [
+   "SB-COLOR"
+  ],
+  "rows": [
+   [
+    "SB-COLOR",
+    "SB-COLOR",
+    "Colour sensor",
+    "颜色传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.5",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-GEST",
+  "title": "Gesture sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-GEST.pdf",
+  "fcstd": "cad/fcstd/SB-GEST.FCStd",
+  "step": "cad/step/SB-GEST.step",
+  "sheets": [
+   "SB-GEST"
+  ],
+  "rows": [
+   [
+    "SB-GEST",
+    "SB-GEST",
+    "Gesture sensor",
+    "手势传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-LUX",
+  "title": "Light sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-LUX.pdf",
+  "fcstd": "cad/fcstd/SB-LUX.FCStd",
+  "step": "cad/step/SB-LUX.step",
+  "sheets": [
+   "SB-LUX"
+  ],
+  "rows": [
+   [
+    "SB-LUX",
+    "SB-LUX",
+    "Light sensor",
+    "光照传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-UV",
+  "title": "UV index",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-UV.pdf",
+  "fcstd": "cad/fcstd/SB-UV.FCStd",
+  "step": "cad/step/SB-UV.step",
+  "sheets": [
+   "SB-UV"
+  ],
+  "rows": [
+   [
+    "SB-UV",
+    "SB-UV",
+    "UV index",
+    "紫外线传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-FLAME",
+  "title": "Flame sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-FLAME.pdf",
+  "fcstd": "cad/fcstd/SB-FLAME.FCStd",
+  "step": "cad/step/SB-FLAME.step",
+  "sheets": [
+   "SB-FLAME"
+  ],
+  "rows": [
+   [
+    "SB-FLAME",
+    "SB-FLAME",
+    "Flame sensor",
+    "火焰传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-IRT",
+  "title": "IR thermometer",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-IRT.pdf",
+  "fcstd": "cad/fcstd/SB-IRT.FCStd",
+  "step": "cad/step/SB-IRT.step",
+  "sheets": [
+   "SB-IRT"
+  ],
+  "rows": [
+   [
+    "SB-IRT",
+    "SB-IRT",
+    "IR thermometer",
+    "非接触测温模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.6",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-THERM",
+  "title": "Thermal camera 8x8",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-THERM.pdf",
+  "fcstd": "cad/fcstd/SB-THERM.FCStd",
+  "step": "cad/step/SB-THERM.step",
+  "sheets": [
+   "SB-THERM"
+  ],
+  "rows": [
+   [
+    "SB-THERM",
+    "SB-THERM",
+    "Thermal camera 8x8",
+    "热成像模块 8×8",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.5",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-BTN",
+  "title": "Big button",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-BTN.pdf",
+  "fcstd": "cad/fcstd/SB-BTN.FCStd",
+  "step": "cad/step/SB-BTN.step",
+  "sheets": [
+   "SB-BTN"
+  ],
+  "rows": [
+   [
+    "SB-BTN",
+    "SB-BTN",
+    "Big button",
+    "大按钮模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.8",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-BUMP",
+  "title": "Bumper switch",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-BUMP.pdf",
+  "fcstd": "cad/fcstd/SB-BUMP.FCStd",
+  "step": "cad/step/SB-BUMP.step",
+  "sheets": [
+   "SB-BUMP"
+  ],
+  "rows": [
+   [
+    "SB-BUMP",
+    "SB-BUMP",
+    "Bumper switch",
+    "碰撞开关模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-TOUCH",
+  "title": "Touch pad",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-TOUCH.pdf",
+  "fcstd": "cad/fcstd/SB-TOUCH.FCStd",
+  "step": "cad/step/SB-TOUCH.step",
+  "sheets": [
+   "SB-TOUCH"
+  ],
+  "rows": [
+   [
+    "SB-TOUCH",
+    "SB-TOUCH",
+    "Touch pad",
+    "触摸传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-FORCE",
+  "title": "Force sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-FORCE.pdf",
+  "fcstd": "cad/fcstd/SB-FORCE.FCStd",
+  "step": "cad/step/SB-FORCE.step",
+  "sheets": [
+   "SB-FORCE"
+  ],
+  "rows": [
+   [
+    "SB-FORCE",
+    "SB-FORCE",
+    "Force sensor",
+    "压力传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-LOAD",
+  "title": "Weight (load cell 1 kg)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-LOAD.pdf",
+  "fcstd": "cad/fcstd/SB-LOAD.FCStd",
+  "step": "cad/step/SB-LOAD.step",
+  "sheets": [
+   "SB-LOAD"
+  ],
+  "rows": [
+   [
+    "SB-LOAD",
+    "SB-LOAD",
+    "Weight (load cell 1 kg)",
+    "称重传感器（1 kg）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-POT",
+  "title": "Rotary knob",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-POT.pdf",
+  "fcstd": "cad/fcstd/SB-POT.FCStd",
+  "step": "cad/step/SB-POT.step",
+  "sheets": [
+   "SB-POT"
+  ],
+  "rows": [
+   [
+    "SB-POT",
+    "SB-POT",
+    "Rotary knob",
+    "旋钮电位器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-ENC",
+  "title": "Rotary encoder",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-ENC.pdf",
+  "fcstd": "cad/fcstd/SB-ENC.FCStd",
+  "step": "cad/step/SB-ENC.step",
+  "sheets": [
+   "SB-ENC"
+  ],
+  "rows": [
+   [
+    "SB-ENC",
+    "SB-ENC",
+    "Rotary encoder",
+    "旋转编码器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SLIDE",
+  "title": "Slide control",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SLIDE.pdf",
+  "fcstd": "cad/fcstd/SB-SLIDE.FCStd",
+  "step": "cad/step/SB-SLIDE.step",
+  "sheets": [
+   "SB-SLIDE"
+  ],
+  "rows": [
+   [
+    "SB-SLIDE",
+    "SB-SLIDE",
+    "Slide control",
+    "滑动电位器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "3.8",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-JOY",
+  "title": "Joystick",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-JOY.pdf",
+  "fcstd": "cad/fcstd/SB-JOY.FCStd",
+  "step": "cad/step/SB-JOY.step",
+  "sheets": [
+   "SB-JOY"
+  ],
+  "rows": [
+   [
+    "SB-JOY",
+    "SB-JOY",
+    "Joystick",
+    "摇杆模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.8",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-KEYPAD",
+  "title": "Keypad 4x3",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-KEYPAD.pdf",
+  "fcstd": "cad/fcstd/SB-KEYPAD.FCStd",
+  "step": "cad/step/SB-KEYPAD.step",
+  "sheets": [
+   "SB-KEYPAD"
+  ],
+  "rows": [
+   [
+    "SB-KEYPAD",
+    "SB-KEYPAD",
+    "Keypad 4x3",
+    "4×3 键盘",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.1",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-IMU",
+  "title": "Motion sensor (6-axis)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-IMU.pdf",
+  "fcstd": "cad/fcstd/SB-IMU.FCStd",
+  "step": "cad/step/SB-IMU.step",
+  "sheets": [
+   "SB-IMU"
+  ],
+  "rows": [
+   [
+    "SB-IMU",
+    "SB-IMU",
+    "Motion sensor (6-axis)",
+    "六轴姿态传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-KNOCK",
+  "title": "Knock / vibration",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-KNOCK.pdf",
+  "fcstd": "cad/fcstd/SB-KNOCK.FCStd",
+  "step": "cad/step/SB-KNOCK.step",
+  "sheets": [
+   "SB-KNOCK"
+  ],
+  "rows": [
+   [
+    "SB-KNOCK",
+    "SB-KNOCK",
+    "Knock / vibration",
+    "敲击/震动传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-ANGLE",
+  "title": "Angle sensor (axle-through)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-ANGLE.pdf",
+  "fcstd": "cad/fcstd/SB-ANGLE.FCStd",
+  "step": "cad/step/SB-ANGLE.step",
+  "sheets": [
+   "SB-ANGLE"
+  ],
+  "rows": [
+   [
+    "SB-ANGLE",
+    "SB-ANGLE",
+    "Angle sensor (axle-through)",
+    "角度传感器（轴穿式）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.7",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-MAG",
+  "title": "Magnetic sensor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-MAG.pdf",
+  "fcstd": "cad/fcstd/SB-MAG.FCStd",
+  "step": "cad/step/SB-MAG.step",
+  "sheets": [
+   "SB-MAG"
+  ],
+  "rows": [
+   [
+    "SB-MAG",
+    "SB-MAG",
+    "Magnetic sensor",
+    "磁场传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-COMPASS",
+  "title": "Compass",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-COMPASS.pdf",
+  "fcstd": "cad/fcstd/SB-COMPASS.FCStd",
+  "step": "cad/step/SB-COMPASS.step",
+  "sheets": [
+   "SB-COMPASS"
+  ],
+  "rows": [
+   [
+    "SB-COMPASS",
+    "SB-COMPASS",
+    "Compass",
+    "电子罗盘",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-ENV",
+  "title": "Temp / humidity / pressure",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-ENV.pdf",
+  "fcstd": "cad/fcstd/SB-ENV.FCStd",
+  "step": "cad/step/SB-ENV.step",
+  "sheets": [
+   "SB-ENV"
+  ],
+  "rows": [
+   [
+    "SB-ENV",
+    "SB-ENV",
+    "Temp / humidity / pressure",
+    "温湿度气压传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.4",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-PROBE",
+  "title": "Waterproof temp probe",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-PROBE.pdf",
+  "fcstd": "cad/fcstd/SB-PROBE.FCStd",
+  "step": "cad/step/SB-PROBE.step",
+  "sheets": [
+   "SB-PROBE"
+  ],
+  "rows": [
+   [
+    "SB-PROBE",
+    "SB-PROBE",
+    "Waterproof temp probe",
+    "防水温度探头",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SOIL",
+  "title": "Soil moisture",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SOIL.pdf",
+  "fcstd": "cad/fcstd/SB-SOIL.FCStd",
+  "step": "cad/step/SB-SOIL.step",
+  "sheets": [
+   "SB-SOIL"
+  ],
+  "rows": [
+   [
+    "SB-SOIL",
+    "SB-SOIL",
+    "Soil moisture",
+    "土壤湿度传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-WATER",
+  "title": "Water level / rain",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-WATER.pdf",
+  "fcstd": "cad/fcstd/SB-WATER.FCStd",
+  "step": "cad/step/SB-WATER.step",
+  "sheets": [
+   "SB-WATER"
+  ],
+  "rows": [
+   [
+    "SB-WATER",
+    "SB-WATER",
+    "Water level / rain",
+    "水位/雨滴传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SOUND",
+  "title": "Sound level",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SOUND.pdf",
+  "fcstd": "cad/fcstd/SB-SOUND.FCStd",
+  "step": "cad/step/SB-SOUND.step",
+  "sheets": [
+   "SB-SOUND"
+  ],
+  "rows": [
+   [
+    "SB-SOUND",
+    "SB-SOUND",
+    "Sound level",
+    "声音传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-CO2",
+  "title": "CO2 (NDIR)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-CO2.pdf",
+  "fcstd": "cad/fcstd/SB-CO2.FCStd",
+  "step": "cad/step/SB-CO2.step",
+  "sheets": [
+   "SB-CO2"
+  ],
+  "rows": [
+   [
+    "SB-CO2",
+    "SB-CO2",
+    "CO2 (NDIR)",
+    "二氧化碳传感器（NDIR）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.7",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-AIR",
+  "title": "Air quality (TVOC)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-AIR.pdf",
+  "fcstd": "cad/fcstd/SB-AIR.FCStd",
+  "step": "cad/step/SB-AIR.step",
+  "sheets": [
+   "SB-AIR"
+  ],
+  "rows": [
+   [
+    "SB-AIR",
+    "SB-AIR",
+    "Air quality (TVOC)",
+    "空气质量传感器（TVOC）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-PM",
+  "title": "Dust PM2.5",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-PM.pdf",
+  "fcstd": "cad/fcstd/SB-PM.FCStd",
+  "step": "cad/step/SB-PM.step",
+  "sheets": [
+   "SB-PM"
+  ],
+  "rows": [
+   [
+    "SB-PM",
+    "SB-PM",
+    "Dust PM2.5",
+    "PM2.5 粉尘传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "30.3",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-GAS",
+  "title": "Gas / smoke",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-GAS.pdf",
+  "fcstd": "cad/fcstd/SB-GAS.FCStd",
+  "step": "cad/step/SB-GAS.step",
+  "sheets": [
+   "SB-GAS"
+  ],
+  "rows": [
+   [
+    "SB-GAS",
+    "SB-GAS",
+    "Gas / smoke",
+    "气体/烟雾传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.6",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-PH",
+  "title": "pH probe",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-PH.pdf",
+  "fcstd": "cad/fcstd/SB-PH.FCStd",
+  "step": "cad/step/SB-PH.step",
+  "sheets": [
+   "SB-PH"
+  ],
+  "rows": [
+   [
+    "SB-PH",
+    "SB-PH",
+    "pH probe",
+    "pH 酸碱度探头",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-TDS",
+  "title": "Water quality (TDS)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-TDS.pdf",
+  "fcstd": "cad/fcstd/SB-TDS.FCStd",
+  "step": "cad/step/SB-TDS.step",
+  "sheets": [
+   "SB-TDS"
+  ],
+  "rows": [
+   [
+    "SB-TDS",
+    "SB-TDS",
+    "Water quality (TDS)",
+    "水质 TDS 传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-HEART",
+  "title": "Heart rate & SpO2",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-HEART.pdf",
+  "fcstd": "cad/fcstd/SB-HEART.FCStd",
+  "step": "cad/step/SB-HEART.step",
+  "sheets": [
+   "SB-HEART"
+  ],
+  "rows": [
+   [
+    "SB-HEART",
+    "SB-HEART",
+    "Heart rate & SpO2",
+    "心率血氧传感器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.8",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-GPS",
+  "title": "GPS",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-GPS.pdf",
+  "fcstd": "cad/fcstd/SB-GPS.FCStd",
+  "step": "cad/step/SB-GPS.step",
+  "sheets": [
+   "SB-GPS"
+  ],
+  "rows": [
+   [
+    "SB-GPS",
+    "SB-GPS",
+    "GPS",
+    "GPS 定位模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Blue / White",
+    "SB-C01 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.1",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-CAM",
+  "title": "AI vision camera",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-CAM.pdf",
+  "fcstd": "cad/fcstd/SB-CAM.FCStd",
+  "step": "cad/step/SB-CAM.step",
+  "sheets": [
+   "SB-CAM"
+  ],
+  "rows": [
+   [
+    "SB-CAM",
+    "SB-CAM",
+    "AI vision camera",
+    "AI 视觉摄像头",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Violet / White",
+    "SB-C09 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "19.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-VOICE",
+  "title": "Offline voice",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-VOICE.pdf",
+  "fcstd": "cad/fcstd/SB-VOICE.FCStd",
+  "step": "cad/step/SB-VOICE.step",
+  "sheets": [
+   "SB-VOICE"
+  ],
+  "rows": [
+   [
+    "SB-VOICE",
+    "SB-VOICE",
+    "Offline voice",
+    "离线语音识别模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Violet / White",
+    "SB-C09 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-RFID",
+  "title": "RFID / NFC reader",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-RFID.pdf",
+  "fcstd": "cad/fcstd/SB-RFID.FCStd",
+  "step": "cad/step/SB-RFID.step",
+  "sheets": [
+   "SB-RFID"
+  ],
+  "rows": [
+   [
+    "SB-RFID",
+    "SB-RFID",
+    "RFID / NFC reader",
+    "RFID/NFC 读卡器",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Teal / White",
+    "SB-C08 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.1",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-IRX",
+  "title": "IR remote send + receive",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-IRX.pdf",
+  "fcstd": "cad/fcstd/SB-IRX.FCStd",
+  "step": "cad/step/SB-IRX.step",
+  "sheets": [
+   "SB-IRX"
+  ],
+  "rows": [
+   [
+    "SB-IRX",
+    "SB-IRX",
+    "IR remote send + receive",
+    "红外收发模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Teal / White",
+    "SB-C08 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-RGB",
+  "title": "RGB LED x4",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-RGB.pdf",
+  "fcstd": "cad/fcstd/SB-RGB.FCStd",
+  "step": "cad/step/SB-RGB.step",
+  "sheets": [
+   "SB-RGB"
+  ],
+  "rows": [
+   [
+    "SB-RGB",
+    "SB-RGB",
+    "RGB LED x4",
+    "RGB 彩灯 ×4",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.3",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "SB-RING",
+  "title": "LED ring x12",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-RING.pdf",
+  "fcstd": "cad/fcstd/SB-RING.FCStd",
+  "step": "cad/step/SB-RING.step",
+  "sheets": [
+   "SB-RING"
+  ],
+  "rows": [
+   [
+    "SB-RING",
+    "SB-RING",
+    "LED ring x12",
+    "LED 灯环 ×12",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.1",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-MATRIX",
+  "title": "LED matrix 8x8",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-MATRIX.pdf",
+  "fcstd": "cad/fcstd/SB-MATRIX.FCStd",
+  "step": "cad/step/SB-MATRIX.step",
+  "sheets": [
+   "SB-MATRIX"
+  ],
+  "rows": [
+   [
+    "SB-MATRIX",
+    "SB-MATRIX",
+    "LED matrix 8x8",
+    "8×8 点阵屏",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.7",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-TRAFFIC",
+  "title": "Traffic light",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-TRAFFIC.pdf",
+  "fcstd": "cad/fcstd/SB-TRAFFIC.FCStd",
+  "step": "cad/step/SB-TRAFFIC.step",
+  "sheets": [
+   "SB-TRAFFIC"
+  ],
+  "rows": [
+   [
+    "SB-TRAFFIC",
+    "SB-TRAFFIC",
+    "Traffic light",
+    "交通灯模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-OLED",
+  "title": "OLED screen 0.96 in",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-OLED.pdf",
+  "fcstd": "cad/fcstd/SB-OLED.FCStd",
+  "step": "cad/step/SB-OLED.step",
+  "sheets": [
+   "SB-OLED"
+  ],
+  "rows": [
+   [
+    "SB-OLED",
+    "SB-OLED",
+    "OLED screen 0.96 in",
+    "0.96 寸 OLED 显示屏",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "3.4",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SEG",
+  "title": "4-digit display",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SEG.pdf",
+  "fcstd": "cad/fcstd/SB-SEG.FCStd",
+  "step": "cad/step/SB-SEG.step",
+  "sheets": [
+   "SB-SEG"
+  ],
+  "rows": [
+   [
+    "SB-SEG",
+    "SB-SEG",
+    "4-digit display",
+    "四位数码管",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.7",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SPK",
+  "title": "Speaker / MP3",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SPK.pdf",
+  "fcstd": "cad/fcstd/SB-SPK.FCStd",
+  "step": "cad/step/SB-SPK.step",
+  "sheets": [
+   "SB-SPK"
+  ],
+  "rows": [
+   [
+    "SB-SPK",
+    "SB-SPK",
+    "Speaker / MP3",
+    "喇叭/MP3 模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "5.1",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-FAN",
+  "title": "Fan",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-FAN.pdf",
+  "fcstd": "cad/fcstd/SB-FAN.FCStd",
+  "step": "cad/step/SB-FAN.step",
+  "sheets": [
+   "SB-FAN"
+  ],
+  "rows": [
+   [
+    "SB-FAN",
+    "SB-FAN",
+    "Fan",
+    "风扇模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "12.2",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-PUMP",
+  "title": "Water pump",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-PUMP.pdf",
+  "fcstd": "cad/fcstd/SB-PUMP.FCStd",
+  "step": "cad/step/SB-PUMP.step",
+  "sheets": [
+   "SB-PUMP"
+  ],
+  "rows": [
+   [
+    "SB-PUMP",
+    "SB-PUMP",
+    "Water pump",
+    "水泵模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "8.8",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-VIB",
+  "title": "Vibration motor",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-VIB.pdf",
+  "fcstd": "cad/fcstd/SB-VIB.FCStd",
+  "step": "cad/step/SB-VIB.step",
+  "sheets": [
+   "SB-VIB"
+  ],
+  "rows": [
+   [
+    "SB-VIB",
+    "SB-VIB",
+    "Vibration motor",
+    "震动马达模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.0",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-EMAG",
+  "title": "Electromagnet",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-EMAG.pdf",
+  "fcstd": "cad/fcstd/SB-EMAG.FCStd",
+  "step": "cad/step/SB-EMAG.step",
+  "sheets": [
+   "SB-EMAG"
+  ],
+  "rows": [
+   [
+    "SB-EMAG",
+    "SB-EMAG",
+    "Electromagnet",
+    "电磁铁模块",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "4.6",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SWITCH",
+  "title": "Power switch (12 V max)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SWITCH.pdf",
+  "fcstd": "cad/fcstd/SB-SWITCH.FCStd",
+  "step": "cad/step/SB-SWITCH.step",
+  "sheets": [
+   "SB-SWITCH"
+  ],
+  "rows": [
+   [
+    "SB-SWITCH",
+    "SB-SWITCH",
+    "Power switch (12 V max)",
+    "电源开关（≤12 V）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Yellow / White",
+    "SB-C02 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "1.9",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-SOLAR",
+  "title": "Solar panel 1 W",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-SOLAR.pdf",
+  "fcstd": "cad/fcstd/SB-SOLAR.FCStd",
+  "step": "cad/step/SB-SOLAR.step",
+  "sheets": [
+   "SB-SOLAR"
+  ],
+  "rows": [
+   [
+    "SB-SOLAR",
+    "SB-SOLAR",
+    "Solar panel 1 W",
+    "太阳能板 1 W",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey / White",
+    "SB-C05 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "17.2",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "SB-METER",
+  "title": "Energy meter (V/I/W)",
+  "family": "Smart modules",
+  "pdf": "drawings/SB-METER.pdf",
+  "fcstd": "cad/fcstd/SB-METER.FCStd",
+  "step": "cad/step/SB-METER.step",
+  "sheets": [
+   "SB-METER"
+  ],
+  "rows": [
+   [
+    "SB-METER",
+    "SB-METER",
+    "Energy meter (V/I/W)",
+    "电能表（电压/电流/功率）",
+    "electronic module (outline drawing)",
+    "ABS, e.g. CHIMEI PA-757 or equiv.",
+    "Dark grey / White",
+    "SB-C05 / SB-C03",
+    "VDI 3400 Ref 18 细哑光纹理",
+    "2.2",
+    ""
+   ]
+  ]
+ }
+]
