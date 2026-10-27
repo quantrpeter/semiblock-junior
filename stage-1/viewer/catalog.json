@@ -1543,7 +1543,7 @@
    "phase": "P1",
    "chip": "RCWL-9610A + MCU",
    "does": "2-400 cm distance, 'eyes' RGB LEDs",
-   "replaces": "HC-SR04 超声波模块",
+   "replaces": "HC-SR04 ultrasonic module",
    "size": [
     2,
     6,
@@ -1620,7 +1620,7 @@
    "phase": "P1",
    "chip": "IR LED + phototransistor",
    "does": "2-30 cm near/far, digital + analog",
-   "replaces": "避障传感器 / 光遮断",
+   "replaces": "obstacle-avoidance sensor / photo-interrupter",
    "size": [
     2,
     3,
@@ -1772,7 +1772,7 @@
    "phase": "P1",
    "chip": "5x ITR20001 + MCU auto-calibrate",
    "does": "5-channel line position for line-follow races",
-   "replaces": "循迹传感器",
+   "replaces": "line-tracking sensor",
    "size": [
     2,
     6,
@@ -1885,7 +1885,7 @@
    "phase": "P1",
    "chip": "BH1750 (lux)",
    "does": "ambient light in lux",
-   "replaces": "光敏电阻 / 魔术光杯",
+   "replaces": "photoresistor / magic light cup",
    "size": [
     2,
     2,
@@ -1960,7 +1960,7 @@
    "phase": "P2",
    "chip": "3x IR phototransistor 760-1100 nm",
    "does": "finds a candle flame (fire-fighting robot)",
-   "replaces": "火焰传感器",
+   "replaces": "flame sensor",
    "size": [
     2,
     3,
@@ -2073,7 +2073,7 @@
    "phase": "P1",
    "chip": "tactile switch + MCU",
    "does": "press / release / long-press / count",
-   "replaces": "按键开关",
+   "replaces": "push-button switch",
    "size": [
     2,
     3,
@@ -2149,7 +2149,7 @@
    "phase": "P1",
    "chip": "capacitive touch",
    "does": "touch / no touch, works through paper",
-   "replaces": "人体触摸",
+   "replaces": "touch sensor",
    "size": [
     2,
     3,
@@ -2299,7 +2299,7 @@
    "phase": "P1",
    "chip": "EC11 encoder + push",
    "does": "endless clicks + push button",
-   "replaces": "旋转编码器",
+   "replaces": "rotary encoder",
    "size": [
     2,
     2,
@@ -2374,7 +2374,7 @@
    "phase": "P1",
    "chip": "2-axis + push",
    "does": "x / y / push, drive a robot by hand",
-   "replaces": "XY摇杆",
+   "replaces": "XY joystick",
    "size": [
     3,
     3,
@@ -2448,7 +2448,7 @@
    "phase": "P2",
    "chip": "ICM-42670 accel + gyro",
    "does": "tilt, shake, spin of a moving part",
-   "replaces": "倾斜开关 / 水银开关 / 震动开关",
+   "replaces": "tilt switch / mercury switch / vibration switch",
    "size": [
     2,
     2,
@@ -2485,7 +2485,7 @@
    "phase": "P2",
    "chip": "piezo disc",
    "does": "knocks, taps, vibration strength",
-   "replaces": "敲击 / 震动开关",
+   "replaces": "knock sensor / vibration switch",
    "size": [
     2,
     2,
@@ -2560,7 +2560,7 @@
    "phase": "P1",
    "chip": "linear Hall + threshold",
    "does": "magnet near/far, N or S, strength",
-   "replaces": "霍尔 x2 / 线性霍尔 / 磁簧 x2",
+   "replaces": "Hall x2 / linear Hall / reed switch x2",
    "size": [
     2,
     2,
@@ -2634,7 +2634,7 @@
    "phase": "P1",
    "chip": "SHT40 + BMP280",
    "does": "+-0.2 C, %RH, hPa, altitude",
-   "replaces": "DHT11 温湿度 / 模拟温度 / 数字温度",
+   "replaces": "DHT11 temp + humidity / analog temp / digital temp",
    "size": [
     2,
     4,
@@ -2673,7 +2673,7 @@
    "phase": "P1",
    "chip": "DS18B20 stainless probe",
    "does": "-55..125 C in water, soil, food",
-   "replaces": "18B20温度传感器",
+   "replaces": "DS18B20 temperature sensor",
    "size": [
     2,
     3,
@@ -2710,7 +2710,7 @@
    "phase": "P1",
    "chip": "capacitive (no corrosion)",
    "does": "plant needs water? 0-100 %",
-   "replaces": "土壤湿度 (resistive)",
+   "replaces": "soil moisture (resistive)",
    "size": [
     2,
     3,
@@ -2747,7 +2747,7 @@
    "phase": "P2",
    "chip": "gold-plated traces",
    "does": "water depth 0-35 mm, rain drops",
-   "replaces": "水位传感器",
+   "replaces": "water level sensor",
    "size": [
     2,
     3,
@@ -2783,7 +2783,7 @@
    "phase": "P1",
    "chip": "MEMS mic + RMS",
    "does": "loudness in dB, clap detect",
-   "replaces": "高感度声音 / 小麦克风",
+   "replaces": "high-sensitivity sound / small microphone",
    "size": [
     2,
     3,
@@ -3045,7 +3045,7 @@
    "phase": "P2",
    "chip": "MAX30102",
    "does": "pulse + oxygen for PE / biology",
-   "replaces": "手指测心跳",
+   "replaces": "finger heartbeat sensor",
    "size": [
     2,
     3,
@@ -3236,7 +3236,7 @@
    "phase": "P1",
    "chip": "38 kHz IR LED + receiver",
    "does": "TV / air-con remote codes",
-   "replaces": "红外发射 / 红外接收",
+   "replaces": "IR transmitter / IR receiver",
    "size": [
     2,
     3,
@@ -3276,7 +3276,7 @@
    "phase": "P1",
    "chip": "4x WS2812B",
    "does": "any colour, any brightness",
-   "replaces": "3色LED / 双色LED x2 / 七彩 / RGB",
+   "replaces": "3-colour LED / 2-colour LED x2 / 7-colour flash LED / RGB LED",
    "size": [
     2,
     4,
@@ -3506,7 +3506,7 @@
    "phase": "P2",
    "chip": "I2S amp + 8 MB sound flash",
    "does": "play sounds and recorded voice",
-   "replaces": "有源 / 无源蜂鸣器",
+   "replaces": "active / passive buzzer",
    "size": [
     4,
     4,
@@ -3697,7 +3697,7 @@
    "phase": "P2",
    "chip": "MOSFET, 12 V / 2 A max",
    "does": "switch lamps, pumps, LED strips safely",
-   "replaces": "继电器 (mains relay removed)",
+   "replaces": "relay (mains relay removed)",
    "size": [
     2,
     3,

@@ -71,12 +71,12 @@ def modules_md():
         if not rows:
             continue
         out.append("### %s (%d)\n" % (title, len(rows)))
-        out.append("| 3D | ID | Module | 中文 | What it does | Candidate chip | Phase | Replaces (45-in-1 kit) | Files |")
-        out.append("|---|---|---|---|---|---|---|---|---|")
+        out.append("| 3D | ID | Module | What it does | Candidate chip | Phase | Replaces (45-in-1 kit) | Files |")
+        out.append("|---|---|---|---|---|---|---|---|")
         for r in rows:
             m = r["module"]
-            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s | %s | %s | %s |" % (
-                img(r["id"], 120), r["id"], r["id"], esc(r["title"]), m["zh"], esc(m["does"]), esc(m["chip"]),
+            out.append("| %s | [`%s`](viewer/index.html#part=%s) | %s | %s | %s | %s | %s | %s |" % (
+                img(r["id"], 120), r["id"], r["id"], esc(r["title"]), esc(m["does"]), esc(m["chip"]),
                 PHASE[m["phase"]], esc(m["replaces"]) or "new", files(r["id"])))
         out.append("")
     return "\n".join(out)
