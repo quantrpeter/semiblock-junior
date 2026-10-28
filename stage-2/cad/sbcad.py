@@ -8,6 +8,7 @@ Runs inside FreeCAD's bundled Python (freecadcmd). Provides:
 import json
 import math
 import os
+import re
 import struct
 
 import FreeCAD as App
@@ -412,10 +413,92 @@ def write_glb(path, instances, tol=0.03, meta=None, ang=0.25):
     return os.path.getsize(path)
 
 
+def _step_colours(path, colours):
+    """Give every solid of the named STEP products a surface colour (AP214
+    styled items, as OCC writes them from the GUI; headless FreeCAD writes none).
+    colours: product name -> sRGB hex. Returns the names that got a colour."""
+    with open(path) as fh:
+        txt = fh.read()
+    ents = {int(i): e for i, e in re.findall(r"^#(\d+) = (.*?);$", txt, re.S | re.M)}
+
+    def refs(i, kind):
+        e = ents.get(i, "")
+        return [int(r) for r in re.findall(r"#(\d+)", e)] if e.startswith(kind + "(") else []
+
+    n, new, styles, done = max(ents), [], {}, set()
+
+    def add(e):
+        nonlocal n
+        n += 1
+        new.append("#%d = %s;" % (n, e))
+        return n
+
+    for i in sorted(ents):
+        sdr = refs(i, "SHAPE_DEFINITION_REPRESENTATION")      # (#pds, #rep)
+        if not sdr:
+            continue
+        pd = (refs(sdr[0], "PRODUCT_DEFINITION_SHAPE") or [0])[0]
+        pdf = (refs(pd, "PRODUCT_DEFINITION") or [0])[0]
+        prod = (refs(pdf, "PRODUCT_DEFINITION_FORMATION") or [0])[0]
+        m = re.match(r"PRODUCT\('((?:[^']|'')*)'", ents.get(prod, ""))
+        name = m.group(1).replace("''", "'") if m else None
+        rep = [int(r) for r in re.findall(r"#(\d+)", ents[sdr[1]])]   # items..., context
+        solids = [s for s in rep[:-1] if ents[s].startswith(("MANIFOLD_SOLID_BREP(", "BREP_WITH_VOIDS("))]
+        if name not in colours or not solids:
+            continue
+        hexc = colours[name]
+        if hexc not in styles:
+            rgb = add("COLOUR_RGB('',%.4f,%.4f,%.4f)" % tuple(c / 255.0 for c in hex_rgb(hexc)))
+            fill = add("FILL_AREA_STYLE('',(#%d))" % add("FILL_AREA_STYLE_COLOUR('',#%d)" % rgb))
+            side = add("SURFACE_SIDE_STYLE('',(#%d))" % add("SURFACE_STYLE_FILL_AREA(#%d)" % fill))
+            styles[hexc] = add("PRESENTATION_STYLE_ASSIGNMENT((#%d))" % add("SURFACE_STYLE_USAGE(.BOTH.,#%d)" % side))
+        items = [add("STYLED_ITEM('color',(#%d),#%d)" % (styles[hexc], s)) for s in solids]
+        add("MECHANICAL_DESIGN_GEOMETRIC_PRESENTATION_REPRESENTATION('',(%s),#%d)"
+            % (",".join("#%d" % s for s in items), rep[-1]))
+        done.add(name)
+    head, sep, tail = txt.rpartition("ENDSEC;")
+    with open(path, "w") as fh:
+        fh.write(head + "\n".join(new) + "\n" + sep + tail)
+    return done
+
+
+def export_step(part, path):
+    """STEP for suppliers: one named, coloured solid per moulded part. A part made
+    of several (sleeve + core, collet + ring, base + cover ...) is an assembly
+    whose components carry the drawing numbers <pid>-01, -02 ... ("purchased"
+    for steel bearings and balls), so every CAD tool opens them as separate parts."""
+    import Import
+    printable = [b for b in part.bodies if b.printable]
+    doc = App.newDocument("step_export")
+    try:
+        objs, colours = [], {}
+        for i, b in enumerate(printable):
+            o = doc.addObject("Part::Feature", "c%d" % i)
+            o.Shape = b.shape
+            if len(printable) == 1:
+                o.Label = "%s %s" % (part.pid, part.title)
+            else:
+                o.Label = "%s %s" % ("purchased" if b.mat == "steel" else "%s-%02d" % (part.pid, i + 1), b.name)
+            colours[o.Label] = PALETTE.get(b.mat, ("#FF00FF",))[0]
+            objs.append(o)
+        if len(objs) > 1:
+            root = doc.addObject("App::Part", "Part")
+            root.Label = "%s %s" % (part.pid, part.title)
+            for o in objs:
+                root.addObject(o)
+            objs = [root]
+        doc.recompute()
+        Import.export(objs, path)
+    finally:
+        App.closeDocument(doc.Name)
+    missing = set(colours) - _step_colours(path, colours)
+    if missing:
+        print("STEP %s: no colour for %s" % (part.pid, ", ".join(sorted(missing))), flush=True)
+
+
 def export_part(part, step_dir, stl_dir, tol=0.02):
-    solids = [b.shape for b in part.bodies if b.printable]
-    comp = Part.makeCompound(solids)
-    comp.exportStep(os.path.join(step_dir, part.pid + ".step"))
+    export_step(part, os.path.join(step_dir, part.pid + ".step"))
+    comp = Part.makeCompound([b.shape for b in part.bodies if b.printable])
     # STL: printable bodies only, one file per part (mm)
     import Mesh
     import MeshPart

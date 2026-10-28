@@ -930,6 +930,6 @@ npx esbuild stage-2/viewer/src/viewer.js --bundle --format=iife --minify --outfi
 | [`renders/`](renders/) | Hero renders and labelled diagrams. `renders/parts/` has a picture of every part; `renders/sheets/` has contact sheets per family. |
 | [`drawings/`](drawings/) | 2D manufacturing drawings for the factory: one PDF per part (English / Simplified Chinese, A3, first-angle), the combined drawing pack and an RFQ parts list (CSV). |
 | [`cad/fcstd/`](cad/fcstd/) | FreeCAD files, one per part: coloured 3D bodies, part data and the drawing sheets as TechDraw pages. |
-| [`cad/step/`](cad/step/) | STEP files for suppliers and CAD tools (Fusion 360, SolidWorks, Onshape), in mm. |
+| [`cad/step/`](cad/step/) | STEP files for suppliers and CAD tools (Fusion 360, SolidWorks, Onshape), in mm, coloured. A part made of several mouldings (a TwistLock's sleeve + core, a module's base + cover, a wheel's hub + tyre) opens as an assembly with one component per moulding, numbered as on its drawing (`SB-TL2-01 sleeve`, `SB-TL2-02 core`). |
 | [`cad/stl/`](cad/stl/) | STL files for 3D-printing prototypes (TwistLock pins: resin printer, tough resin). |
 | [`cad/`](cad/) | Parametric source. Change a number in `params.py` and rebuild (see the end of the design doc). |
