@@ -1,5 +1,7 @@
 """Write one FreeCAD file per part: coloured bodies + part data + the 2D
-drawing sheets as TechDraw pages. Needs FreeCAD's GUI layer for colours,
+drawing sheets as TechDraw pages. Every moulded or purchased component is a
+Part Design Body on its generated solid, so it can be edited in Part Design
+(sketch, pad, pocket, fillet ...). Needs FreeCAD's GUI layer for colours,
 so it runs offscreen (no window):
 
     QT_QPA_PLATFORM=offscreen /Applications/FreeCAD.app/Contents/MacOS/FreeCAD stage-2/cad/fcstd_export.py
@@ -75,9 +77,22 @@ def export(item, part, sheets):
     add_str(root, "Step", "cad/step/%s.step" % part.pid)
     k = 0
     for b in part.bodies:
-        o = doc.addObject("Part::Feature", b.name)
-        o.Shape = b.shape
         mk = D.material_for(fam, b.name, b.mat)
+        if b.printable:
+            # the generated solid is the Body's base feature; Part Design features go on top
+            src = doc.addObject("Part::Feature", b.name + "_solid")
+            src.Shape = b.shape
+            src.Label = "%s source solid" % b.name
+            src.Visibility = False
+            root.addObject(src)
+            o = doc.addObject("PartDesign::Body", b.name)
+            o.BaseFeature = src
+            o.Group[0].Label = "%s solid" % b.name
+            colour(src, b.mat)
+            colour(o.Group[0], b.mat)
+        else:
+            o = doc.addObject("Part::Feature", b.name)
+            o.Shape = b.shape
         if b.printable:
             k += 1
             comp_no = "%s-%02d" % (part.pid, k) if len([x for x in part.bodies if x.printable]) > 1 else part.pid
@@ -107,6 +122,8 @@ def export(item, part, sheets):
         page.Label = "Drawing %d of %d — %s" % (i + 1, len(sheets), name)
     doc.recompute()
     path = os.path.join(OUT, part.pid + ".FCStd")
+    if os.path.exists(path):        # else FreeCAD leaves a .FCBak beside it
+        os.remove(path)
     doc.saveAs(path)
     App.closeDocument(doc.Name)
     return path
