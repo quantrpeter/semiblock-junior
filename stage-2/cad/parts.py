@@ -8,7 +8,7 @@ go down -Z. Electronics housings live in modules.py.
 import math
 
 from params import *  # noqa: F401,F403
-from sbcad import (Body, PartDef, V, box, cone_between, cross_prism, cyl_between, edges_at_z,
+from sbcad import (Body, PartDef, V, box, compound, cone_between, cross_prism, cyl_between, edges_at_z,
                    engrave, frame, moved, prism_xy, revolve_rz, ring, rotated,
                    rounded_box, rounded_rect_prism, sector, stadium_xy, try_fillet, zcyl)
 import Part
@@ -515,14 +515,14 @@ def tl_sleeve(modules=2, smooth=False):
             (rl, z_step + 0.05 - ramp - 0.1),
             (rs - 0.15, zf + 0.05),                    # lead-in
             (0, zf + 0.05)]
-    s = revolve_rz(prof)
+    s = revolve_rz(prof)                       # turned sleeve outline
     ribs = []
     zones = [(-BEAM_T + CB_DEPTH + 0.2, -1.0)]
     if not smooth:
         zones.append((zf + 0.9, zf + TL_FINGER_L - 0.3))
     for za, zb in zones:
         for a in (45, 135, 225, 315):
-            ribs.append(rotated(box(rs - 0.1, -0.3, za, rs + TL_RIB_H, 0.3, zb), (0, 0, 1), a))
+            ribs.append(rotated(box(rs - 0.1, -0.3, za, rs + TL_RIB_H, 0.3, zb), (0, 0, 1), a))  # anti-spin ribs
     s = s.fuse(ribs).removeSplitter()
     s = s.cut([zcyl(TL_BORE_D / 2, zf - 1, 1),                              # bore for the core
                zcyl(1.45, z_fb + 0.2, z_fb + 0.45),                          # snap groove for the core
@@ -548,7 +548,7 @@ def tl_core(modules=2):
     shaft = zcyl(TL_SHAFT_D / 2, z_cam - 0.3, 0.6)
     cam = zcyl(TL_CAM_D / 2, zf + 0.3, z_cam).common(
         box(-2, -TL_CAM_FLATS / 2, zf, 2, TL_CAM_FLATS / 2, 0))        # flats face +-Y = OPEN
-    snap = zcyl(1.4, -0.62, -0.42)
+    snap = zcyl(1.4, -0.62, -0.42)             # snap bead: clicks into the sleeve groove
     core = knob.fuse(wing).fuse(shaft).fuse(cam).fuse(snap).removeSplitter()
     # two 50 deg arc windows (readable from ~1 m) over the red/green status ring
     core = core.cut([sector(TL_WINDOW_R - 0.55, TL_WINDOW_R + 0.55, a, TL_WINDOW_ARC, -0.5, 3) for a in (0, 180)])
@@ -559,8 +559,8 @@ def tl_status_ring():
     """Pad-printed status ring on the sleeve flange, seen through the knob windows."""
     z0, z1 = -0.05, -0.012
     r0, r1 = TL_WINDOW_R - 0.6, TL_WINDOW_R + 0.6
-    red = Part.makeCompound([sector(r0, r1, a, 76, z0, z1) for a in (0, 180)])
-    green = Part.makeCompound([sector(r0, r1, a, 76, z0, z1) for a in (90, 270)])
+    red = compound([sector(r0, r1, a, 76, z0, z1) for a in (0, 180)])
+    green = compound([sector(r0, r1, a, 76, z0, z1) for a in (90, 270)])
     return red, green
 
 
@@ -583,12 +583,13 @@ def tl_collar(state="open", length=TC_LEN):
     """TwistLock Collar: grips an axle when the ring is turned 90 deg.
     Front (flange) at z < 0, body from z = 0 to `length`."""
     rf = 3.3
-    collet = zcyl(TC_COLLET_D / 2, 0, length).fuse(zcyl(rf, -TC_FLANGE_T, 0.0))
+    collet = zcyl(TC_COLLET_D / 2, 0, length)
+    collet = collet.fuse(zcyl(rf, -TC_FLANGE_T, 0.0))        # flange
     pads = [sector(TC_COLLET_D / 2 - 0.2, 2.86, a, 70, 0.9, length) for a in (90, 270)]
     collet = collet.fuse(pads).removeSplitter()
     collet = collet.cut([cross_prism(AXLE_HOLE_D, AXLE_HOLE_SPLINE, -2, length + 2),
-                         box(-5, -TC_SLOT_W / 2, 0.8, 5, TC_SLOT_W / 2, length + 1)])
-    ringb = zcyl(TC_OD / 2, 0.05, length)
+                         box(-5, -TC_SLOT_W / 2, 0.8, 5, TC_SLOT_W / 2, length + 1)])  # jaw slot
+    ringb = zcyl(TC_OD / 2, 0.05, length)      # lock ring
     ell = Part.Ellipse(V(0, 0, 0), TC_OVAL_MAJOR / 2 + 0.06, TC_OVAL_MINOR / 2 + 0.03)
     oval = Part.Face(Part.Wire(ell.toShape())).extrude(V(0, 0, length + 2))
     oval.translate(V(0, 0, -1))
@@ -596,10 +597,10 @@ def tl_collar(state="open", length=TC_LEN):
     flutes = [zcyl(0.42, 0.6, length + 1, 3.92 * math.cos(math.radians(a)), 3.92 * math.sin(math.radians(a)))
               for a in range(15, 360, 30)]
     ringb = ringb.cut([oval] + flutes)
-    pointer = Part.makeCompound([sector(rf + 0.08, TC_OD / 2 - 0.05, a, 16, 0.0, 0.05) for a in (0, 180)])
+    pointer = compound([sector(rf + 0.08, TC_OD / 2 - 0.05, a, 16, 0.0, 0.05) for a in (0, 180)])
     zf = -TC_FLANGE_T
-    red = Part.makeCompound([sector(2.55, rf - 0.08, a, 50, zf - 0.04, zf) for a in (0, 180)])
-    green = Part.makeCompound([sector(2.55, rf - 0.08, a, 50, zf - 0.04, zf) for a in (90, 270)])
+    red = compound([sector(2.55, rf - 0.08, a, 50, zf - 0.04, zf) for a in (0, 180)])
+    green = compound([sector(2.55, rf - 0.08, a, 50, zf - 0.04, zf) for a in (90, 270)])
     if state == "locked":
         ringb = rotated(ringb, (0, 0, 1), 90)
         pointer = rotated(pointer, (0, 0, 1), 90)
@@ -729,7 +730,7 @@ def clutch_gear():
     hub = zcyl(6.5, -BEAM_T / 2, BEAM_T / 2)
     ribs = [rotated(box(6.0, -0.6, -BEAM_T / 2 + 0.6, 9.4, 0.6, BEAM_T / 2 - 0.6), (0, 0, 1), a) for a in range(0, 360, 60)]
     body = _union([g, hub] + ribs).cut([_axle_hole(0, 0, -BEAM_T / 2, BEAM_T / 2)])
-    marks = Part.makeCompound([rotated(box(7.2, -0.35, GEAR_T / 2, 9.6, 0.35, GEAR_T / 2 + 0.25), (0, 0, 1), a)
+    marks = compound([rotated(box(7.2, -0.35, GEAR_T / 2, 9.6, 0.35, GEAR_T / 2 + 0.25), (0, 0, 1), a)
                                for a in range(30, 360, 60)])
     return PartDef("SB-G24C", "Clutch gear 24T (slips at safe torque)",
                    [Body("gear", body, "sb_white"), Body("marks", marks, "sb_magenta", False)], {"family": "Gears"})
@@ -854,7 +855,7 @@ def omni_wheel():
             c = ((R - 3.6) * math.cos(a), (R - 3.6) * math.sin(a), z)
             rollers.append(_roller(10.0, 3.6, 2.4, c, (-math.sin(a), math.cos(a), 0)))
     return PartDef("SB-WO48", "Omni wheel 48", [Body("hub", hub, "sb_dgrey"),
-                                                 Body("rollers", Part.makeCompound(rollers), "rubber")],
+                                                 Body("rollers", compound(rollers), "rubber")],
                    {"family": "Wheels"})
 
 
@@ -883,7 +884,7 @@ def mecanum_wheel(hand=1):
     hub = hub.cut(tools)
     name = "SB-WM60%s" % ("L" if hand > 0 else "R")
     return PartDef(name, "Mecanum wheel 60 (%s)" % ("left" if hand > 0 else "right"),
-                   [Body("hub", hub, "sb_blue"), Body("rollers", Part.makeCompound(rollers), "rubber")],
+                   [Body("hub", hub, "sb_blue"), Body("rollers", compound(rollers), "rubber")],
                    {"family": "Wheels"})
 
 

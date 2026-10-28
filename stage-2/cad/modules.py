@@ -15,7 +15,7 @@ import math
 import Part
 
 from params import *  # noqa: F401,F403
-from sbcad import (Body, PartDef, V, box, cone_between, cross_prism, cyl_between, edges_at_z, engrave,
+from sbcad import (Body, PartDef, V, box, compound, cone_between, cross_prism, cyl_between, edges_at_z, engrave,
                    frame, prism_xy, ring, rounded_box, rounded_rect_prism, sector, try_fillet, zcyl)
 
 CATEGORY_MAT = {"sense": "sb_blue", "env": "sb_blue", "output": "sb_yellow", "connect": "sb_teal",
@@ -73,7 +73,7 @@ def socket_parts(origin, normal_dir, up_dir, depth=9.0):
     cav = link_profile(SEMILINK_W + 0.4, SEMILINK_H + 0.4, 1.5, -depth, 0.5)
     insert = link_profile(SEMILINK_W + 0.4, SEMILINK_H + 0.4, 1.5, -depth, -depth + 1.6)
     tongue = box(-3.4, -1.2, -depth + 1.5, 3.4, 0.6, -depth + 5.0)
-    contacts = Part.makeCompound([box(-3.1 + 1.24 * i, 0.58, -depth + 2.0, -2.5 + 1.24 * i, 0.72, -depth + 4.8)
+    contacts = compound([box(-3.1 + 1.24 * i, 0.58, -depth + 2.0, -2.5 + 1.24 * i, 0.72, -depth + 4.8)
                                   for i in range(6)])
     return (frame(cav, xd, yd, origin), frame(insert.fuse(tongue), xd, yd, origin),
             frame(contacts, xd, yd, origin))
@@ -99,7 +99,7 @@ def semilink_plug(with_cable_stub=True):
     body = front.fuse(ridges + [grip, latch_arm, hook, tab, relief]).removeSplitter()
     body = body.cut([box(-3.3 + 1.24 * i, -0.4, -8.5, -2.3 + 1.24 * i, 1.4, -6.8) for i in range(6)])
     bodies = [Body("plug", body, "sb_black")]
-    contacts = Part.makeCompound([box(-3.1 + 1.24 * i, -0.1, -7.6, -2.5 + 1.24 * i, 0.5, -6.9) for i in range(6)])
+    contacts = compound([box(-3.1 + 1.24 * i, -0.1, -7.6, -2.5 + 1.24 * i, 0.5, -6.9) for i in range(6)])
     bodies.append(Body("contacts", contacts, "contact", printable=False))
     if with_cable_stub:
         bodies.append(Body("cable", cyl_between(1.5, (0, -0.2, 9.0), (0, -0.2, 22.0)), "cable", printable=False))
@@ -120,7 +120,7 @@ def brain_hub():
     face = [rounded_rect_prism(scx + 2.0, scy + sy * 6.5, 7.0, 4.2, 2.0, top - 0.3, top - 0.26) for sy in (-1, 1)]
     smile = sector(5.0, 6.3, 180, 120, top - 0.3, top - 0.26)
     smile.translate(V(scx - 3.0, scy, 0))
-    extra.append(Body("screen_face", Part.makeCompound(face + [smile]), "screen_glow", False))
+    extra.append(Body("screen_face", compound(face + [smile]), "screen_glow", False))
     bx = 34.0
     tools.append(zcyl(5.4, top - 1.6, top + 1, bx, scy))
     tools.append(ring(5.3, 6.4, top - 0.6, top + 1, bx, scy))
@@ -306,7 +306,7 @@ def f_joystick():
 def f_keypad(rows=4, cols=3, pitch=6.8):
     keys = [rounded_rect_prism((i - (rows - 1) / 2) * pitch, (j - (cols - 1) / 2) * pitch, 5.4, 5.4, 1.2, -0.3, 0.9)
             for i in range(rows) for j in range(cols)]
-    return [], [(Part.makeCompound(keys), "sb_lgrey")]
+    return [], [(compound(keys), "sb_lgrey")]
 
 
 def f_pad(r):
@@ -324,7 +324,7 @@ def f_bar(L, w=6.0, h=5.0):
     posts = [box(-w / 2, sx * L / 2 - (6 if sx > 0 else 0), -0.1, w / 2, sx * L / 2 + (0 if sx > 0 else 6), 1.7)
              for sx in (-1, 1)]
     screws = [zcyl(1.5, 1.6 + h, 2.2 + h, 0, sx * (L / 2 - 3)) for sx in (-1, 1)]
-    return [], [(bar, "steel"), (Part.makeCompound(posts), "sb_dgrey"), (Part.makeCompound(screws), "sb_dgrey")]
+    return [], [(bar, "steel"), (compound(posts), "sb_dgrey"), (compound(screws), "sb_dgrey")]
 
 
 def f_chip(s=4.0):
@@ -353,7 +353,7 @@ def f_fork(length, w, traces=False):
     if traces:
         tr = [box(-w / 2 + 1.5 + i * (w - 3) / 5, 0.8, 3.0, -w / 2 + 2.3 + i * (w - 3) / 5, 0.86, length - w / 2 - 2)
               for i in range(6)]
-        bodies.append((frame(Part.makeCompound(tr), (1, 0, 0), (0, 1, 0)), "contact"))
+        bodies.append((frame(compound(tr), (1, 0, 0), (0, 1, 0)), "contact"))
     return [], bodies
 
 
@@ -366,7 +366,7 @@ def f_probe(cable_len=26.0, tip_len=22.0, tip_r=3.0, tip_mat="steel", glass=Fals
     if glass:
         bodies.append((Part.makeSphere(tip_r * 0.85, V(0, 0, end)).common(zcyl(tip_r, end, end + tip_r)), "dome_white"))
     elif pins:
-        bodies.append((Part.makeCompound([zcyl(0.6, end, end + 6.0, sx * 1.6, 0) for sx in (-1, 1)]), "steel"))
+        bodies.append((compound([zcyl(0.6, end, end + 6.0, sx * 1.6, 0) for sx in (-1, 1)]), "steel"))
     else:
         bodies.append((Part.makeSphere(tip_r, V(0, 0, end)).common(zcyl(tip_r, end, end + tip_r)), tip_mat))
     return [], bodies
@@ -385,14 +385,14 @@ def f_camera():
     rim = ring(6.0, 8.0, -0.4, 2.6)
     lens = zcyl(6.0, -0.4, 1.6)
     leds = [Part.makeSphere(1.4, V(u, -9.5, 0)).common(zcyl(1.5, 0, 2, u, -9.5)) for u in (-11.0, 11.0)]
-    return [zcyl(8.2, -0.6, 1)], [(rim, "steel"), (lens, "glass_dark"), (Part.makeCompound(leds), "led_white")]
+    return [zcyl(8.2, -0.6, 1)], [(rim, "steel"), (lens, "glass_dark"), (compound(leds), "led_white")]
 
 
 def f_rfid(mat):
     arcs = [sector(R, R + 1.0, 45, 70, -0.02, 0.18) for R in (3.0, 6.0, 9.0)]
     arcs = [frame(a, (1, 0, 0), (0, 1, 0), (-6.0, -6.0, 0)) for a in arcs]
     dot = zcyl(1.4, -0.02, 0.18, -6.0, -6.0)
-    return [], [(Part.makeCompound(arcs + [dot]), mat)]
+    return [], [(compound(arcs + [dot]), mat)]
 
 
 def f_ring_leds(n=12, R=10.0, r=1.4):
@@ -405,7 +405,7 @@ def f_ring_leds(n=12, R=10.0, r=1.4):
         d = Part.makeSphere(r, V(u, v, -0.3)).common(zcyl(r + 0.1, -0.3, r, u, v))
         out.setdefault(mats[k % 4], []).append(d)
         cuts.append(zcyl(r + 0.2, -0.6, 1, u, v))
-    return cuts, [(Part.makeCompound(v), m) for m, v in out.items()]
+    return cuts, [(compound(v), m) for m, v in out.items()]
 
 
 SMILE = ["00111100", "01000010", "10100101", "10000001", "10100101", "10011001", "01000010", "00111100"]
@@ -419,14 +419,14 @@ def f_matrix(p=2.9, s=2.3):
             (lit if c == "1" else dark).append(px)
     panel = rounded_rect_prism(0, 0, 8 * p + 1.0, 8 * p + 1.0, 1.0, -0.6, -0.29)
     return [rounded_rect_prism(0, 0, 8 * p + 1.4, 8 * p + 1.4, 1.2, -0.6, 1)], \
-           [(panel, "glass_dark"), (Part.makeCompound(lit), "led_cyan"), (Part.makeCompound(dark), "port_black")]
+           [(panel, "glass_dark"), (compound(lit), "led_cyan"), (compound(dark), "port_black")]
 
 
 def f_screen(w, h, lines=3):
     cuts, bodies = f_window(w, h, 1.0)
     bars = [box(-w / 2 + 1.6 + i * 3.0, -h / 2 + 2.0, -0.25, -w / 2 + 2.8 + i * 3.0, -h / 2 + 2.0 + (h - 4) * (0.9 - 0.25 * i), -0.2)
             for i in range(lines)]
-    return cuts, bodies + [(Part.makeCompound(bars), "screen_glow")]
+    return cuts, bodies + [(compound(bars), "screen_glow")]
 
 
 def f_segment(digits=4, dw=6.4, dh=10.0):
@@ -440,7 +440,7 @@ def f_segment(digits=4, dw=6.4, dh=10.0):
                              (-w2 - t / 2, 0.3, -w2 + t / 2, h2 - 0.3), (w2 - t / 2, 0.3, w2 + t / 2, h2 - 0.3),
                              (-w2 - t / 2, -h2 + 0.3, -w2 + t / 2, -0.3), (w2 - t / 2, -h2 + 0.3, w2 + t / 2, -0.3)):
             segs.append(box(-e, cu + a, -0.25, -b, cu + c, -0.2))
-    return cuts, bodies + [(Part.makeCompound(segs), "led_red")]
+    return cuts, bodies + [(compound(segs), "led_red")]
 
 
 def f_fan(R=13.0):
@@ -449,7 +449,7 @@ def f_fan(R=13.0):
     hub = zcyl(3.2, 0, 3.4)
     blades = [frame(rounded_rect_prism(R * 0.55, 0, R * 0.8, 6.0, 2.8, 1.0, 1.9), (math.cos(math.radians(a)), math.sin(math.radians(a)), 0),
                     (-math.sin(math.radians(a)), math.cos(math.radians(a)), 0)) for a in (0, 120, 240)]
-    return [zcyl(R + 0.2, -1.0, 1)], [(guard.fuse(spokes), "sb_white"), (hub, "sb_dgrey"), (Part.makeCompound(blades), "soft"),
+    return [zcyl(R + 0.2, -1.0, 1)], [(guard.fuse(spokes), "sb_white"), (hub, "sb_dgrey"), (compound(blades), "soft"),
                                       (zcyl(R + 0.2, -1.0, -0.6), "mesh_dark")]
 
 
@@ -465,13 +465,13 @@ def f_pump():
     head = cyl_between(6.5, (4.0, 0, 6.0), (10.0, 0, 6.0))
     feet = box(-8.0, -4.0, -0.1, 8.0, 4.0, 1.5)
     tubes = [cyl_between(1.7, (8.0, 0, 6.0 + dz), (16.0, 0, 6.0 + dz)) for dz in (-2.6, 2.6)]
-    return [], [(can, "steel"), (head, "sb_white"), (feet, "sb_dgrey"), (Part.makeCompound(tubes), "tube")]
+    return [], [(can, "steel"), (head, "sb_white"), (feet, "sb_dgrey"), (compound(tubes), "tube")]
 
 
 def f_terminals():
     blk = box(-4.0, -6.0, -0.1, 4.0, 6.0, 6.0)
     screws = [zcyl(1.6, 6.0, 6.4, 0.0, sy * 3.0) for sy in (-1, 1)]
-    return [], [(blk, "terminal"), (Part.makeCompound(screws), "steel")]
+    return [], [(blk, "terminal"), (compound(screws), "steel")]
 
 
 def f_solar(w, h):
@@ -485,7 +485,7 @@ def f_solar(w, h):
             cells.append(rounded_rect_prism(u, v, ch - 0.6, cw - 0.6, 0.6, -0.3, 0.15))
             lines += [box(u - 0.1, v - cw / 2 + 0.5, 0.15, u + 0.1, v + cw / 2 - 0.5, 0.2),
                       box(u - ch / 2 + 0.5, v - 0.08, 0.15, u + ch / 2 - 0.5, v + 0.08, 0.2)]
-    return [], [(Part.makeCompound(cells), "solar"), (Part.makeCompound(lines), "steel")]
+    return [], [(compound(cells), "solar"), (compound(lines), "steel")]
 
 
 def f_traffic():
@@ -513,7 +513,7 @@ def f_ir_txrx():
 def f_bumper(width):
     bar = rounded_box(-width / 2, -2.6, 4.5, width / 2, 2.6, 7.0, 0.8)
     arms = [zcyl(1.0, -0.5, 4.6, sx * (width / 2 - 4.0), 0) for sx in (-1, 1)]
-    return [], [(bar, "sb_lgrey"), (Part.makeCompound(arms), "sb_dgrey")]
+    return [], [(bar, "sb_lgrey"), (compound(arms), "sb_dgrey")]
 
 
 def f_emag(r=6.5):
@@ -533,7 +533,7 @@ def f_led_row(n=4, pitch=6.4, r=1.7):
         d = Part.makeSphere(r, V(0, v, -0.3)).common(zcyl(r + 0.1, -0.3, r, 0, v))
         out.setdefault(mats[k % 4], []).append(d)
         cuts.append(zcyl(r + 0.2, -0.6, 1, 0, v))
-    return cuts, [(Part.makeCompound(v), m) for m, v in out.items()]
+    return cuts, [(compound(v), m) for m, v in out.items()]
 
 
 FACES = {"led_row": f_led_row, 
@@ -617,8 +617,8 @@ def sensor_ultrasonic():
     parts = _two_tone(shell, tools, cell, "sb_blue", zb=3.0)
     return PartDef("SB-US", "Ultrasonic distance", parts + [
         Body("panel", panel, "sb_blue", False),
-        Body("eyes", Part.makeCompound(eyes), "steel", False), Body("mesh", Part.makeCompound(mesh), "mesh_dark", False),
-        Body("brows", Part.makeCompound(brows), "led_cyan", False),
+        Body("eyes", compound(eyes), "steel", False), Body("mesh", compound(mesh), "mesh_dark", False),
+        Body("brows", compound(brows), "led_cyan", False),
         Body("port", ins, "port_black", False), Body("contacts", con, "contact", False)],
         {"family": "Modules"})
 
@@ -641,9 +641,9 @@ def sensor_line():
     tools.append(engrave("LINE", 2.6, 0.25, (4.0, 24.0, lz - 0.1), (0, 1, 0), (-1, 0, 0)))
     parts = _two_tone(shell, tools, cell, "sb_blue", zb=3.0)
     return PartDef("SB-LINE", "Line sensor x5", parts + [
-        Body("windows", Part.makeCompound(win), "glass_dark", False),
-        Body("leds_on", Part.makeCompound(leds_on), "led_red", False),
-        Body("leds_off", Part.makeCompound(leds_off), "glass_dark", False),
+        Body("windows", compound(win), "glass_dark", False),
+        Body("leds_on", compound(leds_on), "led_red", False),
+        Body("leds_off", compound(leds_off), "glass_dark", False),
         Body("port", ins, "port_black", False), Body("contacts", con, "contact", False)],
         {"family": "Modules"})
 

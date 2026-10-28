@@ -1,8 +1,9 @@
 """Write one FreeCAD file per part: coloured bodies + part data + the 2D
 drawing sheets as TechDraw pages. Every moulded or purchased component is a
-Part Design Body on its generated solid, so it can be edited in Part Design
-(sketch, pad, pocket, fillet ...). Needs FreeCAD's GUI layer for colours,
-so it runs offscreen (no window):
+Part Design Body built from sketches, pads, pockets, revolutions, fillets ...
+(pdbuild.py, from the recorded construction in parts.py / modules.py), so
+every feature can be opened and changed. Needs FreeCAD's GUI layer for
+colours, so it runs offscreen (no window):
 
     QT_QPA_PLATFORM=offscreen /Applications/FreeCAD.app/Contents/MacOS/FreeCAD stage-2/cad/fcstd_export.py
 
@@ -20,8 +21,11 @@ sys.path.insert(0, HERE)
 
 import FreeCAD as App  # noqa: E402
 
+import sbcad  # noqa: E402
+sbcad.RECORD = True             # the parts keep how they were made, for the feature trees
 import catalog as CAT  # noqa: E402
 import dwg_data as D  # noqa: E402
+import pdbuild  # noqa: E402
 from sbcad import PALETTE, hex_rgb  # noqa: E402
 
 OUT = os.path.join(HERE, "fcstd")
@@ -79,37 +83,30 @@ def export(item, part, sheets):
     for b in part.bodies:
         mk = D.material_for(fam, b.name, b.mat)
         if b.printable:
-            # the generated solid is the Body's base feature; Part Design features go on top
-            src = doc.addObject("Part::Feature", b.name + "_solid")
-            src.Shape = b.shape
-            src.Label = "%s source solid" % b.name
-            src.Visibility = False
-            root.addObject(src)
-            o = doc.addObject("PartDesign::Body", b.name)
-            o.BaseFeature = src
-            o.Group[0].Label = "%s solid" % b.name
-            colour(src, b.mat)
-            colour(o.Group[0], b.mat)
-        else:
-            o = doc.addObject("Part::Feature", b.name)
-            o.Shape = b.shape
-        if b.printable:
             k += 1
             comp_no = "%s-%02d" % (part.pid, k) if len([x for x in part.bodies if x.printable]) > 1 else part.pid
             if mk == "STEEL":                       # purchased (bearing, ball): no drawing number, as in the BOM
                 comp_no = "purchased"
+            # a Part Design body whose sketches, pads, pockets ... rebuild the generated solid
+            o = doc.addObject("PartDesign::Body", b.name)
             o.Label = "%s %s" % (comp_no if mk != "STEEL" else D.COMP_NAME.get(b.name, (b.name,))[0], b.name)
+            root.addObject(o)
+            n, helpers, plain = pdbuild.build(doc, o, b.recipe or b.shape, root.addObject)
+            log("  %-16s %3d features, %d helper bodies%s" % (b.name, n, helpers, ", PLAIN SOLID" if plain else ""))
             add_str(o, "ComponentNo", comp_no)
             add_str(o, "Material", D.MATERIALS[mk][0])
             add_str(o, "Process", "purchased" if mk == "STEEL" else "injection moulding")
         else:
+            o = doc.addObject("Part::Feature", b.name)
+            o.Shape = b.shape
             o.Label = "%s (%s)" % (b.name, "pad print / insert" if fam not in D.MODULE_FAMILIES else "electronics / window")
             add_str(o, "Process", "pad print" if b.mat.startswith("ind_") or b.name in ("marks", "pointer")
                     else "reference only")
         c = D.COLOURS.get(b.mat)
         if c:
             add_str(o, "Colour", "%s %s %s (%s)" % (c[0], c[1], c[2], c[3]))
-        root.addObject(o)
+        if o not in root.Group:
+            root.addObject(o)
         colour(o, b.mat)
     for i, name in enumerate(sheets):
         svg = os.path.join(DWG, name + ".svg")
@@ -133,10 +130,15 @@ def main():
     idx = {r["id"]: r["sheets"] for r in json.load(open(IDX))}
     n = 0
     for item in CAT.ITEMS:
-        part = CAT.build(item)
+        try:
+            part = CAT.build(item)
+        except Exception:
+            log("FAILED build", traceback.format_exc())
+            continue
         if PIDS and part.pid not in PIDS:
             continue
         try:
+            log(part.pid)
             export(item, part, idx.get(part.pid, []))
             n += 1
             log("fcstd", part.pid)

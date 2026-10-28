@@ -4,12 +4,16 @@ Runs inside FreeCAD's bundled Python (freecadcmd). Provides:
   * small solid-modelling helpers (boxes, cylinders, revolves, text engraving)
   * a tiny Part / Instance / Scene model (a part = several coloured bodies)
   * exporters: STEP + STL per part, GLB per scene (shared by Blender + viewer)
+  * a recorder (RECORD = True) that keeps how every solid was made, for the
+    Part Design feature trees in the FreeCAD files (pdbuild.py)
 """
+import functools
 import json
 import math
 import os
 import re
 import struct
+import sys
 
 import FreeCAD as App
 import Part
@@ -20,15 +24,212 @@ FONT_DIR = "/System/Library/Fonts/Supplemental/"
 FONT = "Arial Rounded Bold.ttf"
 
 
+# ------------------------------------------------------------- recording
+# fcstd_export.py sets RECORD = True. The helpers below then return Rec objects:
+# the very same solid (.shape) plus how it was made (.op), so pdbuild.py can
+# rebuild every part as a Part Design feature tree. Off (the default), nothing
+# changes: the helpers return plain shapes.
+RECORD = False
+_HERE = os.path.abspath(__file__)
+_NOT_NAMES = {"shape", "tool", "tools", "out", "res", "tmp", "body", "part", "parts", "solid", "self", "other"}
+
+
+def _caller():
+    """First stack frame outside this file: the builder line that made a shape."""
+    f = sys._getframe(1)
+    while f is not None and os.path.abspath(f.f_code.co_filename) == _HERE:
+        f = f.f_back
+    return f
+
+
+def _translation(x, y, z):
+    return App.Placement(V(x, y, z), App.Rotation()).toMatrix()
+
+
+class Rec:
+    """A solid and its recipe (op, args):
+      prism (faces, h)          planar faces at z = 0 of the leaf frame .m, extruded +h along its Z
+      revolve (face,)           face in the leaf frame's XZ plane, turned 360 deg about its Z
+      sphere (r,) | cone (r0, r1, h)    on the leaf frame's Z axis
+      solid ()                  no recipe (made without the helpers)
+      fuse | cut | common | compound (a, b, ...)    refine (a,)
+      fillet | chamfer (a, size, edges)    move (a, matrix from a's frame to this one)
+    .src is the builder line (file, line, function) that made it and .var the
+    builder variable it was bound to: pdbuild.py names the features after them."""
+
+    def __init__(self, shape, op="solid", *args, m=None, kind=None):
+        self.shape, self.op, self.args, self.kind = shape, op, args, kind
+        self.m = m if m is not None else App.Matrix()
+        f = _caller()
+        self.src = (f.f_code.co_filename, f.f_lineno, f.f_code.co_name) if f else None
+        self.col = None             # column of the call on that line (leaves)
+        if f is not None and kind:
+            pos = list(f.f_code.co_positions())[f.f_lasti // 2]
+            self.col = pos[2] if pos[0] == f.f_lineno else None
+        self.var = self.name = None
+
+    def __getattr__(self, k):           # Edges, BoundBox, Volume ... answered by the solid
+        if k == "shape":
+            raise AttributeError(k)
+        return getattr(self.shape, k)
+
+    def _bool(self, op, other):
+        many = isinstance(other, (list, tuple))
+        _recs([self])
+        tools = _recs(other if many else [other])
+        fn = getattr(self.shape, op)
+        shape = fn([t.shape for t in tools]) if many else fn(tools[0].shape)
+        return Rec(shape, op, self, *tools)
+
+    def fuse(self, other):
+        return self._bool("fuse", other)
+
+    def cut(self, other):
+        return self._bool("cut", other)
+
+    def common(self, other):
+        return self._bool("common", other)
+
+    def removeSplitter(self):
+        return Rec(self.shape.removeSplitter(), "refine", self)
+
+    def makeFillet(self, r, edges):
+        _recs([self])
+        return Rec(self.shape.makeFillet(r, edges), "fillet", self, r, [e.copy() for e in edges])
+
+    def makeChamfer(self, r, edges):
+        _recs([self])
+        return Rec(self.shape.makeChamfer(r, edges), "chamfer", self, r, [e.copy() for e in edges])
+
+    def copy(self):
+        return Rec(self.shape.copy(), "move", self, App.Matrix())
+
+    def _move_in_place(self, m):
+        inner = Rec.__new__(Rec)
+        inner.__dict__.update(self.__dict__)
+        inner.shape = self.shape.copy()
+        self.op, self.args, self.m = "move", (inner, m), App.Matrix()
+
+    def translate(self, v):
+        v = V(v)
+        self._move_in_place(_translation(v.x, v.y, v.z))
+        self.shape.translate(v)
+        return self
+
+    def rotate(self, base, axis, angle):
+        self._move_in_place(App.Placement(V(0, 0, 0), App.Rotation(V(axis), angle), V(base)).toMatrix())
+        self.shape.rotate(base, axis, angle)
+        return self
+
+    def transformShape(self, m, *a):
+        self._move_in_place(App.Matrix(m))
+        self.shape.transformShape(m, *a)
+
+
+def _recs(items):
+    """Wrap plain shapes as Recs and name every Rec after the builder variable it
+    is bound to (a list bound to a variable names all its members)."""
+    out = []
+    for x in items:
+        if isinstance(x, Rec):
+            out.append(x)
+        else:
+            r = Rec(x)
+            r.src = None                # made outside the helpers: only its variable names it
+            out.append(r)
+    f = _caller()
+    if f is not None:
+        for k, v in f.f_locals.items():
+            if len(k) < 3 or k in _NOT_NAMES or k.startswith("_"):
+                continue
+            for x, r in zip(items, out):
+                if r.var is None and (v is x or (isinstance(v, list) and (v is items or any(x is e for e in v)))):
+                    r.var = k
+    return out
+
+
+def compound(shapes):
+    """Part.makeCompound that also takes recorded shapes."""
+    if not RECORD or not any(isinstance(s, Rec) for s in shapes):
+        return Part.makeCompound([s.shape if isinstance(s, Rec) else s for s in shapes])
+    recs = _recs(shapes)
+    return Rec(Part.makeCompound([r.shape for r in recs]), "compound", *recs)
+
+
+def prism_recipe(shape, m=None):
+    """Recipe of a solid that is a straight extrusion along the Z axis of frame m
+    (default: the part's Z): (faces at z = 0, height, frame), or None."""
+    m = m or App.Matrix()
+    s = shape.copy()
+    s.transformShape(m.inverse())
+    bb = s.BoundBox
+    if bb.ZLength < 1e-9 or not s.Solids:
+        return None
+    bottom = [f for f in s.Faces if f.BoundBox.ZLength < 1e-9 and abs(f.BoundBox.ZMin - bb.ZMin) < 1e-7]
+    area = sum(f.Area for f in bottom)
+    if not bottom or abs(area * bb.ZLength - s.Volume) > 1e-6 * max(1.0, s.Volume):
+        return None
+    if len(bottom) > 1:
+        bottom = bottom[0].fuse(bottom[1:]).removeSplitter().Faces
+    faces = [f.translated(V(0, 0, -bb.ZMin)) for f in bottom]
+    return faces, bb.ZLength, m * _translation(0, 0, bb.ZMin)
+
+
+def _zprism(shape, *a, **k):
+    r = prism_recipe(shape)
+    return ("prism", r[:2], r[2]) if r else ("solid", (), None)
+
+
+def _axis_frame(p0, p1):
+    """Frame with origin p0 and Z along p1 - p0; and the distance."""
+    p0, p1 = V(*p0), V(*p1)
+    n = p1 - p0
+    length = n.Length
+    n.normalize()
+    x = V(1, 0, 0) if abs(n.x) < 0.9 else V(0, 1, 0)
+    x = x - n * x.dot(n)
+    x.normalize()
+    y = n.cross(x)
+    return App.Matrix(x.x, y.x, n.x, p0.x, x.y, y.y, n.y, p0.y, x.z, y.z, n.z, p0.z, 0, 0, 0, 1), length
+
+
+def _leaf(recipe):
+    """With RECORD on, the helper builds its solid exactly as usual (nothing inside
+    it is recorded) and returns it as a Rec leaf: recipe(solid, *args) -> op, args, frame."""
+    def deco(fn):
+        @functools.wraps(fn)
+        def wrapped(*a, **k):
+            global RECORD
+            if not RECORD:
+                return fn(*a, **k)
+            RECORD = False
+            try:
+                shape = fn(*a, **k)
+                op, args, m = recipe(shape, *a, **k)
+            finally:
+                RECORD = True
+            return Rec(shape, op, *args, m=m, kind=fn.__name__)
+        return wrapped
+    return deco
+
+
 # ---------------------------------------------------------------- primitives
+@_leaf(_zprism)
 def box(x0, y0, z0, x1, y1, z1):
     return Part.makeBox(x1 - x0, y1 - y0, z1 - z0, V(x0, y0, z0))
 
 
+@_leaf(_zprism)
 def zcyl(r, z0, z1, x=0.0, y=0.0):
     return Part.makeCylinder(r, z1 - z0, V(x, y, z0))
 
 
+def _cyl_recipe(shape, r, p0, p1):
+    m, length = _axis_frame(p0, p1)
+    return "prism", ([Part.Face(Part.Wire(Part.makeCircle(r)))], length), m
+
+
+@_leaf(_cyl_recipe)
 def cyl_between(r, p0, p1):
     p0, p1 = V(*p0), V(*p1)
     d = p1 - p0
@@ -37,6 +238,12 @@ def cyl_between(r, p0, p1):
     return Part.makeCylinder(r, d.Length, p0, n)
 
 
+def _cone_recipe(shape, r0, r1, p0, p1):
+    m, length = _axis_frame(p0, p1)
+    return "cone", (r0, r1, length), m
+
+
+@_leaf(_cone_recipe)
 def cone_between(r0, r1, p0, p1):
     p0, p1 = V(*p0), V(*p1)
     d = p1 - p0
@@ -45,14 +252,20 @@ def cone_between(r0, r1, p0, p1):
     return Part.makeCone(r0, r1, d.Length, p0, n)
 
 
-def revolve_rz(pts):
-    """Solid of revolution around Z from an (r, z) outline."""
+def _rz_face(pts):
     poly = [V(r, 0, z) for r, z in pts]
     if (poly[0] - poly[-1]).Length > 1e-9:
         poly.append(poly[0])
-    return Part.Face(Part.makePolygon(poly)).revolve(V(0, 0, 0), V(0, 0, 1), 360)
+    return Part.Face(Part.makePolygon(poly))
 
 
+@_leaf(lambda shape, pts: ("revolve", (_rz_face(pts),), None))
+def revolve_rz(pts):
+    """Solid of revolution around Z from an (r, z) outline."""
+    return _rz_face(pts).revolve(V(0, 0, 0), V(0, 0, 1), 360)
+
+
+@_leaf(_zprism)
 def prism_xy(pts, z0, z1):
     poly = [V(x, y, z0) for x, y in pts]
     if (poly[0] - poly[-1]).Length > 1e-9:
@@ -60,6 +273,7 @@ def prism_xy(pts, z0, z1):
     return Part.Face(Part.makePolygon(poly)).extrude(V(0, 0, z1 - z0))
 
 
+@_leaf(_zprism)
 def stadium_xy(length, r, z0, z1):
     """Beam outline: centre line from (0,0) to (length,0), radius r."""
     s = zcyl(r, z0, z1, 0, 0)
@@ -68,10 +282,12 @@ def stadium_xy(length, r, z0, z1):
     return s.removeSplitter()
 
 
+@_leaf(_zprism)
 def ring(r0, r1, z0, z1, x=0.0, y=0.0):
     return zcyl(r1, z0, z1, x, y).cut(zcyl(r0, z0 - 1, z1 + 1, x, y))
 
 
+@_leaf(_zprism)
 def sector(r0, r1, a_center_deg, span_deg, z0, z1, steps=24):
     """Annular sector (used for pad-printed status rings)."""
     a0 = math.radians(a_center_deg - span_deg / 2)
@@ -82,6 +298,7 @@ def sector(r0, r1, a_center_deg, span_deg, z0, z1, steps=24):
     return wedge.common(ring(r0, r1, z0, z1))
 
 
+@_leaf(_zprism)
 def cross_prism(d, s, z0, z1, x=0.0, y=0.0):
     """Axle cross (tip-to-tip d, arm thickness s) with round arm tips."""
     c = box(x - d / 2, y - s / 2, z0, x + d / 2, y + s / 2, z1).fuse(
@@ -99,6 +316,7 @@ def rounded_box(x0, y0, z0, x1, y1, z1, r):
     return b
 
 
+@_leaf(_zprism)
 def rounded_rect_prism(cx, cy, w, h, r, z0, z1):
     """Rectangle w x h centred at (cx, cy) with rounded corners, extruded in Z."""
     r = min(r, w / 2 - 1e-3, h / 2 - 1e-3)
@@ -150,6 +368,7 @@ def rotated(shape, axis, angle_deg, center=(0, 0, 0)):
 
 
 # ------------------------------------------------------------------ text
+@_leaf(_zprism)
 def text_solid(text, size, depth, font=FONT):
     """Extruded text, centred on the origin in XY, from z=0 to z=depth."""
     faces = []
@@ -233,7 +452,9 @@ PALETTE = {
 # ------------------------------------------------------- part / scene model
 class Body:
     def __init__(self, name, shape, mat, printable=True):
-        self.name, self.shape, self.mat, self.printable = name, shape, mat, printable
+        self.name, self.mat, self.printable = name, mat, printable
+        self.recipe = shape if isinstance(shape, Rec) else None    # set while RECORD is on
+        self.shape = shape.shape if isinstance(shape, Rec) else shape
 
 
 class PartDef:
